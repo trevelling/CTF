@@ -3,6 +3,6 @@ import styles from "./credits.module.css";
 
 export default function Navbar() {
   return (
-    <div className={styles.creds}>made w 💕 by tev</div>
+    <a className={styles.creds} href="https://github.com/trevelling" target="_blank" rel="noopener noreferrer">made w 💕 by tev</a>
   );
 }
