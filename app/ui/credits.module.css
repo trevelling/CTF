@@ -1,0 +1,7 @@
+.creds{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
