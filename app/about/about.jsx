@@ -25,7 +25,7 @@ function About(){
                     this is a blog documenting writeup's and tools of various ctf's we
                     participate in. we may not be the best though 🙂!<br/>
                     <br/>
-                    <strong>*not all CTF's 🚩we play are documented*</strong>
+                    <strong>*not all CTF's 🚩 played are documented*</strong>
                 </p>
                 <div className={styles.buttonContainer}>
                     <button className={styles.button} onClick={buttonClick}>view ctf's</button>
