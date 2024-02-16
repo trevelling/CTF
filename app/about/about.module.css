@@ -47,6 +47,7 @@
 
 .CTFheader span{
     position: absolute;
+    z-index: 1;
 }
 
 .CTFheader span:first-child{
@@ -85,8 +86,7 @@
 .about {
     color: white;
     background-color: #161616;
-    display: flex;
-    padding: 50px 50px;
+    padding: 40px 35px;
     border-radius: 9px;
     width: 50%;
     font-family: Arial, Helvetica, sans-serif;
@@ -95,10 +95,43 @@
     font-size: 1.2em;
     opacity: 0.9;
     text-align: center;
+    margin-top: 120px;
 
     /* Centering of Square */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    color: rgb(27, 27, 27);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+.dropdownContent {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out; 
+}
+
+.dropdownContent.show {
+    height: 150px; 
+    overflow-y: auto; 
 }

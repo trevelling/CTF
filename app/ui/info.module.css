@@ -1,11 +1,11 @@
 .info {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
     color: white;
-    padding-bottom: 25px;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
     text-decoration: none;
+    padding: 20px 20px;
+    z-index: 999; 
 }

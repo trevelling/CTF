@@ -1,5 +1,6 @@
-body {
+body, html {
     margin: 0;
     padding: 0;
+    height: 120%;
     background-color: rgb(27, 27, 27);
 }

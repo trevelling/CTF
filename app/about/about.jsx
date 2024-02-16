@@ -1,9 +1,19 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import styles from "./about.module.css";
 
 function About(){
+
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    // Function for button click
+    const buttonClick = () =>{
+        setShowDropdown(!showDropdown);
+    }
+
     return(
-        <div>
+        <div className={styles.aboutContainer}>
             <div className={styles.CTFheader} >
                 <span aria-hidden="true">CTF</span>
                 <span>CTF</span>
@@ -13,12 +23,25 @@ function About(){
                 <p>
                     hi! i'm a CTF player in SG!<br/><br/>
                     this is a blog documenting writeup's and tools of various ctf's we
-                    participate in. we may not be the best though 🙂!
-    
-                    <br></br>
-                    *not CTF's 🚩we play in are documented*
+                    participate in. we may not be the best though 🙂!<br/>
+                    <br/>
+                    <strong>*not CTF's 🚩we play in are documented*</strong>
                 </p>
-                <button className={styles.button}>view ctf's</button>
+                <div className={styles.buttonContainer}>
+                    <button className={styles.button} onClick={buttonClick}>view ctf's</button>
+                </div>
+                <div className={`${styles.dropdownContent} ${showDropdown ? styles.show : ''}`}>
+                    <div className={`${styles.CTF}${2023}`}>
+                        <p>CTF 1</p>
+                        <p>CTF 2</p>
+                        <p>CTF 3</p>
+                    </div>
+                    <div className={`${styles.CTF}${2024}`}>
+                        <p>CTF 1</p>
+                        <p>CTF 2</p>
+                        <p>CTF 3</p>
+                    </div>
+                </div>
             </div>
         </div>
         
