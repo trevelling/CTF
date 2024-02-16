@@ -49,7 +49,7 @@ export default function Sidebar() {
                         className={styles.sideBarLogo}
                         alt="logo"
                      />
-                     <p className={styles.sideBarLogoName}>Testing</p>
+                     <p className={styles.sideBarLogoName}>MENU</p>
                 </div>
                 <div className={styles.sideBarList}>
                     {sideBarItems.map(({ name, href, icon: Icon }) => (
