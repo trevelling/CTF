@@ -13,17 +13,17 @@ const sideBarItems = [
     {
         name: "About",
         href: "/",
-        icon: <FiHome />
+        icon: <FiHome />,
     },
     {
         name: "Tools",
         href: "/tools",
-        icon: <GoTools />
+        icon: <GoTools />,
     },
     {
         name: "CTF",
         href: "/ctf",
-        icon: <IoFlagOutline />
+        icon: <IoFlagOutline />,
     }
 ];
 

@@ -12,8 +12,8 @@ export default function RootLayout({ children }) {
         <title>CTF blog</title>
       </Head>
       <body>
-        <Info />
         <Sidebar />
+        <Info />
         {children}
       </body>
     </html>
