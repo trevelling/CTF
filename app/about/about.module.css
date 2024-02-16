@@ -96,6 +96,7 @@
     opacity: 0.9;
     text-align: center;
     margin-top: 90px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgba(68, 68, 183, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
     /* Centering of Square */
     position: absolute;

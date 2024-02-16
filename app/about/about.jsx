@@ -22,7 +22,6 @@ const AnimatedText = ({ text }) => {
     return <span>{visibleText}</span>;
   };
 
-
 function About(){
 
     const [showDropdown, setShowDropdown] = useState(false);
@@ -44,8 +43,8 @@ function About(){
                     <AnimatedText text="hi! i&apos;m a CTF player in SG!" /><br/>
                 </p>
                 <p>
-                    this is a blog documenting writeup&apos;s and tools of various ctf&apos;s we
-                    participate in. we may not be the best though 🙂!<br/>
+                    this is a blog documenting writeup&apos;s and tools of various ctf&apos;s i
+                    participate in. i may not be the best though 🙂!<br/>
                     <br/>
                     <strong>*not all CTF&apos;s 🚩 played are documented*</strong>
                 </p>
