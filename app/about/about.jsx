@@ -8,15 +8,15 @@ const AnimatedText = ({ text }) => {
     const [visibleText, setVisibleText] = useState('');
   
     useEffect(() => {
-      let index = 1; // Variable to keep track of the current index in the text
+      let index = 1; 
       const interval = setInterval(() => {
         if (index > text.length) {
-          clearInterval(interval); // Check if we have reached the end of the text
+          clearInterval(interval); 
         } else {
-          setVisibleText(text.substring(0, index)); // Update the 'visibleText' state with a substring of 'text' up to the current index
+          setVisibleText(text.substring(0, index)); 
           index += 1;
         }
-      }, 100); // Text animation speed (milliseconds)
+      }, 100); 
     }, [text]);
   
     return <span>{visibleText}</span>;
@@ -30,7 +30,7 @@ function About(){
     const buttonClick = () =>{
         setShowDropdown(!showDropdown);
     }
-
+    
     return(
         <div className={styles.aboutContainer}>
             <div className={styles.CTFheader} >
@@ -75,13 +75,9 @@ function About(){
                             </ul>
                         </div>
                     </div>
-                    <div className={`${styles.CTF}${2024}`}>
-                        
-                    </div>
                 </div>
             </div>
         </div>
-        
     );
 }
 

@@ -68,7 +68,7 @@
     animation: glitch 500ms infinite; 
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: end-left;
     margin-top: 60px;
 
     color: rgb(255, 255, 255);
@@ -122,8 +122,9 @@
 }
 
 .button:hover {
-    background-color: tomato;
+    background-color: rgba(68, 68, 183, 0.95);
     color: white;
+    font-weight: 400;
 }
 
 .dropdownContent {
