@@ -14,10 +14,9 @@ export default function RootLayout({ children }) {
       </Head>
       <body>
         <Navbar />
-        {children}
         <Credits />
-        {children}
         <LastUpdated />
+        {children}
       </body>
     </html>
   );
