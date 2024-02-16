@@ -1,5 +1,5 @@
 import React from 'react';
-import About from "./about/about";
+import About from "./about/page";
 
 export default function App(){
     return(

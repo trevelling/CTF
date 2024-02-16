@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState,  useEffect } from 'react';
-import styles from "./about.module.css";
+import styles from "./page.module.css";
 
 // Component for animating text
 const AnimatedText = ({ text }) => {
