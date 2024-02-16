@@ -47,7 +47,6 @@
 
 .CTFheader span{
     position: absolute;
-    
 }
 
 .CTFheader span:first-child{
@@ -60,19 +59,19 @@
 .CTFheader span:last-child{
     animation: glitch 375ms infinite;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
-    transform: translate(0.05em, 0.025em);
-    
+    transform: translate(0.05em, 0.025em); 
 }
 
 .CTFheader {
     display: inline-block; 
     animation: glitch 500ms infinite; 
+    position: relative;
     display: flex;
     justify-content: center;
-    position: relative;
+    margin-top: 60px;
 
     color: rgb(255, 255, 255);
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -87,12 +86,15 @@
     color: white;
     background-color: #161616;
     display: flex;
-    padding: 10px 15px;
-    border-radius: 5px;
-    width: 65%;
+    padding: 50px 50px;
+    border-radius: 9px;
+    width: 50%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     letter-spacing: 1.1px;
+    font-size: 1.2em;
+    opacity: 0.9;
+    text-align: center;
 
     /* Centering of Square */
     position: absolute;

@@ -1,4 +1,4 @@
-.lastupdate {
+.info {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -7,4 +7,5 @@
     color: white;
     padding-bottom: 25px;
     font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
 }

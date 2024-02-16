@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navbar from "@/app/ui/navbar";
-import Credits from "@/app/ui/credits";
-import LastUpdated from "@/app/ui/lastupdate";
+import Info from "@/app/ui/info";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -14,8 +13,7 @@ export default function RootLayout({ children }) {
       </Head>
       <body>
         <Navbar />
-        <Credits />
-        <LastUpdated />
+        <Info />
         {children}
       </body>
     </html>
