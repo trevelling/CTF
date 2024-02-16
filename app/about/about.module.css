@@ -132,6 +132,25 @@
 }
 
 .dropdownContent.show {
-    height: 150px; 
+    height: 180px; 
     overflow-y: auto; 
+}
+
+.ctf2023{
+    color:#ffffff;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: left;
+}
+
+.ctf2024{
+    color:#ffffff;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: left;
+}
+
+.ctf{
+    padding: 5px;
+    color: white;
 }

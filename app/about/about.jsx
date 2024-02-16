@@ -25,21 +25,37 @@ function About(){
                     this is a blog documenting writeup's and tools of various ctf's we
                     participate in. we may not be the best though 🙂!<br/>
                     <br/>
-                    <strong>*not CTF's 🚩we play in are documented*</strong>
+                    <strong>*not all CTF's 🚩we play are documented*</strong>
                 </p>
                 <div className={styles.buttonContainer}>
                     <button className={styles.button} onClick={buttonClick}>view ctf's</button>
                 </div>
                 <div className={`${styles.dropdownContent} ${showDropdown ? styles.show : ''}`}>
-                    <div className={`${styles.CTF}${2023}`}>
-                        <p>CTF 1</p>
-                        <p>CTF 2</p>
-                        <p>CTF 3</p>
+                    <div className={styles.ctf2023}>
+                       <strong><em>2023</em></strong>
+                        <div className={styles.ctf}>
+                            <ul>
+                                <li>BrainHack [Top 20 poly-category]</li><br/>
+                                <li>TISC [Level 2]</li><br/>
+                                <li>YBN [8th]</li><br/>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className={styles.ctf2024}>
+                       <strong><em>2024</em></strong>
+                        <div className={styles.ctf}>
+                            <ul>
+                                <li>Bits CTF</li><br/>
+                                <li>LA CTF</li><br/>
+                                <li>Braeker CTF</li><br/>
+                                <li>ACS(I) Hacks</li><br/>
+                                <li>Grey Hats</li><br/>
+                                <li>BrainHack</li><br/>
+                            </ul>
+                        </div>
                     </div>
                     <div className={`${styles.CTF}${2024}`}>
-                        <p>CTF 1</p>
-                        <p>CTF 2</p>
-                        <p>CTF 3</p>
+                        
                     </div>
                 </div>
             </div>
