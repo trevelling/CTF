@@ -1,7 +1,27 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState,  useEffect } from 'react';
 import styles from "./about.module.css";
+
+// Component for animating text
+const AnimatedText = ({ text }) => {
+    const [visibleText, setVisibleText] = useState('');
+  
+    useEffect(() => {
+      let index = 1; // Variable to keep track of the current index in the text
+      const interval = setInterval(() => {
+        if (index > text.length) {
+          clearInterval(interval); // Check if we have reached the end of the text
+        } else {
+          setVisibleText(text.substring(0, index)); // Update the 'visibleText' state with a substring of 'text' up to the current index
+          index += 1;
+        }
+      }, 100); // Text animation speed (milliseconds)
+    }, [text]);
+  
+    return <span>{visibleText}</span>;
+  };
+
 
 function About(){
 
@@ -21,14 +41,16 @@ function About(){
             </div>
             <div className={styles.about}>
                 <p>
-                    hi! i'm a CTF player in SG!<br/><br/>
-                    this is a blog documenting writeup's and tools of various ctf's we
+                    <AnimatedText text="hi! i&apos;m a CTF player in SG!" /><br/>
+                </p>
+                <p>
+                    this is a blog documenting writeup&apos;s and tools of various ctf&apos;s we
                     participate in. we may not be the best though 🙂!<br/>
                     <br/>
-                    <strong>*not all CTF's 🚩 played are documented*</strong>
+                    <strong>*not all CTF&apos;s 🚩 played are documented*</strong>
                 </p>
                 <div className={styles.buttonContainer}>
-                    <button className={styles.button} onClick={buttonClick}>view ctf's</button>
+                    <button className={styles.button} onClick={buttonClick}>view ctf&apos;s</button>
                 </div>
                 <div className={`${styles.dropdownContent} ${showDropdown ? styles.show : ''}`}>
                     <div className={styles.ctf2023}>
