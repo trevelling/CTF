@@ -22,64 +22,91 @@ const AnimatedText = ({ text }) => {
     return <span>{visibleText}</span>;
   };
 
-function About(){
-
-    const [showDropdown, setShowDropdown] = useState(false);
-
-    // Function for button click
-    const buttonClick = () =>{
-        setShowDropdown(!showDropdown);
-    }
-    
-    return(
+  const About = () => {
+    return (
         <div className={styles.aboutContainer}>
-            <div className={styles.CTFheader} >
-                <span aria-hidden="true">CTF</span>
-                <span>CTF</span>
+            <div className={styles.CTFheader}>
+                <span aria-hidden="true">CTF </span>
+                <span>CTF </span>
                 <span aria-hidden="true">CTF</span>
             </div>
             <div className={styles.about}>
                 <p>
-                    <AnimatedText text="hi! i&apos;m a CTF player in SG!" /><br/>
+                    hi! i'm tev, a CTF player 🚩 in SG!<br/>
                 </p>
                 <p>
-                    this is a blog documenting writeup&apos;s and tools of various ctf&apos;s i
-                    participate in. i may not be the best though 🙂!<br/>
+                    This is a blog documenting writeup's and tools of various ctf's I
+                    participate in 🙂!<br/>
                     <br/>
-                    <strong>*not all CTF&apos;s 🚩 played are documented*</strong>
+                    <strong>*not all CTF's played are documented*</strong>
                 </p>
-                <div className={styles.buttonContainer}>
-                    <button className={styles.button} onClick={buttonClick}>view ctf&apos;s</button>
-                </div>
-                <div className={`${styles.dropdownContent} ${showDropdown ? styles.show : ''}`}>
-                    <div className={styles.ctf2023}>
-                       <strong><em>2023</em></strong>
-                        <div className={styles.ctf}>
-                            <ul>
-                                <li>BrainHack [Top 20 poly-category]</li><br/>
-                                <li>TISC [Level 2]</li><br/>
-                                <li>YBN [8th]</li><br/>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className={styles.ctf2024}>
-                       <strong><em>2024</em></strong>
-                        <div className={styles.ctf}>
-                            <ul>
-                                <li>Bits CTF</li><br/>
-                                <li>LA CTF</li><br/>
-                                <li>Braeker CTF</li><br/>
-                                <li>ACS(I) Hacks</li><br/>
-                                <li>Grey Hats</li><br/>
-                                <li>BrainHack</li><br/>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <div className={styles.date2023}>
+               <div>~# ls -la 2023</div>
+            </div>
+            <table className={styles.table2023}>
+                <thead>
+                    <tr>
+                        <th>CTF Name</th>
+                        <th>Type</th>
+                        <th>Ranking</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://www.dsta.gov.sg/brainhack" style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}>BrainHack</a></td>
+                        <td>Jeporady</td>
+                        <td>Top 20 (Poly-Category)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.csit.gov.sg/events/tisc/tisc-2023" style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}>TISC</a></td>
+                        <td>Jeporady</td>
+                        <td>Level 2</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf" style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}>YBN</a></td>
+                        <td>Jeporady</td>
+                        <td>8th</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div className={styles.date2024}>
+               <div>~# ls -la 2024</div>
+            </div>
+            <table className={styles.table2024}>
+                <thead>
+                    <tr>
+                        <th>CTF Name</th>
+                        <th>Type</th>
+                        <th>Ranking</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Braeker CTF</td>
+                        <td>Jeporady</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://8059blank.github.io/hackac/HACK@AC-Information/" style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}>ACS(I) Hacks</a></td>
+                        <td>Jeporady</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://ctf.nusgreyhats.org/" style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}>NUS Grey Hats</a></td>
+                        <td>Jeporady</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.dsta.gov.sg/brainhack" style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}>BrainHack</a></td>
+                        <td>Jeporady</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
-}
+};
 
 export default About;
 

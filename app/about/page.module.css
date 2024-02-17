@@ -1,3 +1,13 @@
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    position: relative; 
+    margin-top: 200px; 
+}
+
 /* Glitch animation for CTF header */
 @keyframes glitch {
     0% {
@@ -50,14 +60,14 @@
     z-index: 1;
 }
 
-.CTFheader span:first-child{
+.CTFheader span:first-child {
     animation: glitch 650ms infinite;
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 30%);
     transform: translate(-0.05em, -0.025em);
     opacity: 0.8;
 }
 
-.CTFheader span:last-child{
+.CTFheader span:last-child {
     animation: glitch 375ms infinite;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
     transform: translate(0.05em, 0.025em); 
@@ -67,14 +77,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: glitch 500ms infinite;
     color: rgb(255, 255, 255);
-    font-size: 8rem;
-    font-family: sans-serif;
+    font-size: 12rem;
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 
+        0.05em 0 0 rgba(255,0,0,0.75),
+        -0.025em -0.05em 0 rgba(0,255,0,0.75),
+        0.025em 0.05em 0 rgba(0,0,255,0.75);
+    margin-bottom: 100px; 
+}
+
+.CTFheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 12rem;
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     text-shadow: 
@@ -83,77 +104,60 @@
         0.025em 0.05em 0 rgba(0,0,255,0.75);
 }
 
-
 .about {
     color: white;
-    background-color: #161616;
-    padding: 40px 35px;
-    border-radius: 9px;
-    width: 50%;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(20, 23, 28);
+    padding: 15px;
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1.1px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     opacity: 0.9;
-    text-align: center;
-    margin-top: 90px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px inset, rgba(68, 68, 183, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-
-    /* Centering of Square */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: left;
+    border-left: 4px solid rgb(40, 47, 48);
+    margin: 20px;
 }
 
-.buttonContainer {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+.date2023, .date2024 {
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: left;
+    margin: 20px;
 }
 
-.button {
-    color: rgb(27, 27, 27);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+.table2023, .table2024 {
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    width: 40%;
+    margin: 20px;
+    color: #ffffff;
+    border-spacing: 0;
+    border-collapse: separate;
+    font-size: 1.5rem;
 }
 
-.button:hover {
-    background-color: rgba(68, 68, 183, 0.95);
-    color: white;
-    font-weight: 400;
+.table2023 th, .table2024 th,
+.table2023 td, .table2024 td {
+    border: 0.5px solid rgb(40, 47, 48);
+    padding: 8px;
+    text-align: left;
 }
 
-.dropdownContent {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease-out; 
+.table2023 th:first-child, .table2024 th:first-child,
+.table2023 td:first-child, .table2024 td:first-child {
+    border-left: none;
+    width: 30%;
 }
 
-.dropdownContent.show {
-    height: 180px; 
-    overflow-y: auto; 
+.table2023 th:last-child, .table2024 th:last-child,
+.table2023 td:last-child, .table2024 td:last-child {
+    border-right: none;
+    width: 30%;
 }
 
-.ctf2023{
-    color:#ffffff;
-    padding: 30px 20px;
-    display: flex;
-    justify-content: left;
+.table2023 th {
+    border-top: none;
+    color: rgb(204, 207, 212);
 }
 
-.ctf2024{
-    color:#ffffff;
-    padding: 30px 20px;
-    display: flex;
-    justify-content: left;
-}
-
-.ctf{
-    padding: 5px;
-    color: white;
-}

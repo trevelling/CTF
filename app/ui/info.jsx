@@ -5,7 +5,7 @@ export default function Info() {
   return (
     <footer>
       <a className={styles.info} href="https://github.com/trevelling" target="_blank" rel="noopener noreferrer" >
-      &copy; {new Date().getFullYear()} made w 💕 by tev 
+      &copy; {new Date().getFullYear()} tev 
       </a>
     </footer>
   );
