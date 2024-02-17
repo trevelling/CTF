@@ -6,7 +6,7 @@
 }
   
 .dropdownWrapper {
-  margin-right: 60px; 
+  margin-right: 20%; 
   position: relative;
   flex: 1; 
 }
@@ -23,12 +23,11 @@
   font-size: 20px;
   color: white;
   border: 2.5px solid transparent;
-  transition: border-color 0.3s, color 0.3s;
-  gap: 10px;
+  transition: border-color 0.3s, color 0.3s;  
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
+  width: 200%;
 }
-  
+
 .button:hover,
 .button:focus {
   border-color: white;
@@ -39,7 +38,7 @@
   display: none;
   position: absolute;
   left: 0;
-  width: 100%;
+  width: 200%;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   background-color: rgba(68, 68, 183, 0.95);
@@ -65,7 +64,7 @@
   
 .dropdownItem h3 {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -74,6 +73,39 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.generalName{
+  position: relative;
+  right: 120px;
+}
+.forensicsName{
+  position: relative;
+  right: 135px;
+}
+.cryptoName{
+  position: relative;
+  right: 180px;
+}
+.stegName{
+  position: relative;
+  right: 195px;
+}
+.revName{
+  position: relative;
+  right: 65px;
+}
+.webName{
+  position: relative;
+  right: 110px;
+}
+.binaryName{
+  position: relative;
+  right: 90px;
+}
+.osintName{
+  position: relative;
+  right: 85px;
 }
   
   

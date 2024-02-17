@@ -12,7 +12,7 @@ import { IoIosGlobe } from "react-icons/io";
 import { FaGoogle } from "react-icons/fa";
 
 const general = [
-  { name: 'test' },
+  { name: '' },
 ];
 
 
@@ -78,7 +78,7 @@ const webExploitation = [
 ];
 
 const binaryExploitation = [
-  { name: 'test' },
+  { name: '' },
 ];
 
 const OSINT = [
@@ -105,7 +105,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenGeneral(!isOpenGeneral)}>
           <IoFlagOutline className="h-8" />
-          {' '}GENERAL
+          <div className={styles.generalName}>GENERAL</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenGeneral ? styles.showDropdown : ''}`}>
@@ -120,7 +120,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenForensics(!isOpenForensics)}>
           <GiMagnifyingGlass className="h-8" />
-          {' '}FORENSICS
+          <div className={styles.forensicsName}>FORENSICS</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenForensics ? styles.showDropdown : ''}`}>
@@ -135,7 +135,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenCryptography(!isOpenCryptography)}>
           <FaUserSecret className="h-8" />
-          {' '}CRYPTOGRAPHY
+          <div className={styles.cryptoName}>CRYPTOGRAPHY</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenCryptography ? styles.showDropdown : ''}`}>
@@ -150,7 +150,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenSteganography(!isOpenSteganography)}>
           <SiAudiomack className="h-8" />
-          {' '}STEGANOGRAPHY
+          <div className={styles.stegName}>STEGANOGRAPHY</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenSteganography ? styles.showDropdown : ''}`}>
@@ -165,7 +165,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenRevEngineering(!isOpenRevEngineering)}>
           <IoCogOutline className="h-8" />
-          {' '}REVERSE ENGINEERING
+          <div className={styles.revName}>REVERSE ENGINEERING</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenRevEngineering ? styles.showDropdown : ''}`}>
@@ -180,7 +180,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenWebExpolitation(!isOpenWebExpolitation)}>
           <IoIosGlobe className="h-8" />
-          {' '}WEB EXPLOITATION
+          <div className={styles.webName}>WEB EXPLOITATION</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenWebExpolitation ? styles.showDropdown : ''}`}>
@@ -195,7 +195,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenBinaryExploitation(!isOpenBinaryExploitation)}>
           <TbBinary className="h-8" />
-          {' '}BINARY EXPLOITATION
+          <div className={styles.binaryName}>BINARY EXPLOITATION</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenBinaryExploitation ? styles.showDropdown : ''}`}>
@@ -210,7 +210,7 @@ export default function Tools() {
       <div className={styles.dropdownWrapper}>
         <button className={styles.button} onClick={() => setIsOpenOSINT(!isOpenOSINT)}>
           <FaGoogle className="h-8" />
-          {' '}OSINT
+          <div className={styles.osintName}>OSINT</div>
         </button>
 
         <div className={`${styles.dropdownContent} ${isOpenOSINT ? styles.showDropdown : ''}`}>
