@@ -1,17 +1,18 @@
 .container {
     position: relative;
     display: flex;
-    left: 150px;
+    left: 80px;
     top: 60px;
   }
   
 .dropdownWrapper {
   margin-right: 60px; 
-  position: relative; 
+  position: relative;
+  flex: 1; 
 }
   
   .button {
-    background-color: #4169E1;
+    background-color: rgba(68, 68, 183, 0.60);;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -25,6 +26,7 @@
     transition: border-color 0.3s, color 0.3s;
     gap: 10px;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
   }
   
   .button:hover,
@@ -40,7 +42,7 @@
     width: 100%;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: #A7C7E7;
+    background-color: rgba(68, 68, 183, 0.95);
     text-align: center;
     box-shadow: rgba(51, 51, 252, 0.1) 0px 1px 1px 0px inset, rgba(29, 29, 239, 0.25) 0px 50px 100px -20px, rgba(93, 28, 255, 0.3) 0px 30px 60px -30px;
     opacity: 0;
