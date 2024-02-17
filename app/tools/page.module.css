@@ -1,11 +1,17 @@
 .container {
     position: relative;
+    display: flex;
     left: 150px;
     top: 60px;
   }
   
+.dropdownWrapper {
+  margin-right: 60px; 
+  position: relative; 
+}
+  
   .button {
-    background-color: #3182ce;
+    background-color: #4169E1;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -13,9 +19,9 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    border: 4px solid transparent;
+    border: 2.5px solid transparent;
     transition: border-color 0.3s, color 0.3s;
     gap: 10px;
     font-family: Arial, Helvetica, sans-serif;
@@ -34,15 +40,18 @@
     width: 100%;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: #3182ce;
+    background-color: #A7C7E7;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: rgba(51, 51, 252, 0.1) 0px 1px 1px 0px inset, rgba(29, 29, 239, 0.25) 0px 50px 100px -20px, rgba(93, 28, 255, 0.3) 0px 30px 60px -30px;
     opacity: 0;
     visibility: hidden;
     z-index: 1;
     font-family: Arial, Helvetica, sans-serif;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth transition */
+    transform-origin: top;
+    transform: translateY(-10px); /* Initial position above */
   }
+  
   
   
   .dropdownItem {
@@ -55,7 +64,7 @@
   
   .dropdownItem h3 {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
   }
 
@@ -63,6 +72,7 @@
     display: block;
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
   }
   
   
