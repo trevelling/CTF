@@ -23,6 +23,13 @@ const AnimatedText = ({ text }) => {
   };
 
   const About = () => {
+
+    const [lastUpdated, setLastUpdated] = useState('');
+
+    useEffect(() => {
+        setLastUpdated(document.lastModified);
+    }, []);
+
     return (
         <div className={styles.aboutContainer}>
             <div className={styles.CTFheader}>
@@ -117,6 +124,17 @@ const AnimatedText = ({ text }) => {
                     </tr>
                 </tbody>
             </table>
+            <footer className={styles.footer}>
+                <a
+                    className={styles.info}
+                    href="https://github.com/trevelling"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    &copy; {new Date().getFullYear()} Tev | Last updated:{" "}
+                    {new Date(document.lastModified).toLocaleDateString()}
+                 </a>
+            </footer>
         </div>
     );
 };

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Info from "@/app/ui/info";
 import Sidebar from "@/app/ui/sidebar";
 
 import "./globals.css";
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
         <title>CTF blog</title>
       </Head>
       <body>
-        <Info />
         <Sidebar />
         {children}
       </body>

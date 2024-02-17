@@ -6,7 +6,7 @@ import styles from "./sidebar.module.css";
 
 const sideBarItems = [
     {
-        name: "About",
+        name: "Home",
         href: "/", 
     },
     {
@@ -31,12 +31,12 @@ export default function Sidebar() {
                 <div className={styles.sideBarTop}>
                     <Image 
                         src="/guy.png" 
-                        width={80} 
-                        height={80} 
+                        width={50} 
+                        height={50} 
                         className={styles.sideBarLogo}
                         alt="logo"
                     />
-                    <p className={styles.sideBarLogoName}>Tev's Writeups</p>
+                    <p className={styles.sideBarLogoName}>Tev's CTF Writeups</p>
                 </div>
                 <div className={styles.sideBarList}>
                     {sideBarItems.map(({ name, href }) => (

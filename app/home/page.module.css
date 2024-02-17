@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     position: relative;  
+    padding-top: 150px;
 }
 
 /* Glitch animation for CTF header */
@@ -55,7 +56,6 @@
 
 .CTFheader span{
     position: absolute;
-    z-index: 1;
 }
 
 .CTFheader span:first-child {
@@ -161,5 +161,16 @@
 .table2024 th {
     border-top: none;
     color: rgb(204, 207, 212);
+}
+.table2024 {
+    padding-bottom: 50px;
+}
+
+.info {
+    width: 100%;
+    color: white;
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
 }
 
