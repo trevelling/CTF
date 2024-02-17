@@ -2,7 +2,7 @@ body, html {
     display: flex;
     margin: 0;
     padding: 0;
-    height: 105%;
+    height: 100%;
     background-color: rgb(27, 27, 27);
 }
 

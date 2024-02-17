@@ -3,7 +3,7 @@ import React from "react";
 export default function Tools() {
   return (
     <div>
-        <p>hello</p>
+        <p>testing</p>
     </div>
   );
 }
