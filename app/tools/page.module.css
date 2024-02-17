@@ -3,6 +3,8 @@
   display: flex;
   left: 80px;
   top: 60px;
+  margin-bottom: 20px;
+  margin-right: 10px;
 }
   
 .dropdownWrapper {
