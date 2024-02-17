@@ -14,9 +14,13 @@ const sideBarItems = [
         href: "/tools",
     },
     {
-        name: "CTF",
-        href: "/ctf",
-    }
+        name: "test",
+        href: "/tools",
+    },
+    {
+        name: "test",
+        href: "/tools",
+    },
 ];
 
 export default function Sidebar() {
@@ -32,7 +36,7 @@ export default function Sidebar() {
                         className={styles.sideBarLogo}
                         alt="logo"
                     />
-                    <p className={styles.sideBarLogoName}>MENU</p>
+                    <p className={styles.sideBarLogoName}>Tev's Writeups</p>
                 </div>
                 <div className={styles.sideBarList}>
                     {sideBarItems.map(({ name, href }) => (

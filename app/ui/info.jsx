@@ -18,7 +18,7 @@ export default function Info() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        &copy; {new Date().getFullYear()} tev | Last updated:{" "}
+        &copy; {new Date().getFullYear()} Tev | Last updated:{" "}
         {new Date(document.lastModified).toLocaleDateString()}
       </a>
     </footer>

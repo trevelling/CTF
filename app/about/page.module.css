@@ -3,9 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
-    position: relative; 
-    margin-top: 170px; 
+    position: relative;  
 }
 
 /* Glitch animation for CTF header */
@@ -104,10 +102,10 @@
         0.025em 0.05em 0 rgba(0,0,255,0.75);
 }
 
-.about {
+.about, .aboutCTF {
     color: white;
     background-color: rgb(20, 23, 28);
-    padding: 15px;
+    padding-left: 15px;
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1.1px;
@@ -116,7 +114,10 @@
     text-align: left;
     border-left: 4px solid rgb(40, 47, 48);
     margin: 20px;
+    width: 40%;
 }
+
+
 
 .date2023, .date2024 {
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -153,10 +154,11 @@
 .table2023 th:last-child, .table2024 th:last-child,
 .table2023 td:last-child, .table2024 td:last-child {
     border-right: none;
+    
     width: 30%;
 }
-
-.table2023 th {
+.table2023 th,
+.table2024 th {
     border-top: none;
     color: rgb(204, 207, 212);
 }

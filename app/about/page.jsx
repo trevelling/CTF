@@ -32,13 +32,26 @@ const AnimatedText = ({ text }) => {
             </div>
             <div className={styles.about}>
                 <p>
-                    hi! i'm tev, a CTF player 🚩 in SG!<br/>
+                    <strong><em style={{ color: "rgb(76, 211, 76)"}}>Introduction!</em></strong><br/>
+                </p>
+                <p>
+                    hi! i'm Tev, a CTF player 🚩 in SG!<br/>
                 </p>
                 <p>
                     This is a blog documenting writeup's and tools of various ctf's I
                     participate in 🙂!<br/>
                     <br/>
                     <strong>*not all CTF's played are documented*</strong>
+                </p>
+            </div>
+            <div className={styles.aboutCTF}>
+                <p>
+                    <strong><em style={{ color: "rgb(76, 211, 76)"}}>What is a CTF?</em></strong><br/>
+                </p>
+                <p>
+                A capture the flag (CTF) contest is a special kind of cybersecurity competition designed
+                to challenge its participants to solve computer security problems and/or capture 
+                and defend computer systems.
                 </p>
             </div>
             <div className={styles.date2023}>
