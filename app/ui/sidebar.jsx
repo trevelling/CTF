@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./sidebar.module.css";
 import { FiHome } from "react-icons/fi";
-import { IoIosArrowBack } from "react-icons/io";
+import { HiBars3 } from "react-icons/hi2";
 import { GoTools } from "react-icons/go";
 import { IoFlagOutline } from "react-icons/io5";
 
@@ -38,7 +38,7 @@ export default function Sidebar() {
     return (
         <div  className={styles.sideBarContainer}>
             <button className={styles.button} onClick={toggleSideBarCollapaseHandler}>
-                <IoIosArrowBack />
+                <HiBars3 />
             </button>
             <aside className={`${styles.sideBar} ${isCollapsedSideBar ? styles.collapsed : ""}`} data-collapsed={isCollapsedSideBar}>
 

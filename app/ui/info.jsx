@@ -8,6 +8,5 @@ export default function Info() {
       &copy; {new Date().getFullYear()} made w 💕 by tev 
       </a>
     </footer>
-  
   );
 }
