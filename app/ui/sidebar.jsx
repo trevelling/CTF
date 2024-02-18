@@ -71,6 +71,16 @@ const sideBarItems = [
     isLink: true,
   },
   {
+    name: "2024",
+    isLink: false,
+    className: "ctf",
+  },
+  {
+    name: "Bits CTF",
+    href: "/bitsCTF",
+    isLink: true,
+  },
+  {
     name: "2023",
     isLink: false,
     className: "ctf",
@@ -81,18 +91,8 @@ const sideBarItems = [
     isLink: true,
   },
   {
-    name: "YBNCTF",
+    name: "YBN CTF",
     href: "/ybnCTF", 
-    isLink: true,
-  },
-  {
-    name: "2024",
-    isLink: false,
-    className: "ctf",
-  },
-  {
-    name: "picoCTF",
-    href: "/picoCTF2024",
     isLink: true,
   },
 ];

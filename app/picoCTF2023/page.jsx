@@ -16,7 +16,7 @@ export default function Tools() {
         <br />
       </div>
       <div className={styles.pico2023}>
-        <p>playing to learn and improve my skills 😃</p>
+        <p>playing to learn and improve my skills 😃!</p>
       </div>
       <table className={styles.pico2023Categories}>
         <thead>
@@ -29,7 +29,7 @@ export default function Tools() {
           <tr>
             <td>
               <a
-                href="/----"
+                href="../picoCTF2023/moneyware"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 money-ware

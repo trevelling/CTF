@@ -19,16 +19,9 @@ export default function Tools() {
           </p>
         </div>
 
-        {/*
         <div className={styles.ybnCertification}>
-            <Image
-            src="/ybnctf.jpg"
-            width={400}
-            height={200}
-            alt="logo"
-            />
+        <Image src="/ybnctf.jpg" width={500} height={350} alt="logo" />
         </div>
-        */}
       </div>
     );
   }

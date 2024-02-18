@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 100px; /* Adjust the padding as needed */
+  padding-top: 100px; 
 }
 
 .pico2023 {
@@ -20,7 +20,7 @@
   text-align: left;
   border-left: 4px solid rgb(40, 47, 48);
   margin: 20px;
-  width: 50%; /* Adjust the width as needed */
+  width: 50%; 
 }
 
 .pico2023Title {
@@ -35,13 +35,13 @@
   opacity: 0.9;
   text-align: left;
   margin: 20px;
-  width: 50%; /* Adjust the width as needed */
+  width: 50%; 
 }
 
 .pico2023Categories {
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
-  width: 50%; /* Adjust the width as needed */
+  width: 50%; 
   margin: 18px;
   color: #ffffff;
   border-spacing: 0;

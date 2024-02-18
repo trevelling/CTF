@@ -23,7 +23,7 @@
   width: 65%;
 }
 
-.forensicsTitle, .cryptographyTitle, .steganographyTitle {
+.forensicsTitle, .cryptographyTitle, .steganographyTitle, .revEngineeringTitle, .webExploitationTitle, .binaryExploitationTitle, .osintTitle {
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;

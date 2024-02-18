@@ -38,10 +38,11 @@
 }
 
 .ybnCertification {
-  margin-top: 20px; /* Adjust as needed */
-  margin-left: auto;
-  margin-right: auto;
-  display: block; /* Ensures the image is displayed as a block element */
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-align: left;
+  margin: 20px;
+  width: 65%;
 }
 
 

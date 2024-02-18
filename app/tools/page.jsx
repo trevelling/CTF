@@ -1,46 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./page.module.css";
-
-const steganography = [
-  { name: "Aperi'Solve [Static analysis]" },
-  { name: "Steg Online [Modify/extract data from images]" },
-  { name: "Steg Solve [View hidden text in images]" },
-  { name: "Steg Hide [Hiding sensitive data]" },
-  { name: "Steganographic Decoder [Encoder/Decoder of files in images]" },
-  { name: "Image Colour Picker" },
-];
-
-const revEngineering = [
-  { name: "Online Decomplier [Decompile Java classes, APKs]" },
-  { name: "MobSF [Decomplie and reverse APK files]" },
-  { name: "JADX [Producing Java source code from Andriod Dex and APK files]" },
-  { name: "Ghidra [Analyzing and decompling binary code]" },
-  { name: "IDA Pro [Disassembler and debugger]" },
-  { name: "Radare2 [CLI]" },
-  { name: "Cutter [GUI for Radare2]" },
-  { name: "OllyDbg [Analyzing and reversing engineered binary code]" },
-  { name: "Binary Ninja [Advanced analysis and debugging]" },
-  { name: "Immunity Debugger" },
-  { name: "x64dbg" },
-  {
-    name: "Jeb Decomplier [Transforms machine code to higher-level programming language]",
-  },
-];
-
-const webExploitation = [
-  { name: "BurpSuite [Scanning, intercepting and exploiting vul]" },
-  { name: "OWASP ZAP [Scanner]" },
-  { name: "SQLMap [Detecting and exploting SQL]" },
-  { name: "Nikto [Checks for common vulnerabilties]" },
-  { name: "Nmap [Network Scanner]" },
-  { name: "XSSer [Detecting and exploting XSS]" },
-  { name: "Subdomain Finder [Find subdomains of URLs including hidden ones]" },
-  { name: "Traversal Archives" },
-  { name: "JSONP Endpoints [Well known endpoints]" },
-  { name: "Web Payloads [Well known Payloads]" },
-];
 
 const binaryExploitation = [{ name: "" }];
 
@@ -231,19 +192,263 @@ export default function Tools() {
 
         <tbody>
           <tr>
-            <td>----</td>
+            <td>Aperi'Solve</td>
             <td>Website</td>
             <td>
               <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Crypto functions
+                Image analyzer
               </strong>
-              ; decryption, ciphertexts, cheating at letter games, solve riddles, treasure hunts, etc.
+              ; online platform which performs layer analysis on image.
             </td>
           </tr>
         </tbody>
 
-  
-  
+        <tbody>
+          <tr>
+            <td>StegOnline</td>
+            <td>Website</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Image analyzer
+              </strong>
+              ; embedding and extracting data through LSB techniques.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>StegHide</td>
+            <td>CLI tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Image and audio analyzer
+              </strong>
+              ; hide and extract data in various kinds of images and audio-files.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div className={styles.revEngineeringTitle}>
+        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Reverse-Engineering</div>
+      </div>
+      <table className={styles.toolstable}>
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Type</th>
+            <th>Use</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Online Decomplier</td>
+            <td>Website</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Decomplier
+              </strong>
+              ; decompile Java classes and APKs etc.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>MobSF</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Decomplier
+              </strong>
+              ; decompile and reverse APK files, IPA, APPX and source codes.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>JADX</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Decomplier
+              </strong>
+              ; decompiler for the Java programming language
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Ghidra</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Decomplier
+              </strong>
+              ; software reverse engineering suite of tools - analyzing and decompling binary code.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>IDA Pro</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Disassembler
+              </strong>
+              ; generates assembly language source code from machine-executable code.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Radare2/Cutter</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Analyzer
+              </strong>
+              ; framework for reverse-engineering and analyzing binaries.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>OllyDbg</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Analyzer
+              </strong>
+              ; debugger that emphasizes binary code analysis,
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Binary Ninja</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Disassembler
+              </strong>
+              ; disassemble a binary and display the disassembly in linear or graph views.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>x64dbg</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Debugger
+              </strong>
+              ; debugger for windows.
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Jeb decomplier</td>
+            <td>Open-source tool</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Disassembler and decompiler
+              </strong>
+              ; for android applications and native machine code. It decompiles Dalvik bytecode to Java source code, and x86, ARM, MIPS, RISC-V machine code to C source code.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div className={styles.webExploitationTitle}>
+        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Web-Exploitation</div>
+      </div>
+      <table className={styles.toolstable}>
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Type</th>
+            <th>Use</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>-----</td>
+            <td>Website</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Decomplier
+              </strong>
+              ; decompile Java classes and APKs etc.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div className={styles.binaryExploitationTitle}>
+        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Binary-Exploitation</div>
+      </div>
+      <table className={styles.toolstable}>
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Type</th>
+            <th>Use</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>-----</td>
+            <td>Website</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Decomplier
+              </strong>
+              ; decompile Java classes and APKs etc.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div className={styles.osintTitle}>
+        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la OSINT</div>
+      </div>
+      <table className={styles.toolstable}>
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Type</th>
+            <th>Use</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>-----</td>
+            <td>Website</td>
+            <td>
+              <strong style={{ color: "rgb(93, 63, 211)" }}>
+                Decomplier
+              </strong>
+              ; decompile Java classes and APKs etc.
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
