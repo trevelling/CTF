@@ -101,6 +101,11 @@ const About = () => {
         </thead>
         <tbody>
           <tr>
+            <td>Bits CTF</td>
+            <td>Jeporady</td>
+            <td>Participation</td>
+          </tr>
+          <tr>
             <td>Braeker CTF</td>
             <td>Jeporady</td>
             <td>-</td>

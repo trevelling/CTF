@@ -36,7 +36,6 @@ export default function Tools() {
             <th>Use</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>Autopsy</td>
@@ -46,9 +45,6 @@ export default function Tools() {
               recovery tool with data carving{" "}
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Binwalk</td>
             <td>Open-source tool</td>
@@ -57,9 +53,6 @@ export default function Tools() {
               analysing binary files for embeded files and executable code
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Foremost</td>
             <td>Open-source tool</td>
@@ -69,9 +62,6 @@ export default function Tools() {
               search for (doc,jpg,pdf,xls) in files
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Wireshark</td>
             <td>Open-source tool</td>
@@ -82,9 +72,6 @@ export default function Tools() {
               ; network protocol analyzer to look at recorded network traffic
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>TcpDump</td>
             <td>CLI tool</td>
@@ -96,9 +83,6 @@ export default function Tools() {
               transmitted over the network
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Volatility</td>
             <td>CLI tool</td>
@@ -124,7 +108,6 @@ export default function Tools() {
             <th>Use</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>dCode</td>
@@ -133,12 +116,10 @@ export default function Tools() {
               <strong style={{ color: "rgb(93, 63, 211)" }}>
                 Crypto functions
               </strong>
-              ; decryption, ciphertexts, cheating at letter games, solve riddles, treasure hunts, etc.
+              ; decryption, ciphertexts, cheating at letter games, solve
+              riddles, treasure hunts, etc.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Hash Cat</td>
             <td>CLI tool</td>
@@ -146,12 +127,10 @@ export default function Tools() {
               <strong style={{ color: "rgb(93, 63, 211)" }}>
                 Password cracking
               </strong>
-              ; powerful password recovery tool that supports various hash types and attack modes.
+              ; powerful password recovery tool that supports various hash types
+              and attack modes.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>John The Ripper</td>
             <td>Open-source tool</td>
@@ -159,25 +138,20 @@ export default function Tools() {
               <strong style={{ color: "rgb(93, 63, 211)" }}>
                 Password cracking
               </strong>
-              ; fast password cracker that can detect weak passwords and perform dictionary attacks
+              ; fast password cracker that can detect weak passwords and perform
+              dictionary attacks
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>GnuPG</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Files 
-              </strong>
-              ; implementation of the OpenPGP encryption standard.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Files</strong>;
+              implementation of the OpenPGP encryption standard.
             </td>
           </tr>
         </tbody>
       </table>
-
       <div className={styles.steganographyTitle}>
         <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Steganography</div>
       </div>
@@ -189,7 +163,6 @@ export default function Tools() {
             <th>Use</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>Aperi'Solve</td>
@@ -201,9 +174,6 @@ export default function Tools() {
               ; online platform which performs layer analysis on image.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>StegOnline</td>
             <td>Website</td>
@@ -214,9 +184,6 @@ export default function Tools() {
               ; embedding and extracting data through LSB techniques.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>StegHide</td>
             <td>CLI tool</td>
@@ -224,14 +191,16 @@ export default function Tools() {
               <strong style={{ color: "rgb(93, 63, 211)" }}>
                 Image and audio analyzer
               </strong>
-              ; hide and extract data in various kinds of images and audio-files.
+              ; hide and extract data in various kinds of images and
+              audio-files.
             </td>
           </tr>
         </tbody>
       </table>
-
       <div className={styles.revEngineeringTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Reverse-Engineering</div>
+        <div style={{ color: "rgb(76, 211, 76)" }}>
+          ~# ls -la Reverse-Engineering
+        </div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -241,60 +210,40 @@ export default function Tools() {
             <th>Use</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>Online Decomplier</td>
             <td>Website</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Decomplier
-              </strong>
-              ; decompile Java classes and APKs etc.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
+              decompile Java classes and APKs etc.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>MobSF</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Decomplier
-              </strong>
-              ; decompile and reverse APK files, IPA, APPX and source codes.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
+              decompile and reverse APK files, IPA, APPX and source codes.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>JADX</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Decomplier
-              </strong>
-              ; decompiler for the Java programming language
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
+              decompiler for the Java programming language
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Ghidra</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Decomplier
-              </strong>
-              ; software reverse engineering suite of tools - analyzing and decompling binary code.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
+              software reverse engineering suite of tools - analyzing and
+              decompling binary code.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>IDA Pro</td>
             <td>Open-source tool</td>
@@ -302,38 +251,26 @@ export default function Tools() {
               <strong style={{ color: "rgb(93, 63, 211)" }}>
                 Disassembler
               </strong>
-              ; generates assembly language source code from machine-executable code.
+              ; generates assembly language source code from machine-executable
+              code.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Radare2/Cutter</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Analyzer
-              </strong>
-              ; framework for reverse-engineering and analyzing binaries.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Analyzer</strong>;
+              framework for reverse-engineering and analyzing binaries.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>OllyDbg</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Analyzer
-              </strong>
-              ; debugger that emphasizes binary code analysis,
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Analyzer</strong>;
+              debugger that emphasizes binary code analysis,
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Binary Ninja</td>
             <td>Open-source tool</td>
@@ -341,25 +278,18 @@ export default function Tools() {
               <strong style={{ color: "rgb(93, 63, 211)" }}>
                 Disassembler
               </strong>
-              ; disassemble a binary and display the disassembly in linear or graph views.
+              ; disassemble a binary and display the disassembly in linear or
+              graph views.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>x64dbg</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Debugger
-              </strong>
-              ; debugger for windows.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Debugger</strong>;
+              debugger for windows.
             </td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
             <td>Jeb decomplier</td>
             <td>Open-source tool</td>
@@ -367,14 +297,17 @@ export default function Tools() {
               <strong style={{ color: "rgb(93, 63, 211)" }}>
                 Disassembler and decompiler
               </strong>
-              ; for android applications and native machine code. It decompiles Dalvik bytecode to Java source code, and x86, ARM, MIPS, RISC-V machine code to C source code.
+              ; for android applications and native machine code. It decompiles
+              Dalvik bytecode to Java source code, and x86, ARM, MIPS, RISC-V
+              machine code to C source code.
             </td>
           </tr>
         </tbody>
       </table>
-      
       <div className={styles.webExploitationTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Web-Exploitation</div>
+        <div style={{ color: "rgb(76, 211, 76)" }}>
+          ~# ls -la Web-Exploitation
+        </div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -384,23 +317,21 @@ export default function Tools() {
             <th>Use</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>-----</td>
             <td>Website</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Decomplier
-              </strong>
-              ; decompile Java classes and APKs etc.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
+              decompile Java classes and APKs etc.
             </td>
           </tr>
         </tbody>
       </table>
-
       <div className={styles.binaryExploitationTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Binary-Exploitation</div>
+        <div style={{ color: "rgb(76, 211, 76)" }}>
+          ~# ls -la Binary-Exploitation
+        </div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -410,21 +341,17 @@ export default function Tools() {
             <th>Use</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>-----</td>
             <td>Website</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Decomplier
-              </strong>
-              ; decompile Java classes and APKs etc.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
+              decompile Java classes and APKs etc.
             </td>
           </tr>
         </tbody>
       </table>
-
       <div className={styles.osintTitle}>
         <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la OSINT</div>
       </div>
@@ -436,16 +363,13 @@ export default function Tools() {
             <th>Use</th>
           </tr>
         </thead>
-
         <tbody>
           <tr>
             <td>-----</td>
             <td>Website</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Decomplier
-              </strong>
-              ; decompile Java classes and APKs etc.
+              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
+              decompile Java classes and APKs etc.
             </td>
           </tr>
         </tbody>
