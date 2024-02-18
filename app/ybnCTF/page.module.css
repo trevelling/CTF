@@ -1,4 +1,4 @@
-.toolsContainer {
+.ybnContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
-.tools {
+.ybn {
   color: white;
   background-color: rgb(20, 23, 28);
   padding-left: 15px;
@@ -23,41 +23,29 @@
   width: 65%;
 }
 
-.forensicsTitle, .cryptographyTitle, .steganographyTitle {
+.ybnTitle{
+  color: rgb(175, 12, 12);
+  background-color: rgb(20, 23, 28);
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+  letter-spacing: 1.1px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+  opacity: 0.9;
   text-align: left;
   margin: 20px;
-}
-
-.toolstable {
   width: 65%;
-  margin: 20px;
-  border-collapse: collapse;
 }
 
-.toolstable th,
-.toolstable td {
-  border: 0.5px solid rgb(40, 47, 48);
-  padding: 8px;
-  text-align: left;
+.ybnCertification {
+  margin-top: 20px; /* Adjust as needed */
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* Ensures the image is displayed as a block element */
 }
 
-.toolstable th:first-child,
-.toolstable td:first-child {
-  border-left: none;
-  width: 20%;
-}
 
-.toolstable th:last-child,
-.toolstable td:last-child {
-  border-right: none;
-  width: 60%;
-}
+  
 
-.toolstable th {
-  border-top: none;
-  color: rgb(204, 207, 212);
-}
-
+  
+  

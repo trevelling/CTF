@@ -114,7 +114,7 @@
     text-align: left;
     border-left: 4px solid rgb(40, 47, 48);
     margin: 20px;
-    width: 40%;
+    width: 50%;
 }
 
 .license{
@@ -127,14 +127,13 @@
     opacity: 0.9;
     text-align: left;
     margin: 20px;
-    width: 40%;
+    width: 50%;
 }
 
 
 
 .date2023, .date2024 {
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: #ffffff;
     font-size: 1.2rem;
     font-weight: 700;
     text-align: left;
@@ -143,7 +142,7 @@
 
 .table2023, .table2024 {
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    width: 40%;
+    width: 50%;
     margin: 18px;
     color: #ffffff;
     border-spacing: 0;
@@ -166,9 +165,8 @@
 
 .table2023 th:last-child, .table2024 th:last-child,
 .table2023 td:last-child, .table2024 td:last-child {
-    border-right: none;
-    
-    width: 30%;
+    border-right: none; 
+    width: 40%;
 }
 .table2023 th,
 .table2024 th {
