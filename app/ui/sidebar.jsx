@@ -5,39 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./sidebar.module.css";
 
-const sideBarItems = [
-  {
-    name: "Home",
-    href: "/",
-    isLink: true,
-  },
-  {
-    name: "Helpful tools",
-    href: "/tools",
-    isLink: true,
-  },
-  {
-    name: "2023",
-    isLink: false,
-    className: "ctf",
-  },
-  {
-    name: "YBNCTF",
-    href: "/ybnCTF",
-    isLink: true,
-  },
-  {
-    name: "2024",
-    isLink: false,
-    className: "ctf",
-  },
-  {
-    name: "picoCTF",
-    href: "/picoCTF",
-    isLink: true,
-  },
-];
-
 export default function Sidebar() {
   const [activeLink, setActiveLink] = useState("/");
 
@@ -91,3 +58,41 @@ export default function Sidebar() {
     </div>
   );
 }
+
+const sideBarItems = [
+  {
+    name: "Home",
+    href: "/",
+    isLink: true,
+  },
+  {
+    name: "Helpful tools",
+    href: "/tools",
+    isLink: true,
+  },
+  {
+    name: "2023",
+    isLink: false,
+    className: "ctf",
+  },
+  {
+    name: "picoCTF",
+    href: "/picoCTF2023", 
+    isLink: true,
+  },
+  {
+    name: "YBNCTF",
+    href: "/ybnCTF", 
+    isLink: true,
+  },
+  {
+    name: "2024",
+    isLink: false,
+    className: "ctf",
+  },
+  {
+    name: "picoCTF",
+    href: "/picoCTF2024",
+    isLink: true,
+  },
+];

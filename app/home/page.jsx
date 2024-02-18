@@ -61,25 +61,15 @@ const About = () => {
         </thead>
         <tbody>
           <tr>
-            <td>
-              <a
-                href="https://www.dsta.gov.sg/brainhack"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
+            <td>       
                 BrainHack
-              </a>
             </td>
             <td>Jeporady</td>
             <td>Top 20 (Poly-Category)</td>
           </tr>
           <tr>
-            <td>
-              <a
-                href="https://www.csit.gov.sg/events/tisc/tisc-2023"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                TISC
-              </a>
+            <td>  
+                TISC             
             </td>
             <td>Jeporady</td>
             <td>Level 2</td>
@@ -87,7 +77,7 @@ const About = () => {
           <tr>
             <td>
               <a
-                href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
+                href="/ybnCTF"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 YBN
@@ -117,36 +107,21 @@ const About = () => {
           </tr>
           <tr>
             <td>
-              <a
-                href="https://8059blank.github.io/hackac/HACK@AC-Information/"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
                 ACS(I) Hacks
-              </a>
             </td>
             <td>Jeporady</td>
             <td>-</td>
           </tr>
           <tr>
             <td>
-              <a
-                href="https://ctf.nusgreyhats.org/"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
                 NUS Grey Hats
-              </a>
             </td>
             <td>Jeporady</td>
             <td>-</td>
           </tr>
           <tr>
             <td>
-              <a
-                href="https://www.dsta.gov.sg/brainhack"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
                 BrainHack
-              </a>
             </td>
             <td>Jeporady</td>
             <td>-</td>
