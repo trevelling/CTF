@@ -39,7 +39,7 @@ const AnimatedText = ({ text }) => {
             </div>
             <div className={styles.about}>
                 <p>
-                    <strong><em style={{ color: "rgb(76, 211, 76)"}}>Introduction!</em></strong><br/>
+                    <strong style={{ color: "rgb(76, 211, 76)"}}> ~# cat Introduction</strong><br/>
                 </p>
                 <p>
                     hi! i'm Tev, a CTF player 🚩 in SG!<br/>
@@ -53,7 +53,7 @@ const AnimatedText = ({ text }) => {
             </div>
             <div className={styles.aboutCTF}>
                 <p>
-                    <strong><em style={{ color: "rgb(76, 211, 76)"}}>What is a CTF?</em></strong><br/>
+                    <strong style={{ color: "rgb(76, 211, 76)"}}>~# man CTFs</strong><br/>
                 </p>
                 <p>
                 A capture the flag (CTF) contest is a special kind of cybersecurity competition designed
@@ -124,6 +124,14 @@ const AnimatedText = ({ text }) => {
                     </tr>
                 </tbody>
             </table>
+            <div className={styles.license}>
+                <p>
+                    <strong style={{ color: "rgb(76, 211, 76)"}}>~# cat LICENSE</strong><br/>
+                </p>
+                <p>
+                All original code is licensed under the MIT license.
+                </p>
+            </div>
             <footer className={styles.footer}>
                 <a
                     className={styles.info}
