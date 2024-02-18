@@ -1,6 +1,7 @@
+// RootLayout.jsx
+import React from 'react';
 import Head from "next/head";
 import Sidebar from "@/app/ui/sidebar";
-
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -12,8 +13,12 @@ export default function RootLayout({ children }) {
         <title>CTF blog</title>
       </Head>
       <body>
-        <Sidebar />
-        {children}
+        <div style={{ display: 'flex', height: '100vh' }}>
+          <Sidebar />
+          <main style={{ flex: 1, overflowY: 'auto', padding: '20px' }}>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

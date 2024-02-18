@@ -27,7 +27,7 @@ const AnimatedText = ({ text }) => {
     const [lastUpdated, setLastUpdated] = useState('');
 
     useEffect(() => {
-        setLastUpdated(document.lastModified);
+        setLastUpdated(new Date(document.lastModified).toLocaleDateString());
     }, []);
 
     return (

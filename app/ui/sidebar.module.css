@@ -1,6 +1,4 @@
-.sideBarContainer{
-    position: fixed;
-}
+
 
 .sideBar{
     width: 11rem;
@@ -34,19 +32,17 @@
 }
 
 .sideBarItem {
-    margin-bottom: 1rem;
-    padding-left: 15px;
+    margin-bottom: 0.8rem;
+
 }
 
 .sideBarLink{
-    border-top-color: rgb(43, 46, 57);
-    border-top-width: 1px;
-    display: flex;
+    display: block;
     align-items: center;
     font-size: 1.5rem;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    border-radius: 0.8rem;
+
 }
 
 .sideBarIcon{
@@ -55,16 +51,28 @@
 
 .sideBarName{
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: rgb(204, 207, 212);
     text-decoration: none;
-    margin-left: 47px;
+    margin-left: 15px;
 }
 
 .sideBarLogoName {
-    font-size: 14px;
+    font-size: 12px;
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     opacity: 0.8;
     border-radius: 0.2rem; 
     color: rgb(204, 207, 212);
+    font-weight: 400;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.ctf {
+    font-weight: 750;
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
