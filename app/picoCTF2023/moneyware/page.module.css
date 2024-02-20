@@ -70,3 +70,9 @@
     margin: 20px;
     width: 65%;
   }
+
+  .moneywareEvidence {
+    margin: 20px;
+    width: 65%;
+    margin-left: -1px;
+  }

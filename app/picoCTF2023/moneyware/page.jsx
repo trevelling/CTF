@@ -45,11 +45,11 @@ export default function Tools() {
             this website
           </a>
           .<br />
-          <br /> Looking for a malware-type, we can see that it is 'petya'
+          <br /> Looking for a malware-type, we can see that it is '<strong style={{ color: "rgb(93, 63, 211)" }}>petya</strong>'
         </p>
       </div>
-      <div className={styles.ybnCertification}>
-        <Image src="/ybnctf.jpg" width={400} height={200} alt="logo" />
+      <div className={styles.moneywareEvidence}>
+        <Image src="/moneyware.png" width={500} height={80} alt="logo" />
       </div>
       <div className={styles.moneywareFlag}>
         <p>picoCTF{"{Petya}"}</p>

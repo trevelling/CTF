@@ -3,15 +3,6 @@
 import React from "react";
 import styles from "./page.module.css";
 
-const binaryExploitation = [{ name: "" }];
-
-const OSINT = [
-  { name: "Wayback Machine [Webpage archive at a certain time]" },
-  { name: "Sherlock [Search social media accounts by name]" },
-  { name: "Email lookup [Retrieve information linked to an email]" },
-  { name: "Google image reverse search" },
-];
-
 export default function Tools() {
   return (
     <div className={styles.toolsContainer}>
@@ -37,60 +28,55 @@ export default function Tools() {
           </tr>
         </thead>
         <tbody>
+        <tr>
+            <td>Nmap</td>
+            <td>Open-source tool</td>
+            <td>
+              Network exploration, host discovery, and security auditing
+            </td>
+          </tr>
           <tr>
             <td>Autopsy</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Disk</strong>;
-              recovery tool with data carving{" "}
+            <td>    
+             Recovery tool with data carving
             </td>
           </tr>
           <tr>
             <td>Binwalk</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Files</strong>;
-              analysing binary files for embeded files and executable code
+            <td>            
+              Analysing binary files for embeded files and executable code
             </td>
           </tr>
           <tr>
             <td>Foremost</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Files</strong>;
-              forensic program to recover lost files based on their headers,
+            <td>           
+              Forensic program to recover lost files based on their headers,
               search for (doc,jpg,pdf,xls) in files
             </td>
           </tr>
           <tr>
             <td>Wireshark</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Network packet analyzer
-              </strong>
-              ; network protocol analyzer to look at recorded network traffic
+            <td>          
+              Network protocol analyzer to look at recorded network traffic
             </td>
           </tr>
           <tr>
             <td>TcpDump</td>
             <td>CLI tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Network packet analyzer
-              </strong>
-              ; displays the TCP/IP and other packets being received and
+            <td>          
+              Displays the TCP/IP and other packets being received and
               transmitted over the network
             </td>
           </tr>
           <tr>
             <td>Volatility</td>
             <td>CLI tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Memory analyzer
-              </strong>
-              ; analyses volatile data in memory dump - includes the browsing
+            <td>           
+              Analyses volatile data in memory dump - includes the browsing
               history, clipboard contents, and chat messages presented in the
               short-term memory storage.
             </td>
@@ -113,10 +99,7 @@ export default function Tools() {
             <td>dCode</td>
             <td>Website</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Crypto functions
-              </strong>
-              ; decryption, ciphertexts, cheating at letter games, solve
+              Decryption, ciphertexts, cheating at letter games, solve
               riddles, treasure hunts, etc.
             </td>
           </tr>
@@ -124,10 +107,7 @@ export default function Tools() {
             <td>Hash Cat</td>
             <td>CLI tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Password cracking
-              </strong>
-              ; powerful password recovery tool that supports various hash types
+              Powerful password recovery tool that supports various hash types
               and attack modes.
             </td>
           </tr>
@@ -135,10 +115,7 @@ export default function Tools() {
             <td>John The Ripper</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Password cracking
-              </strong>
-              ; fast password cracker that can detect weak passwords and perform
+              Fast password cracker that can detect weak passwords and perform
               dictionary attacks
             </td>
           </tr>
@@ -146,7 +123,6 @@ export default function Tools() {
             <td>GnuPG</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Files</strong>;
               implementation of the OpenPGP encryption standard.
             </td>
           </tr>
@@ -168,30 +144,21 @@ export default function Tools() {
             <td>Aperi'Solve</td>
             <td>Website</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Image analyzer
-              </strong>
-              ; online platform which performs layer analysis on image.
+              Online platform which performs layer analysis on image.
             </td>
           </tr>
           <tr>
             <td>StegOnline</td>
             <td>Website</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Image analyzer
-              </strong>
-              ; embedding and extracting data through LSB techniques.
+              Embedding and extracting data through LSB techniques.
             </td>
           </tr>
           <tr>
             <td>StegHide</td>
             <td>CLI tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Image and audio analyzer
-              </strong>
-              ; hide and extract data in various kinds of images and
+              Hide and extract data in various kinds of images and
               audio-files.
             </td>
           </tr>
@@ -214,33 +181,29 @@ export default function Tools() {
           <tr>
             <td>Online Decomplier</td>
             <td>Website</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
-              decompile Java classes and APKs etc.
+            <td>          
+              Decompile Java classes and APKs etc.
             </td>
           </tr>
           <tr>
             <td>MobSF</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
-              decompile and reverse APK files, IPA, APPX and source codes.
+            <td>           
+              Decompile and reverse APK files, IPA, APPX and source codes.
             </td>
           </tr>
           <tr>
             <td>JADX</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
-              decompiler for the Java programming language
+            <td>              
+              Decompiler for the Java programming language
             </td>
           </tr>
           <tr>
             <td>Ghidra</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
-              software reverse engineering suite of tools - analyzing and
+            <td>          
+              Software reverse engineering suite of tools - analyzing and
               decompling binary code.
             </td>
           </tr>
@@ -248,56 +211,44 @@ export default function Tools() {
             <td>IDA Pro</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Disassembler
-              </strong>
-              ; generates assembly language source code from machine-executable
+              Generates assembly language source code from machine-executable
               code.
             </td>
           </tr>
           <tr>
             <td>Radare2/Cutter</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Analyzer</strong>;
-              framework for reverse-engineering and analyzing binaries.
+            <td>     
+              Framework for reverse-engineering and analyzing binaries.
             </td>
           </tr>
           <tr>
             <td>OllyDbg</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Analyzer</strong>;
-              debugger that emphasizes binary code analysis,
+            <td>         
+              Debugger that emphasizes binary code analysis,
             </td>
           </tr>
           <tr>
             <td>Binary Ninja</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Disassembler
-              </strong>
-              ; disassemble a binary and display the disassembly in linear or
+              Disassemble a binary and display the disassembly in linear or
               graph views.
             </td>
           </tr>
           <tr>
             <td>x64dbg</td>
             <td>Open-source tool</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Debugger</strong>;
-              debugger for windows.
+            <td>          
+              Debugger for windows.
             </td>
           </tr>
           <tr>
             <td>Jeb decomplier</td>
             <td>Open-source tool</td>
             <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>
-                Disassembler and decompiler
-              </strong>
-              ; for android applications and native machine code. It decompiles
+              For android applications and native machine code. It decompiles
               Dalvik bytecode to Java source code, and x86, ARM, MIPS, RISC-V
               machine code to C source code.
             </td>
@@ -318,12 +269,53 @@ export default function Tools() {
           </tr>
         </thead>
         <tbody>
+        <tr>
+            <td>Burpsuite</td>
+            <td>Open-source tool</td>
+            <td>     
+              Web crawling, web application testing, analysis, vulnerability detection, intercept HTTP messages, launch an attack.
+            </td>
+          </tr>
           <tr>
-            <td>-----</td>
-            <td>Website</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
-              decompile Java classes and APKs etc.
+            <td>OWASP ZAP</td>
+            <td>Open-source tool</td>
+            <td>      
+              Active and passive scan, websocket testing, jax spidering etc.
+            </td>
+          </tr>
+          <tr>
+            <td>SQLMap</td>
+            <td>Open-source tool</td>
+            <td>          
+              Detecting and exploiting SQL.
+            </td>
+          </tr>
+          <tr>
+            <td>Nikto</td>
+            <td>Open-source tool</td>
+            <td>            
+              Performs vulnerability scanning against web servers for multiple items, including dangerous files and programs.
+            </td>
+          </tr>
+          <tr>
+            <td>XSSer</td>
+            <td>Open-source tool</td>
+            <td>            
+              Detect, exploit, and report XSS vulnerabilities in web-based applications.
+            </td>
+          </tr>
+          <tr>
+            <td>Subdomain Finder</td>
+            <td>Open-source tool</td>
+            <td>             
+              Scanner that scans an entire domain to find as many subdomains as possible.
+            </td>
+          </tr>
+          <tr>
+            <td>Traversal Archive</td>
+            <td>Open-source tool</td>
+            <td>              
+              To access files and directories that are stored outside the web root folder.
             </td>
           </tr>
         </tbody>
@@ -342,14 +334,9 @@ export default function Tools() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>-----</td>
-            <td>Website</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
-              decompile Java classes and APKs etc.
-            </td>
-          </tr>
+          
+
+
         </tbody>
       </table>
       <div className={styles.osintTitle}>
@@ -365,11 +352,31 @@ export default function Tools() {
         </thead>
         <tbody>
           <tr>
-            <td>-----</td>
+            <td>Wayback Machine</td>
             <td>Website</td>
-            <td>
-              <strong style={{ color: "rgb(93, 63, 211)" }}>Decomplier</strong>;
-              decompile Java classes and APKs etc.
+            <td>          
+              Digital archive of the webpage at a certain time.
+            </td>
+          </tr>
+          <tr>
+            <td>Sherlock</td>
+            <td>Open-source tool</td>
+            <td>            
+              Gather information about a specific username or online identity -search for a specific username across multiple social media platforms and websites.
+            </td>
+          </tr>
+          <tr>
+            <td>Email Lookup</td>
+            <td>Open-source tool</td>
+            <td>              
+              Find verified email addresses of professionals by their name.
+            </td>
+          </tr>
+          <tr>
+            <td>Google Image Reverse Search</td>
+            <td>Website</td>
+            <td>  
+              Reverse image search an image or file of its originality.
             </td>
           </tr>
         </tbody>

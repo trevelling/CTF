@@ -101,7 +101,14 @@ const About = () => {
         </thead>
         <tbody>
           <tr>
-            <td>Bits CTF</td>
+            <td>
+              <a
+                href="/bitsCTF"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Bits CTF
+              </a>
+            </td>
             <td>Jeporady</td>
             <td>Participation</td>
           </tr>

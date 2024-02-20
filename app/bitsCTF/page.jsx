@@ -16,7 +16,7 @@ export default function Tools() {
         <br />
       </div>
       <div className={styles.pico2023}>
-        <p>hosted by bitsskrieg 👾!</p>
+        <p>hosted by bitskrieg, a cybersecurity club of BITS Pilani Goa Campus 👾!</p>
       </div>
       <table className={styles.pico2023Categories}>
         <thead>
