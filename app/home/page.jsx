@@ -61,11 +61,23 @@ const About = () => {
         </thead>
         <tbody>
           <tr>
+            <td>
+              <a
+                href="/picoCTF2023"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                picoCTF 
+              </a>
+            </td>
+            <td>Jeporady</td>
+            <td>🏆 NIL points</td>
+          </tr>
+          <tr>
             <td>       
                 BrainHack
             </td>
             <td>Jeporady</td>
-            <td>Top 20 (Poly-Category)</td>
+            <td>19th (poly-category)</td>
           </tr>
           <tr>
             <td>  
