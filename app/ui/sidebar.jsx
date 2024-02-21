@@ -17,16 +17,6 @@ export default function Sidebar() {
   return (
     <div className={styles.sideBarContainer}>
       <aside className={styles.sideBar}>
-        <div className={styles.sideBarTop}>
-          <Image
-            src="/guy.png"
-            width={50}
-            height={50}
-            className={styles.sideBarLogo}
-            alt="logo"
-          />
-          <p className={styles.sideBarLogoName}>CTFs 🚩</p>
-        </div>
         <div className={styles.sideBarList}>
           {sideBarItems.map(({ name, href, isLink, className }) => (
             <li
@@ -55,6 +45,7 @@ export default function Sidebar() {
           ))}
         </div>
       </aside>
+
     </div>
   );
 }

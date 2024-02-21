@@ -159,7 +159,16 @@ const About = () => {
         </p>
         <p>All original code is licensed under the MIT license.</p>
       </div>
-      <footer className={styles.footer}>
+      
+    </div>
+  );
+};
+
+export default About;
+
+/* 
+
+<footer className={styles.footer}>
         <a
           className={styles.info}
           href="https://github.com/trevelling"
@@ -170,8 +179,6 @@ const About = () => {
           {new Date(document.lastModified).toLocaleDateString()}
         </a>
       </footer>
-    </div>
-  );
-};
 
-export default About;
+
+*/
