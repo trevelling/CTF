@@ -38,11 +38,19 @@ export default function DFIR2() {
 
       <div className={styles.dfirSolved}>
         <p>
-        Taking a look at <strong>MogamBro</strong>. We can put the hash inside a password hash cracker.
-        </p>
+        Taking a look at <strong>MogamBro</strong>. 
+        We can put the hash inside a{" "}
+        <a
+            href="https://crackstation.net/"
+            target="blank"
+            style={{ color: "rgb(76, 211, 76)" }}
+          >
+            password hash cracker
+          </a>
+        .</p>
       </div>
       <div className={styles.dfirEvidence}>
-        <Image src="/DFIR3.png" width={750} height={250} alt="picture" />
+        <Image src="/DFIR3.png" width={750} height={320} alt="picture" />
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>

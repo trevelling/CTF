@@ -122,7 +122,7 @@ const About = () => {
               </a>
             </td>
             <td>Jeporady</td>
-            <td>Participation</td>
+            <td>Participant</td>
           </tr>
           <tr>
             <td>Braeker CTF</td>
