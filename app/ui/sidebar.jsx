@@ -34,30 +34,29 @@ export default function Sidebar() {
                       }`}
                       onClick={() => handleLinkClick(href, isLink)}
                     >
-                      <span className={styles.sideBarName}>{name}</span>
+                      <span className={styles.sideBarName} style={{ textDecoration: "none" }}>{name}</span>
                     </span>
                   </Link>
                 </span>
               ) : (
-                <span className={styles.sideBarName}>{name}</span>
+                <span className={styles.sideBarName} style={{ textDecoration: "none" }}>{name}</span>
               )}
             </li>
           ))}
         </div>
       </aside>
-
     </div>
   );
 }
 
 const sideBarItems = [
   {
-    name: "Home",
+    name: "Home 🚩",
     href: "/",
     isLink: true,
   },
   {
-    name: "Helpful tools",
+    name: "Helpful tools 🛠️",
     href: "/tools",
     isLink: true,
   },

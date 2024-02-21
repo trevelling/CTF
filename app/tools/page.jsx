@@ -13,7 +13,7 @@ export default function Tools() {
         </p>
         <p>
           Different open-source tools recommended and used during CTFs are
-          documented here 🔨.
+          documented here 🛠️.
         </p>
       </div>
       <div className={styles.forensicsTitle}>

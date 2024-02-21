@@ -8,8 +8,8 @@ export default function Navbar() {
       <div className={styles.sideBarTop}>
         <p className={styles.sideBarLogoName}>👨‍💻 CTFs</p>
       </div>
-      <a className={styles.navitem} href="https://trevelling.github.io/tev/">
-        Portfolio Website
+      <a className={styles.navitem} href="https://trevelling.github.io/tev/" target="blank" >
+        Personal Website 🏠
       </a>
     </nav>
   );
