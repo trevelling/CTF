@@ -11,7 +11,7 @@ export default function DFIR2() {
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          Intro to DFIR
+          Access Granted!
         </a>
         <br />
       </div>
@@ -40,8 +40,8 @@ export default function DFIR2() {
 
       <div className={styles.dfirSolved}>
         <p>
-        Taking a look at <strong>MogamBro</strong>. 
-        We can put the hash inside a{" "}
+        Taking a look at <strong>MogamBro</strong>, 
+        we can put the hash inside a{" "}
         <a
             href="https://crackstation.net/"
             target="blank"

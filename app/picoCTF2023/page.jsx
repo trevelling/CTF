@@ -11,7 +11,7 @@ export default function PicoCTF() {
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          PICO CTF 2023
+          PICO CTF 🚩
         </a>
         <br />
       </div>

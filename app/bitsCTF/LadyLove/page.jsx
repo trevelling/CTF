@@ -55,7 +55,7 @@ export default function LadyLove() {
 
       <div className={styles.ladyLoveSolved}>
         <p>
-          Reading his history{" "}
+          Reading his history on{" "}
           <a
             href="https://en.wikipedia.org/wiki/Peter_Adolf_Hall"
             target="blank"

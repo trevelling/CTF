@@ -7,7 +7,7 @@ export default function YBNCTF() {
       <div className={styles.ybnContainer}>
         <div className={styles.ybnTitle}>
             <a href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf" target="blank" style={{ color: "white", textDecoration: "none"}}>
-                YBNCTF 2023
+                YBNCTF ❌
             </a>
             <br />
         </div>

@@ -10,12 +10,12 @@ export default function HACKAC() {
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          HACK@AC
+          HACK@AC 🦅
         </a>
         <br />
       </div>
       <div className={styles.acs}>
-        <p>Hosted by ACS(I), a 12 hour cybersecurity competition designed for beginners to enter the realm of cybersecurity 🦅.</p>
+        <p>Hosted by ACS(I), it is a 12 hour cybersecurity competition designed for beginners to enter the realm of cybersecurity.</p>
       </div>
       <table className={styles.acsCategories}>
         <thead>

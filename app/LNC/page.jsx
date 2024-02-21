@@ -10,14 +10,14 @@ export default function LNC() {
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          Lag and Crash
+          Lag and Crash 🕸️
         </a>
         <br />
       </div>
       <div className={styles.lnc}>
         <p>
             Lag and Crash is an inter-polytechnic 2 day CTF targeted at Polytechnic, Institute of Technical Education and Junior College students. 
-            The event is organised between the Polytechnic Cybersecurity Interest Groups 🦠.
+            The event is organised between the Polytechnic Cybersecurity Interest Groups.
         </p>
       </div>
       <table className={styles.lncCategories}>

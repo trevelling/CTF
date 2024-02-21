@@ -10,12 +10,12 @@ export default function HACKAC() {
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          BrainHack CDDC
+          BrainHack CDDC 🛡️
         </a>
         <br />
       </div>
       <div className={styles.brainHack}>
-        <p>Hosted by DSTA, it is a 30 hour qualifier with a 2 day final cybersecurity competition 🛡️.</p>
+        <p>Hosted by DSTA, it is a 30 hour qualifier with a 2 day final cybersecurity competition.</p>
       </div>
       <table className={styles.brainHackCategories}>
         <thead>
