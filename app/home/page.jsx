@@ -74,7 +74,7 @@ const About = () => {
           </tr>
           <tr>
             <td>       
-                BrainHack
+                BrainHack CDDC
             </td>
             <td>Jeporady</td>
             <td>19th (poly-category)</td>

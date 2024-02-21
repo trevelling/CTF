@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 
-export default function Tools() {
+export default function BitsCTF() {
   return (
     <div className={styles.bitsContainer}>
       <div className={styles.bitsTitle}>
@@ -16,7 +15,7 @@ export default function Tools() {
         <br />
       </div>
       <div className={styles.bits}>
-        <p>hosted by bitskrieg, a cybersecurity club of BITS Pilani Goa Campus 👾!</p>
+        <p>A 2 day CTF hosted by bitskrieg, a cybersecurity club of BITS Pilani Goa Campus 👾!</p>
       </div>
       <table className={styles.bitsCategories}>
         <thead>
@@ -73,7 +72,7 @@ export default function Tools() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/baby-rev"
+                href="../bitsCTF/BabyRSA"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 Baby RSA

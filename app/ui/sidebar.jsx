@@ -66,6 +66,21 @@ const sideBarItems = [
     className: "ctf",
   },
   {
+    name: "📁 BrainHack CDDC",
+    href: "/BrainHack2024",
+    isLink: true,
+  },
+  {
+    name: "📁 Lag and Crash",
+    href: "/LNC",
+    isLink: true,
+  },
+  {
+    name: "📁 ACS(I) Hack",
+    href: "/HACK@AC",
+    isLink: true,
+  },
+  {
     name: "📁 Bits CTF",
     href: "/bitsCTF",
     isLink: true,

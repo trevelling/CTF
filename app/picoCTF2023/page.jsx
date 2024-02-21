@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
-export default function Tools() {
+export default function PicoCTF() {
   return (
     <div className={styles.pico2023Container}>
       <div className={styles.pico2023Title}>
