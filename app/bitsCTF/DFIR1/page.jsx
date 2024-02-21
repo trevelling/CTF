@@ -24,6 +24,8 @@ export default function DFIR1() {
             DFIR or Digital Forensics and Incident Response is a field within cybersecurity 
             that focuses on the identification, investigation, and remediation of cyberattacks. 
             Here are the types of analysis you can expect throughout these sequence of challenges!
+            <br /><br />
+            <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>artifacts.ad1, memdump.mem, trace.pcap
         </p>
       </div>
       <div className={styles.dfirSolved}>

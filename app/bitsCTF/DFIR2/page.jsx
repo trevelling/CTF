@@ -25,6 +25,8 @@ export default function DFIR2() {
         MogamBro is so dumb that he might be using the 
         same set of passwords everywhere, 
         so lets try cracking his PC's password for some luck.
+        <br /><br />
+        <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>artifacts.ad1, memdump.mem, trace.pcap
         </p>
       </div>
       <div className={styles.dfirSolved}>

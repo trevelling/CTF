@@ -27,9 +27,11 @@ export default function LadyLove() {
           love. They fell in love in her hometown but her grandfather wouldn't
           let her marry a thief like him.! Answer is the meaning of his
           LadyLove's last name. Wrap the answer in the flag.
+          <br /><br />
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>stolenpainting.jpeg
           <br />
           <br />
-          Given hint: <strong>16th February 2024</strong> is his LadyLove's 111th birthday.
+          <strong style={{ color: "rgb(255, 106, 61)" }}>GIVEN HINT: </strong>16th February 2024 is his LadyLove's 111th birthday.
         </p>
       </div>
       <div className={styles.ladyLoveSolved}>

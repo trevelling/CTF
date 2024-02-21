@@ -37,7 +37,6 @@ export default function Tools() {
             </td>
             <td>Digital Forensics</td>
           </tr>
-
           <tr>
             <td>
               <a
@@ -49,7 +48,6 @@ export default function Tools() {
             </td>
             <td>Digital Forensics</td>
           </tr>
-
           <tr>
             <td>
               <a
@@ -60,6 +58,28 @@ export default function Tools() {
               </a>
             </td>
             <td>OSINT</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/baby-rev"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                baby-rev
+              </a>
+            </td>
+            <td>Reverse Engineering</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/baby-rev"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Baby RSA
+              </a>
+            </td>
+            <td>Cryptography</td>
           </tr>
         </tbody>
       </table>
