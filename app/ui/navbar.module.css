@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
-    justify-content: space-between; /* Distribute items along the main axis */
+    align-items: center; 
+    justify-content: space-between; 
     border-bottom: 1px solid rgb(40, 47, 48);
   }
   

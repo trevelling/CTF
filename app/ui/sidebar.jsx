@@ -51,12 +51,12 @@ export default function Sidebar() {
 
 const sideBarItems = [
   {
-    name: "Home 🚩",
+    name: "🚩 Home ",
     href: "/",
     isLink: true,
   },
   {
-    name: "Helpful tools 🛠️",
+    name: "🛠️ Helpful tools",
     href: "/tools",
     isLink: true,
   },
@@ -66,7 +66,7 @@ const sideBarItems = [
     className: "ctf",
   },
   {
-    name: "Bits CTF",
+    name: "📁 Bits CTF",
     href: "/bitsCTF",
     isLink: true,
   },
@@ -76,12 +76,12 @@ const sideBarItems = [
     className: "ctf",
   },
   {
-    name: "picoCTF",
+    name: "📁 picoCTF",
     href: "/picoCTF2023", 
     isLink: true,
   },
   {
-    name: "YBN CTF",
+    name: "📁 YBN CTF",
     href: "/ybnCTF", 
     isLink: true,
   },

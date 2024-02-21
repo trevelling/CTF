@@ -1,13 +1,16 @@
-.bitsContainer {
+.ladyLoveContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 100px; 
+    padding-top: 60px;
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Helvetica, Arial, sans-serif;
+      
   }
   
-  .bits {
+  .ladyLoveQuestion {
     color: white;
     background-color: rgb(20, 23, 28);
     padding-left: 15px;
@@ -20,10 +23,10 @@
     text-align: left;
     border-left: 4px solid rgb(40, 47, 48);
     margin: 20px;
-    width: 50%; 
+    width: 65%;
   }
   
-  .bitsTitle {
+  .ladyLoveTitle {
     color: rgb(175, 12, 12);
     background-color: rgb(20, 23, 28);
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
@@ -35,45 +38,44 @@
     opacity: 0.9;
     text-align: left;
     margin: 20px;
-    width: 50%; 
+    width: 65%;
   }
   
-  .bitsCategories {
+  .ladyLoveSolved {
+    color: white;
+    background-color: rgb(20, 23, 28);
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
       "Segoe UI", Helvetica, Arial, sans-serif;
-    width: 50%; 
-    margin: 18px;
-    color: #ffffff;
-    border-spacing: 0;
-    border-collapse: separate;
-    font-size: 1rem;
-  }
-  
-  .bitsCategories th,
-  .bitsCategories td {
-    border: 0.5px solid rgb(40, 47, 48);
-    padding: 8px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    font-size: 1em;
+    opacity: 0.9;
     text-align: left;
+    margin: 20px;
+    width: 65%;
   }
   
-  .bitsCategories th:first-child,
-  .bitsCategories td:first-child {
-    border-left: none;
-    width: 30%;
+  .ladyLoveFlag {
+    color: white;
+    background-color: rgb(20, 23, 28);
+    padding-left: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    font-size: 1em;
+    opacity: 0.9;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin: 20px;
+    width: 65%;
   }
   
-  .bitsCategories th:last-child,
-  .bitsCategories td:last-child {
-    border-right: none;
-    width: 30%;
+  .ladyLoveEvidence {
+    margin: 20px;
+    width: 65%;
+    margin-left: -1px;
   }
-  
-  .bitsCategories th {
-    border-top: none;
-    color: rgb(204, 207, 212);
-  }
-  
-  .bitsCategories {
-    padding-bottom: 50px;
-  }
-  

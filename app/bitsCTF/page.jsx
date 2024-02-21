@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Tools() {
   return (
-    <div className={styles.pico2023Container}>
-      <div className={styles.pico2023Title}>
+    <div className={styles.bitsContainer}>
+      <div className={styles.bitsTitle}>
         <a
           href="https://ctf.bitskrieg.org/"
           target="blank"
@@ -15,10 +15,10 @@ export default function Tools() {
         </a>
         <br />
       </div>
-      <div className={styles.pico2023}>
+      <div className={styles.bits}>
         <p>hosted by bitskrieg, a cybersecurity club of BITS Pilani Goa Campus 👾!</p>
       </div>
-      <table className={styles.pico2023Categories}>
+      <table className={styles.bitsCategories}>
         <thead>
           <tr>
             <th>Challenge Name</th>
@@ -29,27 +29,40 @@ export default function Tools() {
           <tr>
             <td>
               <a
-                href="../picoCTF2023/moneyware"
+                href="../bitsCTF/DFIR1"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
-                --------
+                Intro to DFIR
               </a>
             </td>
-            <td>----</td>
+            <td>Digital Forensics</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/DFIR2"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Access Granted!
+              </a>
+            </td>
+            <td>Digital Forensics</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/LadyLove"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                LadyLove
+              </a>
+            </td>
+            <td>OSINT</td>
           </tr>
         </tbody>
       </table>
-
-      {/*
-        <div className={styles.--Certification}>
-            <Image
-            src="/ybnctf.jpg"
-            width={400}
-            height={200}
-            alt="logo"
-            />
-        </div>
-        */}
     </div>
   );
 }

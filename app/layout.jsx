@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
         <title>CTF blog</title>
       </Head>
       <body>
-      <Navbar />
         <div style={{ display: 'flex', height: '100vh' }}>
           <Sidebar />
           <main style={{ flex: 1, overflowY: 'auto', padding: '20px' }}>
