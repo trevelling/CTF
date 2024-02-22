@@ -145,7 +145,7 @@ const About = () => {
           </tr>
           <tr>
             <td>
-                BrainHack
+                BrainHack CDDC
             </td>
             <td>Jeporady</td>
             <td>-</td>

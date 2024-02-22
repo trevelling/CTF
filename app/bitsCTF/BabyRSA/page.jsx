@@ -34,7 +34,7 @@ export default function BabyRSA() {
       <div className={styles.babyRsaSolved}>
         <p>
           RSA challenges are pretty standard. Opening up rsa_mat.sage we will
-          get a python code while chall.txt contained the values of n,a,b,c, and
+          get a code that encrypts a plaintext message using a custom method, and prints the resulting ciphertext while chall.txt contains the values of n,a,b,c, and
           d.
           <br />
           <br />
@@ -106,7 +106,7 @@ export default function BabyRSA() {
         <SyntaxHighlighter language="python" style={materialDark}>
           {`
             from Crypto.Util.number import long_to_bytes
-            
+
             g = matrix(Zmod(n), [[a,b], [c,d]])
             phi = (p*p - 1)*(p*p - p)*(q*q - 1)*(q*q - q)
             d = pow(65537, -1, phi)
