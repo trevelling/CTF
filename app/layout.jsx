@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from "next/head";
 import Sidebar from "@/app/ui/sidebar";
-import Navbar from "@/app/ui/Navbar";
+import Navbar from "@/app/ui/navbar";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
