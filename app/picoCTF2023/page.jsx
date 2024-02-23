@@ -55,7 +55,7 @@ export default function PicoCTF() {
                 href="../picoCTF2023/hideme"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
-                hidemes
+                hideme
               </a>
             </td>
             <td>Forensics</td>

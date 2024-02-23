@@ -49,7 +49,7 @@ export default function Hideme() {
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
-        <Image src="/hideme2.png" width={800} height={280} alt="logo" />
+        <Image src="/hideme2.png" width={800} height={260} alt="logo" />
       </div>
 
       <div className={styles.hideMeSolved}>

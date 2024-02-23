@@ -81,6 +81,13 @@ export default function Tools() {
               short-term memory storage.
             </td>
           </tr>
+          <tr>
+            <td>EOG</td>
+            <td>CLI tool</td>
+            <td>           
+              An image view that can display pictures in a wide range of image formats (PNG, JPEG, TIFF etc.).
+            </td>
+          </tr>
         </tbody>
       </table>
       <div className={styles.cryptographyTitle}>
