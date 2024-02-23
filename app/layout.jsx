@@ -14,14 +14,14 @@ export default function RootLayout({ children }) {
       </Head>
       <body>
         <div
-          style={{ display: "flex", height: "100vh", flexDirection: "column" }}
+          style={{ display: "flex", height: "100vh", flexDirection: "column", textDecoration: "none" }}
         >
           <Navbar />
           <div
-            style={{ display: "flex", flexDirection: "row", overflow: "auto" }}
+            style={{ display: "flex", flexDirection: "row", overflow: "auto", textDecoration: "none" }}
           >
             <Sidebar />
-            <main style={{ flex: 1, overflowY: "auto", padding: "20px" }}>
+            <main style={{ flex: 1, overflowY: "auto", padding: "20px", textDecoration: "none" }}>
               {children}
             </main>
           </div>

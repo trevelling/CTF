@@ -85,7 +85,7 @@ const sideBarItems = [
     isLink: true,
   },
   {
-    name: "📁 ACS(I) Hack",
+    name: "📁 HACK@AC",
     href: "/HACK@AC",
     isLink: true,
   },

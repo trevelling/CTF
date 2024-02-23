@@ -3,4 +3,6 @@ body {
   color: rgb(204, 207, 212);
   overflow-x: hidden;
   overflow-y: hidden;
+  text-decoration: "none";
+  min-height: 100%;
 }

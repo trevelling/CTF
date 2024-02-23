@@ -131,7 +131,7 @@ const About = () => {
           </tr>
           <tr>
             <td>
-                ACS(I) Hacks
+                HACK@AC
             </td>
             <td>Jeporady</td>
             <td>-</td>

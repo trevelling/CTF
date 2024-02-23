@@ -19,7 +19,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 100%; /* Set a fixed height */
+  height: 100%; 
   overflow-y: auto;
 }
 

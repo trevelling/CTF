@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgb(40, 47, 48);
+  padding-top: 8px;
 }
 
 .navitem {
@@ -22,7 +23,6 @@
   opacity: 0.8;
   border-radius: 0.2rem;
   font-weight: bold;
-
   font-weight: 700;
-  color: rgb(234, 242, 247);
+  color: white;
 }
