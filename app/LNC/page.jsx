@@ -16,8 +16,10 @@ export default function LNC() {
       </div>
       <div className={styles.lnc}>
         <p>
-            Lag and Crash is an inter-polytechnic 2 day CTF targeted at Polytechnic, Institute of Technical Education and Junior College students. 
-            The event is organised between the Polytechnic Cybersecurity Interest Groups.
+          Lag and Crash is an inter-polytechnic 2 day CTF targeted at
+          Polytechnic, Institute of Technical Education and Junior College
+          students. The event is organised between the Polytechnic Cybersecurity
+          Interest Groups.
         </p>
       </div>
       <table className={styles.lncCategories}>
@@ -39,9 +41,6 @@ export default function LNC() {
             </td>
             <td>Digital Forensics</td>
           </tr>
-          
-
-
         </tbody>
       </table>
     </div>

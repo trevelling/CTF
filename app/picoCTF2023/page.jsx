@@ -70,9 +70,8 @@ export default function PicoCTF() {
                 HideToSee
               </a>
             </td>
-            <td>Cryptography</td>
+            <td>Steganography</td>
           </tr>
-
         </tbody>
       </table>
     </div>

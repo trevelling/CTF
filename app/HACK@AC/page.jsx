@@ -15,7 +15,10 @@ export default function HACKAC() {
         <br />
       </div>
       <div className={styles.acs}>
-        <p>Hosted by ACS(I), it is a 12 hour cybersecurity competition designed for beginners to enter the realm of cybersecurity.</p>
+        <p>
+          Hosted by ACS(I), it is a 12 hour cybersecurity competition designed
+          for beginners to enter the realm of cybersecurity.
+        </p>
       </div>
       <table className={styles.acsCategories}>
         <thead>
@@ -36,9 +39,6 @@ export default function HACKAC() {
             </td>
             <td>Digital Forensics</td>
           </tr>
-          
-
-
         </tbody>
       </table>
     </div>

@@ -27,11 +27,14 @@ export default function LadyLove() {
           love. They fell in love in her hometown but her grandfather wouldn't
           let her marry a thief like him.! Answer is the meaning of his
           LadyLove's last name. Wrap the answer in the flag.
-          <br /><br />
-          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>stolenpainting.jpeg
           <br />
           <br />
-          <strong style={{ color: "rgb(255, 106, 61)" }}>HINT: </strong>16th February 2024 is his LadyLove's 111th birthday.
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
+          stolenpainting.jpeg
+          <br />
+          <br />
+          <strong style={{ color: "rgb(255, 106, 61)" }}>HINT: </strong>16th
+          February 2024 is his LadyLove's 111th birthday.
         </p>
       </div>
       <div className={styles.ladyLoveSolved}>
@@ -52,7 +55,6 @@ export default function LadyLove() {
       <div className={styles.ladyLoveEvidence}>
         <Image src="/LadyLove1.png" width={800} height={400} alt="picture" />
       </div>
-
       <div className={styles.ladyLoveSolved}>
         <p>
           Reading his history on{" "}
@@ -61,17 +63,13 @@ export default function LadyLove() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-          Wikipedia
+            Wikipedia
           </a>
-          , it seems that he was born in Sweden
-          but died in Belgium, suggesting that his LadyLove was also from
-          Belgium. Due to low solves and after some time, the authors provided
-          us a hint which was the birthdate of LadyLove.
+          , it seems that he was born in Sweden but died in Belgium, suggesting
+          that his LadyLove was also from Belgium. Due to low solves and after
+          some time, the authors provided us a hint which was the birthdate of
+          LadyLove.
           <br />
-          
-          
-          
-    
         </p>
       </div>
       <div className={styles.ladyLoveEvidence}>
@@ -86,11 +84,11 @@ export default function LadyLove() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-          Wikipedia
+            Wikipedia
           </a>
-          , the meaning of her last name can be found where <strong>Ece means queen.</strong>
+          , the meaning of her last name can be found where{" "}
+          <strong>Ece means queen.</strong>
           <br />
-
         </p>
       </div>
       <div className={styles.ladyLoveEvidence}>
@@ -98,8 +96,7 @@ export default function LadyLove() {
       </div>
       <div className={styles.ladyLoveFlag}>
         <span>Flag: </span>
-
-        <span style={{ color: "rgb(93, 63, 211)" }}>BITSCTF{"{queen}"}</span>
+        <span style={{ color: "rgb(137, 207, 240)" }}>BITSCTF{"{queen}"}</span>
       </div>
     </div>
   );

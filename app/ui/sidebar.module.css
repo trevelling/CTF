@@ -1,74 +1,75 @@
 .sideBar {
-    width: 16rem;
-    border-right: 1px solid rgb(40, 47, 48);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-right-color: rgb(43, 46, 57);
-    border-right-width: 1px;
-    position: relative;
-    margin-top: 15px;
+  width: 16rem;
+  border-right: 1px solid rgb(40, 47, 48);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-right-color: rgb(43, 46, 57);
+  border-right-width: 1px;
+  position: relative;
+  margin-top: 15px;
 }
 
 .sideBarTop {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: rgb(20, 23, 28);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgb(20, 23, 28);
 }
 
 .sideBarList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Set a fixed height */
-    overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Set a fixed height */
+  overflow-y: auto;
 }
 
 .sideBarItem {
-    margin-bottom: 0.8rem;
-    justify-content: flex-end;
+  margin-bottom: 0.8rem;
+  justify-content: flex-end;
 }
 
 .sideBarLink {
-    display: block;
-    align-items: center;
-    text-decoration: none;
-    color: rgb(204, 207, 212);
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-    width: 95%;
-    padding-top: 1px;
-    padding-bottom: 4px;
-    line-height: 22px;
+  display: block;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(204, 207, 212);
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  width: 95%;
+  padding-top: 1px;
+  padding-bottom: 4px;
+  line-height: 22px;
 }
 
 .sideBarLink:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .sideBarList .activeLink {
-    background-color: rgba(56, 71, 56, 0.5);
-    color: rgb(76, 211, 76);
-    font-weight: bold;
+  background-color: rgba(56, 71, 56, 0.5);
+  color: rgb(76, 211, 76);
+  font-weight: bold;
 }
 
 .sideBarIcon {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .sideBarName {
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-    margin-left: 15px;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 15px;
 }
 
 .ctf {
-    font-weight: 750;
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 1.2px;
-    padding-bottom: 4px;
-    padding-top: 4px;
+  font-weight: 750;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
-

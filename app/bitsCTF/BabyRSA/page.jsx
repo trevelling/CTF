@@ -34,8 +34,9 @@ export default function BabyRSA() {
       <div className={styles.babyRsaSolved}>
         <p>
           RSA challenges are pretty standard. Opening up rsa_mat.sage we will
-          get a code that encrypts a plaintext message using a custom method, and prints the resulting ciphertext while chall.txt contains the values of n,a,b,c, and
-          d.
+          get a code that encrypts a plaintext message using a custom method,
+          and prints the resulting ciphertext while chall.txt contains the
+          values of n,a,b,c, and d.
           <br />
           <br />
           This code generates an RSA key pair, splits a given plaintext pt into
@@ -130,7 +131,7 @@ export default function BabyRSA() {
       <div className={styles.babyRsaFlag}>
         <span>Flag: </span>
 
-        <span style={{ color: "rgb(93, 63, 211)" }}>
+        <span style={{ color: "rgb(137, 207, 240)" }}>
           BITSCTF{"{63N3r41_11N34r_6r0UP_C4ND0_4NY7H1N6}"}
         </span>
       </div>

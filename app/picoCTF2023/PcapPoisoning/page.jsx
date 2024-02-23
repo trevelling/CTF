@@ -19,18 +19,20 @@ export default function PcapPoisoning() {
         <p>
           <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat Question</strong>
           <br />
-          </p>
+        </p>
         <p>
-            How about some hide and seek heh? 
-            Download this file and find the flag.
-            <br />
-            <br />
-            <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>trace.pcap
+          How about some hide and seek heh? Download this file and find the
+          flag.
+          <br />
+          <br />
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
+          trace.pcap
         </p>
       </div>
       <div className={styles.pcapPoisoningSolved}>
         <p>
-        This is a simple forensics challenge. Seeing the challenge name "<strong>Pcap</strong>", I ought to use {" "}
+          This is a simple forensics challenge. Seeing the challenge name "
+          <strong>Pcap</strong>", I ought to use{" "}
           <a
             href="https://www.wireshark.org/"
             target="blank"
@@ -38,8 +40,12 @@ export default function PcapPoisoning() {
           >
             Wireshark
           </a>
-          . Opening the pcap file in wireshark will result us in a lot of different packets. <br /><br />
-          We can observe the most common protocol being used by going to <strong>Statistics 🡢 Protocol Hierarchy </strong>. We can see that the most exchanged packets is <strong>TCP</strong>.
+          . Opening the pcap file in wireshark will result us in a lot of
+          different packets. <br />
+          <br />
+          We can observe the most common protocol being used by going to{" "}
+          <strong>Statistics 🡢 Protocol Hierarchy </strong>. We can see that the
+          most exchanged packets is <strong>TCP</strong>.
         </p>
       </div>
       <div className={styles.pcapPoisoningEvidence}>
@@ -47,18 +53,20 @@ export default function PcapPoisoning() {
       </div>
       <div className={styles.pcapPoisoningSolved}>
         <p>
-        Using the filter feature in Wireshark and inputting this filter, <strong>tcp contains "pico"</strong> we will get the flag located in the Hex Dump.
-        <br />
-        <br />
-        Use this{" "}
-        <a
+          Using the filter feature in Wireshark and inputting this filter,{" "}
+          <strong>tcp contains "pico"</strong> we will get the flag located in
+          the Hex Dump.
+          <br />
+          <br />
+          Use this{" "}
+          <a
             href="https://cdn.comparitech.com/wp-content/uploads/2019/06/Wireshark-Cheat-Sheet-1.jpg.webp"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
             Wireshark Cheat Sheet
           </a>
-        .
+          .
         </p>
       </div>
       <div className={styles.pcapPoisoningEvidence}>
@@ -66,8 +74,10 @@ export default function PcapPoisoning() {
       </div>
       <div className={styles.pcapPoisoningFlag}>
         <span>Flag: </span>
-        
-        <span style={{ color: "rgb(93, 63, 211)" }}>picoCTF{"{P64P_4N4L7S1S_SU55355FUL_f621fa37}"}</span>
+
+        <span style={{ color: "rgb(137, 207, 240)" }}>
+          picoCTF{"{P64P_4N4L7S1S_SU55355FUL_f621fa37}"}
+        </span>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
-body{
-    background-color: rgb(20, 23, 28);
-    color: rgb(204, 207, 212);
-    overflow-x:hidden;
-    overflow-y:hidden;
+body {
+  background-color: rgb(20, 23, 28);
+  color: rgb(204, 207, 212);
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
-

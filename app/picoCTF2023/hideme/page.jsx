@@ -19,25 +19,30 @@ export default function Hideme() {
         <p>
           <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat Question</strong>
           <br />
-          </p>
+        </p>
         <p>
-            Every file gets a flag. The SOC analyst saw one image been sent back and forth between two people. They decided to investigate and found out that there was more than what meets the eye here.
-            <br />
-            <br />
-            <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>flag.png
+          Every file gets a flag. The SOC analyst saw one image been sent back
+          and forth between two people. They decided to investigate and found
+          out that there was more than what meets the eye here.
+          <br />
+          <br />
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
+          flag.png
         </p>
       </div>
       <div className={styles.hideMeSolved}>
         <p>
-        Since this file was a png file, I used{" "}
+          Since this file was a png file, I used{" "}
           <a
             href="https://exiftool.org/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
             exiftool
-          </a>
-          {" "}to carve out any other files that are hidden. Using the <strong>-e</strong> to extract, low nad behold we have extracted different hidden files.
+          </a>{" "}
+          to carve out any other files that are hidden. Using the{" "}
+          <strong>-e</strong> to extract, low nad behold we have extracted
+          different hidden files.
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
@@ -45,24 +50,27 @@ export default function Hideme() {
       </div>
       <div className={styles.hideMeSolved}>
         <p>
-        Upon extracting I got <strong>_flag.png.extracted</strong>, and discovered a <strong>secret</strong> directory in it. The <strong>secret</strong> directory contains yet another intriguing file <strong>flag.png</strong>.
+          Upon extracting I got <strong>_flag.png.extracted</strong>, and
+          discovered a <strong>secret</strong> directory in it. The{" "}
+          <strong>secret</strong> directory contains yet another intriguing file{" "}
+          <strong>flag.png</strong>.
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
         <Image src="/hideme2.png" width={800} height={260} alt="logo" />
       </div>
-
       <div className={styles.hideMeSolved}>
         <p>
-        To see what is inside <strong>flag.png</strong>, we can use{" "}
-        <a
+          To see what is inside <strong>flag.png</strong>, we can use{" "}
+          <a
             href="https://help.gnome.org/users/eog/stable/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
             eog
           </a>
-          , an image viewer to view the <strong>flag.png</strong>. This will give us the flag.
+          , an image viewer to view the <strong>flag.png</strong>. This will
+          give us the flag.
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
@@ -70,7 +78,9 @@ export default function Hideme() {
       </div>
       <div className={styles.hideMeFlag}>
         <span>Flag: </span>
-        <span style={{ color: "rgb(93, 63, 211)" }}>picoCTF{"{Hiddinng_An_imag3_within_@n_ima9e_96539bea}"}</span>
+        <span style={{ color: "rgb(137, 207, 240)" }}>
+          picoCTF{"{Hiddinng_An_imag3_within_@n_ima9e_96539bea}"}
+        </span>
       </div>
     </div>
   );

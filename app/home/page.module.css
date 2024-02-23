@@ -1,187 +1,188 @@
 .aboutContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;  
-    padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 100px;
 }
 
 /* Glitch animation for CTF header */
 @keyframes glitch {
-    0% {
-        text-shadow: 
-        0.05em 0 0 rgba(255,0,0, 0.75),
-        -0.05em -0.025em 0 rgba(0,255,0, 0.75),
-        -0.025em 0.05em 0 rgba(0,0,255, 0.75);
-    }
-    14% {
-        text-shadow: 
-        0.05em 0 0 rgba(255,0,0, 0.75),
-        -0.05em -0.025em 0 rgba(0,255,0, 0.75),
-        -0.025em 0.05em 0 rgba(0,0,255, 0.75);
-    }
-    15% {
-        text-shadow: 
-        -0.05em -0.025em 0 rgba(255,0,0, 0.75),
-        0.025em 0.025em 0 rgba(0,255,0 ,0.75),
-        -0.05em -0.05em 0 rgba(0,0,255, 0.75);
-    }
-    49% {
-        text-shadow: 
-        -0.05em -0.025em 0 rgba(255,0,0, 0.75),
-        0.025em 0.025em 0 rgba(0,255,0 ,0.75),
-        -0.05em -0.05em 0 rgba(0,0,255, 0.75);
-    }
-    50% {
-        text-shadow: 
-        0.025em 0.05em 0 rgba(255,0,0, 0.75),
-        0.05em 0 0 rgba(0,255,0, 0.75),
-        0 -0.05em 0 rgba(0,0,255, 0.75);
-    }
-    99% {
-        text-shadow: 
-        0.025em 0.05em 0 rgba(255,0,0, 0.75),
-        0.05em 0 0 rgba(0,255,0, 0.75),
-        0 -0.05em 0 rgba(0,0,255, 0.75);
-    }
-    100% {
-        text-shadow: 
-        -0.025em 0 0 rgba(255,0,0, 0.75),
-        -0.025em -0.025em 0 rgba(0,255,0, 0.75),
-        -0.025em -0.05em 0 rgba(0,0,255, 0.75);
-    }
-    
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
 }
 
-.CTFheader span{
-    position: absolute;
+.CTFheader span {
+  position: absolute;
 }
 
 .CTFheader span:first-child {
-    animation: glitch 650ms infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 30%);
-    transform: translate(-0.05em, -0.025em);
-    opacity: 0.8;
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 30%);
+  transform: translate(-0.05em, -0.025em);
+  opacity: 0.8;
 }
 
 .CTFheader span:last-child {
-    animation: glitch 375ms infinite;
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
-    transform: translate(0.05em, 0.025em); 
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(0.05em, 0.025em);
 }
 
 .CTFheader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    font-size: 12rem;
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 
-        0.05em 0 0 rgba(255,0,0,0.75),
-        -0.025em -0.05em 0 rgba(0,255,0,0.75),
-        0.025em 0.05em 0 rgba(0,0,255,0.75);
-    margin-bottom: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 12rem;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  margin-bottom: 100px;
 }
 
 .CTFheader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    font-size: 8em;
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 
-        0.05em 0 0 rgba(255,0,0,0.75),
-        -0.025em -0.05em 0 rgba(0,255,0,0.75),
-        0.025em 0.05em 0 rgba(0,0,255,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 8em;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
 }
 
-.about, .aboutCTF {
-    color: white;
-    background-color: rgb(20, 23, 28);
-    padding-left: 15px;
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: 1.1px;
-    font-size: 1em;
-    opacity: 0.9;
-    text-align: left;
-    border-left: 4px solid rgb(40, 47, 48);
-    margin: 20px;
-    width: 50%;
+.about,
+.aboutCTF {
+  color: white;
+  background-color: rgb(20, 23, 28);
+  padding-left: 15px;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  font-size: 1em;
+  opacity: 0.9;
+  text-align: left;
+  border-left: 4px solid rgb(40, 47, 48);
+  margin: 20px;
+  width: 65%;
 }
 
-.license{
-    color: white;
-    padding-left: 15px;
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: 1.1px;
-    font-size: 1em;
-    opacity: 0.9;
-    text-align: left;
-    margin: 20px;
-    width: 50%;
+.license {
+  color: white;
+  padding-left: 15px;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  font-size: 1em;
+  opacity: 0.9;
+  text-align: left;
+  margin: 20px;
+  width: 65%;
 }
 
-
-
-.date2023, .date2024 {
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-align: left;
-    margin: 20px;
+.date2023,
+.date2024 {
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 20px;
 }
 
-.table2023, .table2024 {
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    width: 50%;
-    margin: 18px;
-    color: #ffffff;
-    border-spacing: 0;
-    border-collapse: separate;
-    font-size: 1rem;
+.table2023,
+.table2024 {
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  width: 65%;
+  margin: 18px;
+  color: #ffffff;
+  border-spacing: 0;
+  border-collapse: separate;
+  font-size: 1rem;
 }
 
-.table2023 th, .table2024 th,
-.table2023 td, .table2024 td {
-    border: 0.5px solid rgb(40, 47, 48);
-    padding: 8px;
-    text-align: left;
+.table2023 th,
+.table2024 th,
+.table2023 td,
+.table2024 td {
+  border: 0.5px solid rgb(40, 47, 48);
+  padding: 8px;
+  text-align: left;
 }
 
-.table2023 th:first-child, .table2024 th:first-child,
-.table2023 td:first-child, .table2024 td:first-child {
-    border-left: none;
-    width: 30%;
+.table2023 th:first-child,
+.table2024 th:first-child,
+.table2023 td:first-child,
+.table2024 td:first-child {
+  border-left: none;
+  width: 30%;
 }
 
-.table2023 th:last-child, .table2024 th:last-child,
-.table2023 td:last-child, .table2024 td:last-child {
-    border-right: none; 
-    width: 40%;
+.table2023 th:last-child,
+.table2024 th:last-child,
+.table2023 td:last-child,
+.table2024 td:last-child {
+  border-right: none;
+  width: 40%;
 }
 .table2023 th,
 .table2024 th {
-    border-top: none;
-    color: rgb(204, 207, 212);
+  border-top: none;
+  color: rgb(204, 207, 212);
 }
 .table2024 {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .info {
-    width: 100%;
-    color: white;
-    font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    text-align: center;
-    text-decoration: none;
+  width: 100%;
+  color: white;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
 }
-

@@ -21,18 +21,21 @@ export default function DFIR1() {
           <br />
         </p>
         <p>
-            DFIR or Digital Forensics and Incident Response is a field within cybersecurity 
-            that focuses on the identification, investigation, and remediation of cyberattacks. 
-            Here are the types of analysis you can expect throughout these sequence of challenges!
-            <br /><br />
-            <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>artifacts.ad1, memdump.mem, trace.pcap
+          DFIR or Digital Forensics and Incident Response is a field within
+          cybersecurity that focuses on the identification, investigation, and
+          remediation of cyberattacks. Here are the types of analysis you can
+          expect throughout these sequence of challenges!
+          <br />
+          <br />
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
+          artifacts.ad1, memdump.mem, trace.pcap
         </p>
       </div>
       <div className={styles.dfirSolved}>
         <p>
-          The authors provided us a memory dump, AD1 image
-          and a pcap file for further analysis. 
-          The flag is given directly in the challenge description.
+          The authors provided us a memory dump, AD1 image and a pcap file for
+          further analysis. The flag is given directly in the challenge
+          description.
         </p>
       </div>
       <div className={styles.dfirEvidence}>
@@ -40,8 +43,10 @@ export default function DFIR1() {
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>
-        
-        <span style={{ color: "rgb(93, 63, 211)" }}>BITSCTF{"{DFIR_r0ck55}"}</span>
+
+        <span style={{ color: "rgb(137, 207, 240)" }}>
+          BITSCTF{"{DFIR_r0ck55}"}
+        </span>
       </div>
     </div>
   );

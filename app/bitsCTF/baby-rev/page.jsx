@@ -24,7 +24,8 @@ export default function BabyRev() {
           anita max wyinn
           <br />
           <br />
-          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>baby-rev.elf 
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
+          baby-rev.elf
         </p>
       </div>
       <div className={styles.babyRevSolved}>
@@ -37,19 +38,22 @@ export default function BabyRev() {
           >
             Ghidra
           </a>
-          . This code computes if the input string length is 18 characters long and if it is will call <strong>myfunc(local_38)</strong> else, it outpits <strong>:P</strong>
+          . This code computes if the input string length is 18 characters long
+          and if it is will call <strong>myfunc(local_38)</strong> else, it
+          outpits <strong>:P</strong>
           <br />
         </p>
       </div>
       <div className={styles.babyRevEvidence}>
         <Image src="/baby-rev1.png" width={600} height={380} alt="picture" />
       </div>
-
       <div className={styles.babyRevSolved}>
         <p>
-          In this function, it compares character by character, if every character is correct it outputs <strong>Yippee :3</strong>.
-          <br/>
-          This indicated to me that inputting the same string will result in the flag by rearranging it.
+          In this function, it compares character by character, if every
+          character is correct it outputs <strong>Yippee :3</strong>.
+          <br />
+          This indicated to me that inputting the same string will result in the
+          flag by rearranging it.
         </p>
       </div>
       <div className={styles.babyRevEvidence}>
@@ -57,8 +61,9 @@ export default function BabyRev() {
       </div>
       <div className={styles.babyRevFlag}>
         <span>Flag: </span>
-
-        <span style={{ color: "rgb(93, 63, 211)" }}>BITSCTF{"{w3lc0me_t0_r3v}"}</span>
+        <span style={{ color: "rgb(137, 207, 240)" }}>
+          BITSCTF{"{w3lc0me_t0_r3v}"}
+        </span>
       </div>
     </div>
   );

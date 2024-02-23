@@ -45,7 +45,8 @@ export default function Moneyware() {
             this website
           </a>
           .<br />
-          <br /> Looking for a malware-type, we can see that it is '<strong>petya</strong>'
+          <br /> Looking for a malware-type, we can see that it is '
+          <strong>petya</strong>'
         </p>
       </div>
       <div className={styles.moneywareEvidence}>
@@ -53,8 +54,7 @@ export default function Moneyware() {
       </div>
       <div className={styles.moneywareFlag}>
         <span>Flag: </span>
-        
-        <span style={{ color: "rgb(93, 63, 211)" }}>picoCTF{"{Petya}"}</span>
+        <span style={{ color: "rgb(137, 207, 240)" }}>picoCTF{"{Petya}"}</span>
       </div>
     </div>
   );

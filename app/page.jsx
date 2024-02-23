@@ -1,11 +1,10 @@
-import React from 'react';
-import Home from "./home/page"; 
+import React from "react";
+import Home from "./home/page";
 
-export default function App(){
-    return(
-        <>
-            <Home />
-        </>
-    );
+export default function App() {
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
-    

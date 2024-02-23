@@ -15,7 +15,10 @@ export default function HACKAC() {
         <br />
       </div>
       <div className={styles.brainHack}>
-        <p>Hosted by DSTA, it is a 30 hour qualifier with a 2 day final cybersecurity competition.</p>
+        <p>
+          Hosted by DSTA, it is a 30 hour qualifier with a 2 day final
+          cybersecurity competition.
+        </p>
       </div>
       <table className={styles.brainHackCategories}>
         <thead>
@@ -36,9 +39,6 @@ export default function HACKAC() {
             </td>
             <td>Digital Forensics</td>
           </tr>
-          
-
-
         </tbody>
       </table>
     </div>

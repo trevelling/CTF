@@ -15,7 +15,10 @@ export default function BitsCTF() {
         <br />
       </div>
       <div className={styles.bits}>
-        <p>A 2 day CTF hosted by bitskrieg, a cybersecurity club of BITS Pilani Goa Campus.</p>
+        <p>
+          A 2 day CTF hosted by bitskrieg, a cybersecurity club of BITS Pilani
+          Goa Campus.
+        </p>
       </div>
       <table className={styles.bitsCategories}>
         <thead>

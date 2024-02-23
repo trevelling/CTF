@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./sidebar.module.css";
 
@@ -34,12 +33,22 @@ export default function Sidebar() {
                       }`}
                       onClick={() => handleLinkClick(href, isLink)}
                     >
-                      <span className={styles.sideBarName} style={{ textDecoration: "none" }}>{name}</span>
+                      <span
+                        className={styles.sideBarName}
+                        style={{ textDecoration: "none" }}
+                      >
+                        {name}
+                      </span>
                     </span>
                   </Link>
                 </span>
               ) : (
-                <span className={styles.sideBarName} style={{ textDecoration: "none" }}>{name}</span>
+                <span
+                  className={styles.sideBarName}
+                  style={{ textDecoration: "none" }}
+                >
+                  {name}
+                </span>
               )}
             </li>
           ))}
@@ -56,7 +65,7 @@ const sideBarItems = [
     isLink: true,
   },
   {
-    name: "🛠️ Helpful tools",
+    name: "🛠️ Tools",
     href: "/tools",
     isLink: true,
   },
@@ -92,12 +101,12 @@ const sideBarItems = [
   },
   {
     name: "📁 picoCTF",
-    href: "/picoCTF2023", 
+    href: "/picoCTF2023",
     isLink: true,
   },
   {
     name: "📁 YBN CTF",
-    href: "/ybnCTF", 
+    href: "/ybnCTF",
     isLink: true,
   },
 ];
