@@ -48,6 +48,18 @@ export default function PicoCTF() {
             </td>
             <td>Forensics</td>
           </tr>
+
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/hideme"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                hidemes
+              </a>
+            </td>
+            <td>Forensics</td>
+          </tr>
         </tbody>
       </table>
 
