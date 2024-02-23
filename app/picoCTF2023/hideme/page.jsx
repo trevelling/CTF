@@ -45,7 +45,7 @@ export default function Hideme() {
       </div>
       <div className={styles.hideMeSolved}>
         <p>
-        Going through the <strong>_flag.png.extracted</strong> we get the <strong>secret</strong> directory, which gives us another <strong>flag.png</strong>.
+        Upon extracting I got <strong>_flag.png.extracted</strong>, and discovered a <strong>secret</strong> directory in it. The <strong>secret</strong> directory contains yet another intriguing file <strong>flag.png</strong>.
         </p>
       </div>
       <div className={styles.hideMeEvidence}>

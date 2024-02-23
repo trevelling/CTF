@@ -60,19 +60,21 @@ export default function PicoCTF() {
             </td>
             <td>Forensics</td>
           </tr>
+
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/HideToSee"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                HideToSee
+              </a>
+            </td>
+            <td>Cryptography</td>
+          </tr>
+
         </tbody>
       </table>
-
-      {/*
-        <div className={styles.--Certification}>
-            <Image
-            src="/ybnctf.jpg"
-            width={400}
-            height={200}
-            alt="logo"
-            />
-        </div>
-        */}
     </div>
   );
 }
