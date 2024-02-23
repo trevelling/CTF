@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 
 export default function PicoCTF() {
   return (
@@ -36,6 +35,18 @@ export default function PicoCTF() {
               </a>
             </td>
             <td>OSINT</td>
+          </tr>
+
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/PcapPoisoning"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                PcapPoisoning
+              </a>
+            </td>
+            <td>Forensics</td>
           </tr>
         </tbody>
       </table>
