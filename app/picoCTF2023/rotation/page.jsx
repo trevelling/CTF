@@ -70,7 +70,7 @@ export default function Rotation() {
       </div>
       <div
         className={`${styles.rotationEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
+          isZoomed2 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom2}
       >

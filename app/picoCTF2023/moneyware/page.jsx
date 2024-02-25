@@ -56,12 +56,12 @@ export default function Moneyware() {
         </p>
       </div>
       <div
-        className={`${styles.moenywareEvidence} ${
+        className={`${styles.moneywareEvidence} ${
           isZoomed1 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="moneyware.png" width={500} height={80} alt="logo" />
+        <Image src="/moneyware.png" width={500} height={80} alt="logo" />
       </div>
       <div className={styles.moneywareFlag}>
         <span>Flag: </span>

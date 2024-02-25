@@ -62,7 +62,7 @@ export default function Hideme() {
         </p>
       </div>
       <div
-        className={`${styles.hideMeSeeEvidence} ${
+        className={`${styles.hideMeEvidence} ${
           isZoomed1 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom1}
@@ -78,8 +78,8 @@ export default function Hideme() {
         </p>
       </div>
       <div
-        className={`${styles.hideMeSeeEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
+        className={`${styles.hideMeEvidence} ${
+          isZoomed2 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom2}
       >
@@ -100,8 +100,8 @@ export default function Hideme() {
         </p>
       </div>
       <div
-        className={`${styles.hideMeSeeEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
+        className={`${styles.hideMeEvidence} ${
+          isZoomed3 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom3}
       >

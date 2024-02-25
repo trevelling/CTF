@@ -84,7 +84,7 @@ export default function Hidetosee() {
       </div>
       <div
         className={`${styles.hideToSeeEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
+          isZoomed2 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom2}
       >
@@ -108,7 +108,7 @@ export default function Hidetosee() {
       </div>
       <div
         className={`${styles.hideToSeeEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
+          isZoomed3 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom3}
       >

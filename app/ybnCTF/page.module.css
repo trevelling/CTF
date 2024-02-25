@@ -44,7 +44,9 @@
   width: 65%;
   margin-left: -1px;
   cursor: zoom-in;
-  margin-top: 20px;
+  margin: 20px;
+  padding-left: 15px;
+  border-left: 4px solid rgb(40, 47, 48);
 }
 
 .ybnCertification.zoomed {
@@ -65,8 +67,13 @@
 }
 
 .ybnCertification.zoomed img {
-  transform: scale(2);
+  width: 75vw; 
+  height: 35vh; 
   transition: transform 0.25s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
 }
