@@ -1,7 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function HACKAC() {
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const toggleZoom = () => {
+    setIsZoomed(!isZoomed);
+  };
+
   return (
     <div className={styles.acsContainer}>
       <div className={styles.acsTitle}>
@@ -18,6 +27,8 @@ export default function HACKAC() {
         <p>
           Hosted by ACS(I), it is a 12 hour cybersecurity competition designed
           for beginners to enter the realm of cybersecurity.
+          <br /><br />
+          Due to time constraints, we weren't able to play the full 12 hours.
         </p>
       </div>
       <table className={styles.acsCategories}>
@@ -31,16 +42,88 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/DFIR1"
+                href="../bitsCTF/ASCII"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
-                ----
+                ASCII Me Anything 
               </a>
             </td>
-            <td>Digital Forensics</td>
+            <td>Reverse Engineering</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/VVS"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Very Vulnerable Site
+              </a>
+            </td>
+            <td>Web Exploitation</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/Grass"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Grass is Greener
+              </a>
+            </td>
+            <td>Forensics</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/OOP"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Object Oritentated Programming
+              </a>
+            </td>
+            <td>Forensics</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/Stream"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Stream of Consciousness
+              </a>
+            </td>
+            <td>Forensics</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/RSA"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+               RandomlySelectedAlgorithm
+              </a>
+            </td>
+            <td>Cryptography</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../bitsCTF/Potato"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+               Potato
+              </a>
+            </td>
+            <td>Cryptography</td>
           </tr>
         </tbody>
       </table>
+      <div
+        className={`${styles.acsCertification} ${isZoomed ? styles.zoomed : ""}`}
+        onClick={toggleZoom}
+      >
+        <Image src="/acsctf.png" width={650} height={350} alt="logo" />
+      </div>
     </div>
   );
 }

@@ -16,7 +16,9 @@ export default function PicoCTF() {
       </div>
       <div className={styles.pico2023}>
         <p>playing to learn and improve my skills 😃!</p>
-        <p><strong>*only showing some challenges*</strong></p>
+        <p>
+          <strong>*only showing some challenges*</strong>
+        </p>
       </div>
       <table className={styles.pico2023Categories}>
         <thead>
@@ -37,7 +39,6 @@ export default function PicoCTF() {
             </td>
             <td>OSINT</td>
           </tr>
-
           <tr>
             <td>
               <a
@@ -49,7 +50,6 @@ export default function PicoCTF() {
             </td>
             <td>Forensics</td>
           </tr>
-
           <tr>
             <td>
               <a
@@ -77,18 +77,6 @@ export default function PicoCTF() {
           <tr>
             <td>
               <a
-                href="../picoCTF2023/Reverse"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                Reverse
-              </a>
-            </td>
-            <td>Reverse Engineering</td>
-          </tr>
-
-          <tr>
-            <td>
-              <a
                 href="../picoCTF2023/rotation"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
@@ -97,7 +85,18 @@ export default function PicoCTF() {
             </td>
             <td>Cryptography</td>
           </tr>
-            <tr>
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/Reverse"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Reverse
+              </a>
+            </td>
+            <td>Reverse Engineering</td>
+          </tr>
+          <tr>
             <td>
               <a
                 href="../picoCTF2023/rotation"
@@ -120,9 +119,6 @@ export default function PicoCTF() {
             </td>
             <td>Reverse Engineering</td>
           </tr>
-          
-
-          
         </tbody>
       </table>
     </div>

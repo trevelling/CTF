@@ -1,8 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function YBNCTF() {
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const toggleZoom = () => {
+    setIsZoomed(!isZoomed);
+  };
   return (
     <div className={styles.ybnContainer}>
       <div className={styles.ybnTitle}>
@@ -24,8 +31,10 @@ export default function YBNCTF() {
           ago 😔.
         </p>
       </div>
-
-      <div className={styles.ybnCertification}>
+      <div
+        className={`${styles.ybnCertification} ${isZoomed ? styles.zoomed : ""}`}
+        onClick={toggleZoom}
+      >
         <Image src="/ybnctf.jpg" width={500} height={350} alt="logo" />
       </div>
     </div>

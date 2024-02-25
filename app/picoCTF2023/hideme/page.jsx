@@ -1,8 +1,24 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Hideme() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+  const [isZoomed3, setIsZoomed3] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
+  const toggleZoom3 = () => {
+    setIsZoomed3(!isZoomed3);
+  };
   return (
     <div className={styles.hideMeContainer}>
       <div className={styles.hideMeTitle}>
@@ -45,7 +61,12 @@ export default function Hideme() {
           different hidden files.
         </p>
       </div>
-      <div className={styles.hideMeEvidence}>
+      <div
+        className={`${styles.hideMeSeeEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
         <Image src="/hideme1.png" width={800} height={300} alt="logo" />
       </div>
       <div className={styles.hideMeSolved}>
@@ -56,7 +77,12 @@ export default function Hideme() {
           <strong>flag.png</strong>.
         </p>
       </div>
-      <div className={styles.hideMeEvidence}>
+      <div
+        className={`${styles.hideMeSeeEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
         <Image src="/hideme2.png" width={800} height={260} alt="logo" />
       </div>
       <div className={styles.hideMeSolved}>
@@ -73,7 +99,12 @@ export default function Hideme() {
           give us the flag.
         </p>
       </div>
-      <div className={styles.hideMeEvidence}>
+      <div
+        className={`${styles.hideMeSeeEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom3}
+      >
         <Image src="/hideme3.png" width={800} height={320} alt="logo" />
       </div>
       <div className={styles.hideMeFlag}>

@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function PcapPoisoning() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
   return (
     <div className={styles.pcapPoisoningContainer}>
       <div className={styles.pcapPoisoningTitle}>
@@ -48,7 +60,12 @@ export default function PcapPoisoning() {
           most exchanged packets is <strong>TCP</strong>.
         </p>
       </div>
-      <div className={styles.pcapPoisoningEvidence}>
+      <div
+        className={`${styles.pcapPoisoningEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
         <Image src="/PcapPoisoning1.png" width={800} height={325} alt="logo" />
       </div>
       <div className={styles.pcapPoisoningSolved}>
@@ -69,7 +86,12 @@ export default function PcapPoisoning() {
           .
         </p>
       </div>
-      <div className={styles.pcapPoisoningEvidence}>
+      <div
+        className={`${styles.pcapPoisoningEvidence} ${
+          isZoomed2 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
         <Image src="/PcapPoisoning2.png" width={800} height={400} alt="logo" />
       </div>
       <div className={styles.pcapPoisoningFlag}>

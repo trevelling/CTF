@@ -1,8 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Moneyware() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
   return (
     <div className={styles.moneywareContainer}>
       <div className={styles.moneywareTitle}>
@@ -49,8 +55,13 @@ export default function Moneyware() {
           <strong>petya</strong>'
         </p>
       </div>
-      <div className={styles.moneywareEvidence}>
-        <Image src="/moneyware.png" width={500} height={80} alt="logo" />
+      <div
+        className={`${styles.moenywareEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="moneyware.png" width={500} height={80} alt="logo" />
       </div>
       <div className={styles.moneywareFlag}>
         <span>Flag: </span>

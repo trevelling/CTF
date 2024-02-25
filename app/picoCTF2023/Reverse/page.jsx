@@ -1,8 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Reverse() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
   return (
     <div className={styles.reverseContainer}>
       <div className={styles.reverseTitle}>
@@ -39,8 +45,13 @@ export default function Reverse() {
           flag.
         </p>
       </div>
-      <div className={styles.reverseEvidence}>
-        <Image src="/reverse.png" width={800} height={300} alt="logo" />
+      <div
+        className={`${styles.reverseEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="/reverse.png" width={800} height={305} alt="logo" />
       </div>
       <div className={styles.reverseFlag}>
         <span>Flag: </span>

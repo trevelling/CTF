@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Rotation() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
   return (
     <div className={styles.rotationContainer}>
       <div className={styles.rotationTitle}>
@@ -34,8 +46,13 @@ export default function Rotation() {
         The clue would be in the challenge name <strong>"rotation"</strong>.
         </p>
       </div>
-      <div className={styles.rotationEvidence}>
-        <Image src="/rotation1.png" width={850} height={100} alt="logo" />
+      <div
+        className={`${styles.rotationEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="/rotation1.png" width={800} height={100} alt="logo" />
       </div>
       <div className={styles.rotationSolved}>
         <p>
@@ -51,7 +68,12 @@ export default function Rotation() {
           From there I used <strong>CTRL-F</strong> to quickly find the pico flag.
         </p>
       </div>
-      <div className={styles.rotationEvidence}>
+      <div
+        className={`${styles.rotationEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
         <Image src="/rotation2.png" width={850} height={500} alt="logo" />
       </div>
       <div className={styles.rotationFlag}>

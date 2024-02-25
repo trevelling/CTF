@@ -1,8 +1,24 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Hidetosee() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+  const [isZoomed3, setIsZoomed3] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
+  const toggleZoom3 = () => {
+    setIsZoomed3(!isZoomed3);
+  };
   return (
     <div className={styles.hideToSeeContainer}>
       <div className={styles.hideToSeeTitle}>
@@ -43,7 +59,12 @@ export default function Hidetosee() {
           on.
         </p>
       </div>
-      <div className={styles.hideToSeeEvidence}>
+      <div
+        className={`${styles.hideToSeeEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
         <Image src="/HideToSee1.png" width={600} height={350} alt="logo" />
       </div>
       <div className={styles.hideToSeeSolved}>
@@ -61,7 +82,12 @@ export default function Hidetosee() {
           what looks like a encrypted flag.
         </p>
       </div>
-      <div className={styles.hideToSeeEvidence}>
+      <div
+        className={`${styles.hideToSeeEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
         <Image src="/HideToSee2.png" width={800} height={350} alt="logo" />
       </div>
       <div className={styles.hideToSeeSolved}>
@@ -80,8 +106,13 @@ export default function Hidetosee() {
           obtained the flag.
         </p>
       </div>
-      <div className={styles.hideToSeeEvidence}>
-        <Image src="/HideToSee3.png" width={800} height={320} alt="logo" />
+      <div
+        className={`${styles.hideToSeeEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom3}
+      >
+        <Image src="/HideToSee3.png" width={600} height={320} alt="logo" />
       </div>
       <div className={styles.hideToSeeFlag}>
         <span>Flag: </span>

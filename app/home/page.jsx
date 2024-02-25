@@ -49,7 +49,7 @@ const About = () => {
         </p>
       </div>
       <div className={styles.date2023}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la 2023</div>
+        ~# ls -la 2023
       </div>
       <table className={styles.table2023}>
         <thead>
@@ -101,7 +101,7 @@ const About = () => {
         </tbody>
       </table>
       <div className={styles.date2024}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la 2024</div>
+        ~# ls -la 2024
       </div>
       <table className={styles.table2024}>
         <thead>
@@ -125,16 +125,11 @@ const About = () => {
             <td>Participant</td>
           </tr>
           <tr>
-            <td>Braeker CTF</td>
-            <td>Jeporady</td>
-            <td>-</td>
-          </tr>
-          <tr>
             <td>
                 HACK@AC
             </td>
             <td>Jeporady</td>
-            <td>-</td>
+            <td>30th</td>
           </tr>
           <tr>
             <td>
@@ -159,16 +154,9 @@ const About = () => {
         </p>
         <p>All original code is licensed under the MIT license.</p>
       </div>
-      <footer className={styles.footer}>
-        <a
-          className={styles.info}
-          href="https://github.com/trevelling"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <footer className={styles.footer}>    
           &copy; {new Date().getFullYear()} Tev | Last updated:{" "}
           {new Date(document.lastModified).toLocaleDateString()}
-        </a>
       </footer>
     </div>
   );
