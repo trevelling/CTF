@@ -100,7 +100,7 @@
 
 .moneywareEvidence.zoomed img {
   width: 75vw; 
-  height: 35vh; 
+  height: 20vh; 
   transition: transform 0.25s;
   position: fixed;
   top: 50%;

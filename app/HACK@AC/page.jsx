@@ -42,7 +42,7 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/ASCII"
+                href="../HACK@AC/ASCII"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 ASCII Me Anything 
@@ -53,7 +53,7 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/VVS"
+                href="../HACK@AC/VVS"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 Very Vulnerable Site
@@ -64,7 +64,7 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/Grass"
+                href="../HACK@AC/Grass"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 Grass is Greener
@@ -75,7 +75,7 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/OOP"
+                href="../HACK@AC/OOP"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 Object Oritentated Programming
@@ -86,7 +86,7 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/Stream"
+                href="../HACK@AC/Stream"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 Stream of Consciousness
@@ -97,7 +97,7 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/RSA"
+                href="../HACK@AC/RSA"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                RandomlySelectedAlgorithm
@@ -108,7 +108,7 @@ export default function HACKAC() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/Potato"
+                href="../HACK@AC/Potato"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                Potato

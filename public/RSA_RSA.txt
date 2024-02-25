@@ -1,0 +1,43 @@
+RSA
+
+RSA (Rivest-Shamir-Adleman) is a widely used public-key encryption algorithm that allows for secure data transmission1. It relies on the difficulty of factoring a very large number into its prime factors, and uses concepts of primes and modular arithmetic.
+
+Being an asymmetric encryption algorithm, RSA uses 2 different keys: a public key for encryption and a private key for decryption.
+
+Key generation
+
+    Two prime numbers pp and qq are chosen. These numbers are kept private.
+
+    The modulus nn is calculated through p∗qp∗q. This is used in both the public and private key.
+
+    ϕϕ (phi) is calculated through (p−1)∗(q−1)(p−1)∗(q−1).
+
+    The public exponent ee is chosen such that 1<e<ϕ1<e<ϕ and ee is coprime to ϕϕ (coprime means the two numbers share no common factors).
+
+    The private exponent dd is calculated as the modular multiplicative inverse of ee modulo ϕϕ.
+
+The public key consists of nn and ee while the private key consists of nn and dd. The public key will be distributed for encryption while the private key is hidden for decryption.
+
+Encryption
+
+    The plaintext MM is converted into an integer mm using a reversible protocol.
+
+    The ciphertext cc is calculated through memod  nmemodn.
+
+Decryption
+
+    The ciphertext is decrypted through cdmod  ncdmodn, which gives us mm.
+
+    From there we convert mm back into the plaintext message.
+
+Hence, dd has to be kept hidden, but if we have access to pp and qq, we can calculate dd and decrypt messages!
+
+For this challenge, decrypt this RSA encryption when provided with nn, ee, cc, pp and qq:
+
+n = 8658628546195742416426846064560031781994710710324915841146332112158193600986064369896954438498015317717916206099831713871181185450145194452521938644103383
+e = 65537
+c = 769592140916016206061510390105816140132298080171302825675003070039700638199487654083036331263030420828746407264205639107935615485853068753206330654648074
+p = 79683944517959696670617631384131219775576650611292688567988662400264431266819
+q = 108662147670716818049624938161195710612908147677637733268728580525147068371357
+
+(After decryption, use the long_to_bytes function to convert the integer to the flag string)

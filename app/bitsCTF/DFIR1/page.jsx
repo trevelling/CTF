@@ -1,8 +1,14 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function DFIR1() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
   return (
     <div className={styles.dfirContainer}>
       <div className={styles.dfirTitle}>
@@ -38,8 +44,13 @@ export default function DFIR1() {
           description.
         </p>
       </div>
-      <div className={styles.dfirEvidence}>
-        <Image src="/DFIR1.png" width={700} height={250} alt="picture" />
+      <div
+        className={`${styles.dfirEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="/DFIR1.png" width={700} height={255} alt="logo" />
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>

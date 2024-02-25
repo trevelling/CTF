@@ -1,8 +1,24 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function LadyLove() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+  const [isZoomed3, setIsZoomed3] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
+  const toggleZoom3 = () => {
+    setIsZoomed3(!isZoomed3);
+  };
   return (
     <div className={styles.ladyLoveContainer}>
       <div className={styles.ladyLoveTitle}>
@@ -52,8 +68,13 @@ export default function LadyLove() {
           <br />
         </p>
       </div>
-      <div className={styles.ladyLoveEvidence}>
-        <Image src="/LadyLove1.png" width={800} height={400} alt="picture" />
+      <div
+        className={`${styles.ladyLoveEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="/LadyLove1.png" width={800} height={400} alt="logo" />
       </div>
       <div className={styles.ladyLoveSolved}>
         <p>
@@ -72,8 +93,13 @@ export default function LadyLove() {
           <br />
         </p>
       </div>
-      <div className={styles.ladyLoveEvidence}>
-        <Image src="/LadyLove2.png" width={800} height={650} alt="picture" />
+      <div
+        className={`${styles.ladyLoveEvidence} ${
+          isZoomed2 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
+        <Image src="/LadyLove2.png" width={800} height={650} alt="logo" />
       </div>
       <div className={styles.ladyLoveSolved}>
         <p>
@@ -91,8 +117,13 @@ export default function LadyLove() {
           <br />
         </p>
       </div>
-      <div className={styles.ladyLoveEvidence}>
-        <Image src="/LadyLove3.png" width={800} height={650} alt="picture" />
+      <div
+        className={`${styles.ladyLoveEvidence} ${
+          isZoomed3 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom3}
+      >
+        <Image src="/LadyLove3.png" width={800} height={650} alt="logo" />
       </div>
       <div className={styles.ladyLoveFlag}>
         <span>Flag: </span>

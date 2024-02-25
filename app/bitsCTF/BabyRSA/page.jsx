@@ -1,10 +1,22 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function BabyRSA() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
   return (
     <div className={styles.babyRsaContainer}>
       <div className={styles.babyRsaTitle}>
@@ -49,29 +61,29 @@ export default function BabyRSA() {
       <div className={styles.babyRsaEvidence}>
         <SyntaxHighlighter language="python" style={materialDark}>
           {`
-            #!/usr/bin/env python3
+  #!/usr/bin/env python3
 
-            from Crypto.Util.number import bytes_to_long
-            from Crypto.PublicKey import RSA
-            from sage.all import matrix, Zmod
+  from Crypto.Util.number import bytes_to_long
+  from Crypto.PublicKey import RSA
+  from sage.all import matrix, Zmod
             
-            key = RSA.generate(2048)
+  key = RSA.generate(2048)
             
-            print(f"n = {key.n}")
+  print(f"n = {key.n}")
             
-            pt = b"REDACTEDZ"
-            pt = [pt[p:p+len(pt)//4] for p in range(0, len(pt), len(pt)//4)]
+  pt = b"REDACTEDZ"
+  pt = [pt[p:p+len(pt)//4] for p in range(0, len(pt), len(pt)//4)]
             
-            g = matrix(Zmod(key.n), [[pt[0], pt[1]], [pt[2], pt[3]]]) 
+  g = matrix(Zmod(key.n), [[pt[0], pt[1]], [pt[2], pt[3]]]) 
             
-            def encrypt(g):
-                return g ^ 65537
+  def encrypt(g):
+    return g ^ 65537
             
-            c = encrypt(g)
+  c = encrypt(g)
             
-            for i in c:
-                for j in i:
-                    print(j)
+  for i in c:
+    for j in i:
+      print(j)
           `}
         </SyntaxHighlighter>
       </div>
@@ -90,10 +102,14 @@ export default function BabyRSA() {
           <br />
         </p>
       </div>
-      <div className={styles.babyRsaEvidence}>
-        <Image src="/babyRSA1.png" width={900} height={100} alt="picture" />
+      <div
+        className={`${styles.babyRsaEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="/BabyRSA1.png" width={900} height={100} alt="logo" />
       </div>
-
       <div className={styles.babyRsaSolved}>
         <p>
           With all the information I have <strong>p,q,n,a,b,c,d</strong> I am
@@ -106,26 +122,30 @@ export default function BabyRSA() {
       <div className={styles.babyRsaEvidence}>
         <SyntaxHighlighter language="python" style={materialDark}>
           {`
-            from Crypto.Util.number import long_to_bytes
+  from Crypto.Util.number import long_to_bytes
 
-            g = matrix(Zmod(n), [[a,b], [c,d]])
-            phi = (p*p - 1)*(p*p - p)*(q*q - 1)*(q*q - q)
-            d = pow(65537, -1, phi)
+   g = matrix(Zmod(n), [[a,b], [c,d]])
+   phi = (p*p - 1)*(p*p - p)*(q*q - 1)*(q*q - q)
+   d = pow(65537, -1, phi)
+             
+   pt = (g^d).lift()
             
-            print(d)
-            
-            pt = (g^d).lift()
-            
-            pt = long_to_bytes(pt[0][0]) + long_to_bytes(pt[0][1]) + long_to_bytes(pt[1][0]) + long_to_bytes(pt[0][1])
-            print(pt)
+   pt = long_to_bytes(pt[0][0]) + long_to_bytes(pt[0][1]) + long_to_bytes(pt[1][0]) + long_to_bytes(pt[0][1])
+   
+   print(pt)
           `}
         </SyntaxHighlighter>
       </div>
       <div className={styles.babyRsaSolved}>
         <p>Running the code in sage will result in the flag.</p>
       </div>
-      <div className={styles.babyRsaEvidence}>
-        <Image src="/BabyRSA2.png" width={800} height={350} alt="picture" />
+      <div
+        className={`${styles.babyRsaEvidence} ${
+          isZoomed2 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
+        <Image src="/BabyRSA2.png" width={800} height={350} alt="logo" />
       </div>
 
       <div className={styles.babyRsaFlag}>

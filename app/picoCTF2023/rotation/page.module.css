@@ -99,14 +99,16 @@
   touch-action: manipulation;
 }
 
-.rotationEvidence.zoomed img {
-  width: 75vw; 
-  height: 35vh; 
-  transition: transform 0.25s;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
+@media screen and (max-width: 768px) {
+  .hideMeEvidence.zoomed img {
+    width: 80vw; /* Adjust this value as needed */
+    height: 80vh; /* Adjust this value as needed */
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hideMeEvidence.zoomed img {
+    width: 50vw; /* Adjust this value as needed */
+    height: 50vh; /* Adjust this value as needed */
+  }
 }

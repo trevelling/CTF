@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function BabyRev() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
   return (
     <div className={styles.babyRevContainer}>
       <div className={styles.babyRevTitle}>
@@ -44,8 +56,13 @@ export default function BabyRev() {
           <br />
         </p>
       </div>
-      <div className={styles.babyRevEvidence}>
-        <Image src="/baby-rev1.png" width={600} height={380} alt="picture" />
+      <div
+        className={`${styles.babyRevEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="/baby-rev1.png" width={600} height={380} alt="logo" />
       </div>
       <div className={styles.babyRevSolved}>
         <p>
@@ -56,8 +73,13 @@ export default function BabyRev() {
           flag by rearranging it.
         </p>
       </div>
-      <div className={styles.babyRevEvidence}>
-        <Image src="/baby-rev2.png" width={900} height={500} alt="picture" />
+      <div
+        className={`${styles.babyRevEvidence} ${
+          isZoomed2 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
+        <Image src="/baby-rev2.png" width={900} height={500} alt="logo" />
       </div>
       <div className={styles.babyRevFlag}>
         <span>Flag: </span>

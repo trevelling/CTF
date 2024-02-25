@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function DFIR2() {
+  const [isZoomed1, setIsZoomed1] = useState(false);
+  const [isZoomed2, setIsZoomed2] = useState(false);
+
+  const toggleZoom1 = () => {
+    setIsZoomed1(!isZoomed1);
+  };
+
+  const toggleZoom2 = () => {
+    setIsZoomed2(!isZoomed2);
+  };
   return (
     <div className={styles.dfirContainer}>
       <div className={styles.dfirTitle}>
@@ -37,8 +49,13 @@ export default function DFIR2() {
           extract the NTLM hashes and crack MogamBro's password hash.
         </p>
       </div>
-      <div className={styles.dfirEvidence}>
-        <Image src="/DFIR2.png" width={750} height={250} alt="picture" />
+      <div
+        className={`${styles.dfirEvidence} ${
+          isZoomed1 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom1}
+      >
+        <Image src="/DFIR2.png" width={750} height={250} alt="logo" />
       </div>
       <div className={styles.dfirSolved}>
         <p>
@@ -54,8 +71,13 @@ export default function DFIR2() {
           .
         </p>
       </div>
-      <div className={styles.dfirEvidence}>
-        <Image src="/DFIR3.png" width={750} height={320} alt="picture" />
+      <div
+        className={`${styles.dfirEvidence} ${
+          isZoomed2 ? styles.zoomed : ""
+        }`}
+        onClick={toggleZoom2}
+      >
+        <Image src="/DFIR3.png" width={750} height={320} alt="logo" />
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>
