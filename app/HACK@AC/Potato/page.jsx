@@ -43,7 +43,7 @@ export default function Potato() {
           wrap the cracked plaintext with ASCI{}
           <br />
           <br />
-          <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
             href="/potato_enc.pcap"
@@ -55,7 +55,7 @@ export default function Potato() {
           <br />
         </p>
       </div>
-      <div className={styles.oopSolved}>
+      <div className={styles.potatoSolved}>
         <p>
           This is was a very simple challenge. The enc file given to us was just an encrypted plain text.
           <br />
@@ -72,13 +72,13 @@ export default function Potato() {
         </p>
       </div>
       <div
-        className={`${styles.oopEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.potatoEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
         <Image src="/potato1.png" width={800} height={500} alt="logo" />
       </div>
       
-      <div className={styles.oopFlag}>
+      <div className={styles.potatoFlag}>
         <span>Flag: </span>
         <span style={{ color: "rgb(137, 207, 240)" }}>
           ACSI{"{pandas}"}

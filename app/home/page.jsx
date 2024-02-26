@@ -26,7 +26,7 @@ const About = () => {
           <br />
         </p>
         <p>
-          hi! i'm Tev, a CTF player 🚩 in SG!
+          Hi! i'm Tev, a CTF player 🚩 in SG!
           <br />
         </p>
         <p>
