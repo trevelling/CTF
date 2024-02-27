@@ -39,22 +39,19 @@ export default function DFIR1() {
       </div>
       <div className={styles.dfirSolved}>
         <p>
-          The authors provided us with a memory dump, AD1 image and a pcap file for
-          further analysis. The flag is given directly in the challenge
+          The authors provided us with a memory dump, AD1 image and a pcap file
+          for further analysis. The flag is given directly in the challenge
           description.
         </p>
       </div>
       <div
-        className={`${styles.dfirEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
-        }`}
+        className={`${styles.dfirEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
         <Image src="/DFIR1.png" width={700} height={255} alt="logo" />
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>
-
         <span style={{ color: "rgb(137, 207, 240)" }}>
           BITSCTF{"{DFIR_r0ck55}"}
         </span>

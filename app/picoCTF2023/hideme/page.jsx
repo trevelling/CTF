@@ -2,23 +2,10 @@
 
 import React, { useState } from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Hideme() {
-  const [isZoomed1, setIsZoomed1] = useState(false);
-  const [isZoomed2, setIsZoomed2] = useState(false);
-  const [isZoomed3, setIsZoomed3] = useState(false);
-
-  const toggleZoom1 = () => {
-    setIsZoomed1(!isZoomed1);
-  };
-
-  const toggleZoom2 = () => {
-    setIsZoomed2(!isZoomed2);
-  };
-  const toggleZoom3 = () => {
-    setIsZoomed3(!isZoomed3);
-  };
   return (
     <div className={styles.hideMeContainer}>
       <div className={styles.hideMeTitle}>
@@ -43,7 +30,13 @@ export default function Hideme() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          flag.png
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/pico_flag.png"
+            download
+          >
+            flag.png
+          </a>
         </p>
       </div>
       <div className={styles.hideMeSolved}>
@@ -61,13 +54,21 @@ export default function Hideme() {
           different hidden files.
         </p>
       </div>
-      <div
-        className={`${styles.hideMeEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom1}
-      >
-        <Image src="/hideme1.png" width={800} height={300} alt="logo" />
+      <div className={styles.hideMeEvidence}>
+        <SyntaxHighlighter language="bash" style={gruvboxDark}>
+  {`
+┌──(tev㉿kali)-[~/pico]
+└─$ binwalk -e flag.png        
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 512 x 504, 8-bit/color RGBA, non-interlaced
+41            0x29            Zlib compressed data, compressed
+39739         0x9B3B          Zip archive data, at least v1.0 to extract, name: secret/
+39804         0x9B7C          Zip archive data, at least v2.0 to extract, compressed size: 2858, uncompressed size: 3015, name: secret/flag.png
+42897         0xA791          End of Zip archive, footer length: 22
+  `}
+</SyntaxHighlighter>
       </div>
       <div className={styles.hideMeSolved}>
         <p>
@@ -77,13 +78,24 @@ export default function Hideme() {
           <strong>flag.png</strong>.
         </p>
       </div>
-      <div
-        className={`${styles.hideMeEvidence} ${
-          isZoomed2 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom2}
-      >
-        <Image src="/hideme2.png" width={800} height={260} alt="logo" />
+      <div className={styles.hideMeEvidence}>
+        <SyntaxHighlighter language="bash" style={gruvboxDark}>
+  {`
+┌──(tev㉿kali)-[~/pico]
+└─$ cd _flag.png.extracted       
+                                                                                   
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted]
+└─$ ls
+29  29.zlib  9B3B.zip  secret
+                                                                                   
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted]
+└─$ cd secret             
+                                                                                   
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted/secret]
+└─$ ls
+flag.png
+  `}
+</SyntaxHighlighter>
       </div>
       <div className={styles.hideMeSolved}>
         <p>
@@ -95,17 +107,17 @@ export default function Hideme() {
           >
             eog
           </a>
-          , an image viewer to view the <strong>flag.png</strong>. This will
+          , to view the <strong>flag.png</strong>. This will
           give us the flag.
         </p>
       </div>
-      <div
-        className={`${styles.hideMeEvidence} ${
-          isZoomed3 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom3}
-      >
-        <Image src="/hideme3.png" width={800} height={320} alt="logo" />
+      <div className={styles.hideMeEvidence}>
+        <SyntaxHighlighter language="bash" style={gruvboxDark}>
+  {`                                                                       
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted/secret]
+└─$ eog flag.png
+  `}
+</SyntaxHighlighter>
       </div>
       <div className={styles.hideMeFlag}>
         <span>Flag: </span>
@@ -116,3 +128,5 @@ export default function Hideme() {
     </div>
   );
 }
+
+

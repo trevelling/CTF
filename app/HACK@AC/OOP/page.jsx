@@ -54,17 +54,21 @@ export default function OOP() {
       </div>
       <div className={styles.oopSolved}>
         <p>
-          Since this is a forensics challenge with a <strong>pcap</strong> file , we can use{" "}
+          Since this is a forensics challenge with a <strong>pcap</strong> file
+          , we can use{" "}
           <a
             href="https://www.wireshark.org/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
             Wireshark
-          </a>
-          {" "} to view the packets.<br /><br /> I scrolled through the first few packets whilst
-          looking at their hex dump and I noticed a packet that had a jpeg image in it. I thought at first 
-          that opening it would give me the flag but when I follow the HTTP stream, I saw <strong>flag.png</strong>.
+          </a>{" "}
+          to view the packets.
+          <br />
+          <br /> I scrolled through the first few packets whilst looking at
+          their hex dump and I noticed a packet that had a jpeg image in it. I
+          thought at first that opening it would give me the flag but when I
+          follow the HTTP stream, I saw <strong>flag.png</strong>.
         </p>
       </div>
       <div
@@ -73,11 +77,13 @@ export default function OOP() {
       >
         <Image src="/oop1.png" width={800} height={500} alt="logo" />
       </div>
-      
+
       <div className={styles.oopSolved}>
         <p>
-         To see it clearer, we can extract the 3 files shown. We can do this by going to 
-        <strong> View</strong> 🡢 <strong>Apply as Filter</strong> 🡢 <strong>ASCII</strong>.
+          To see it clearer, we can extract the 3 files shown. We can do this by
+          going to
+          <strong> View</strong> 🡢 <strong>Apply as Filter</strong> 🡢{" "}
+          <strong>ASCII</strong>.
         </p>
       </div>
       <div
@@ -88,7 +94,8 @@ export default function OOP() {
       </div>
       <div className={styles.oopSolved}>
         <p>
-          From there, the file of interest is <strong>flag.png</strong>. I saved and opened the file, giving us the flag.
+          From there, the file of interest is <strong>flag.png</strong>. I saved
+          and opened the file, giving us the flag.
         </p>
       </div>
       <div

@@ -10,7 +10,7 @@ export default function LNC() {
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          Lag and Crash 🕸️
+          Lag and Crash 💥
         </a>
         <br />
       </div>

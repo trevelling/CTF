@@ -1,17 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function SafeOpener2() {
-  const [isZoomed1, setIsZoomed1] = useState(false);
-  const toggleZoom1 = () => {
-    setIsZoomed1(!isZoomed1);
-  };
   return (
     <div className={styles.safeContainer}>
       <div className={styles.safeTitle}>
@@ -30,40 +24,49 @@ export default function SafeOpener2() {
           <br />
         </p>
         <p>
-        What can you do with this file? I forgot the key to my safe but this file is supposed to help me with retrieving the lost key. Can you help me unlock my safe?
+          What can you do with this file? I forgot the key to my safe but this
+          file is supposed to help me with retrieving the lost key. Can you help
+          me unlock my safe?
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          <a style={{ color: "white", textDecoration: "none" }} href="/safe_SafeOpener.class" download>SafeOpener.class</a>
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/safe_SafeOpener.class"
+            download
+          >
+            SafeOpener.class
+          </a>
         </p>
       </div>
       <div className={styles.safeSolved}>
         <p>
-          This was another very straight foward reverse engineering challenge. We can use{" "}
+          This was another very straight foward reverse engineering challenge.
+          We can use{" "}
           <a
             href="https://www.geeksforgeeks.org/file-command-in-linux-with-examples/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
             file
-          </a>
-          
-          {" "}to see what type file this is. 
-          Since it is a complied Java class file, we need to 
-          decompile it to see the code.
+          </a>{" "}
+          to see what type file this is. Since it is a complied Java class file,
+          we need to decompile it to see the code.
         </p>
       </div>
-      <div
-        className={`${styles.safeEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom1}
-      >
-        <Image src="/safe1.png" width={800} height={85} alt="logo" />
+      <div className={styles.safeEvidence}>
+        <SyntaxHighlighter language="bash" style={gruvboxDark}>
+          {`
+┌──(tev㉿kali)-[~/pico]
+└─$ file SafeOpener.class
+SafeOpener.class: complied Java class data, version 52.0 (Java 1.8)
+  `}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.safeSolved}>
         <p>
-          We can use many open-source tools that decompile Java class code. Since this is a simple challenge, I just used a{" "}
+          We can use many open-source tools that decompile Java class code.
+          Since this is a simple challenge, I just used a{" "}
           <a
             href="http://www.javadecompilers.com/"
             target="blank"
@@ -78,7 +81,7 @@ export default function SafeOpener2() {
         </p>
       </div>
       <div className={styles.safeEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -118,8 +121,7 @@ public class SafeOpener {
             return false;
         }
     }
-}
-            
+} 
           `}
         </SyntaxHighlighter>
       </div>

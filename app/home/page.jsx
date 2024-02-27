@@ -1,14 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./page.module.css";
 
 const About = () => {
-  const [lastUpdated, setLastUpdated] = useState("");
-
-  useEffect(() => {
-    setLastUpdated(new Date(document.lastModified).toLocaleDateString());
-  }, []);
 
   return (
     <div className={styles.aboutContainer}>
@@ -30,11 +25,10 @@ const About = () => {
           <br />
         </p>
         <p>
-          This is a blog documenting writeup's and tools of various ctf's I
+          A blog documenting writeup's and tools of various ctf's I
           participate in 🙂!
           <br />
           <br />
-          <strong>*not all CTF's played are documented*</strong>
         </p>
       </div>
       <div className={styles.aboutCTF}>
@@ -126,14 +120,26 @@ const About = () => {
           </tr>
           <tr>
             <td>
+              <a
+                href="/HACK@AC"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
                 HACK@AC
+              </a>
             </td>
             <td>Jeporady</td>
             <td>30th</td>
           </tr>
           <tr>
             <td>
-                NUS Grey Hats
+                Pearl CTF
+            </td>
+            <td>Jeporady</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>
+                Lag and Crash
             </td>
             <td>Jeporady</td>
             <td>-</td>
@@ -155,8 +161,7 @@ const About = () => {
         <p>All original code is licensed under the MIT license.</p>
       </div>
       <footer className={styles.footer}>    
-          &copy; {new Date().getFullYear()} Tev | Last updated:{" "}
-          {new Date(document.lastModified).toLocaleDateString()}
+          &copy; 2024 Tev
       </footer>
     </div>
   );

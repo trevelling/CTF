@@ -4,18 +4,13 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function VVS() {
   const [isZoomed1, setIsZoomed1] = useState(false);
-  const [isZoomed2, setIsZoomed2] = useState(false);
 
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
-  };
-
-  const toggleZoom2 = () => {
-    setIsZoomed2(!isZoomed2);
   };
   return (
     <div className={styles.vvsContainer}>
@@ -83,7 +78,7 @@ export default function VVS() {
         </p>
       </div>
       <div className={styles.vvsEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
 @app.route('/register', methods=['POST'])
 def register():
@@ -108,7 +103,7 @@ def register():
       Payload:
       <br /> 
       <div className={styles.vvsEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
 [username]','[password hashed with SHA256]',1--
           `}
@@ -126,16 +121,14 @@ def register():
       The SQL payload was based on this line of the code.
       </div>
       <div className={styles.vvsEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
   cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
           `}
         </SyntaxHighlighter>
       </div>
-
       <div className={styles.vvsFlag}>
         <span>Flag: </span>
-
         <span style={{ color: "rgb(137, 207, 240)" }}>
           ACSI{"{a_v3ry_v8lner4b13_p4g3_w1th_55t1_7wt_5q1i}"}
         </span>

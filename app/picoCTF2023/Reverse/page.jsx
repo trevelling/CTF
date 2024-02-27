@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Reverse() {
-  const [isZoomed1, setIsZoomed1] = useState(false);
-  const toggleZoom1 = () => {
-    setIsZoomed1(!isZoomed1);
-  };
   return (
     <div className={styles.reverseContainer}>
       <div className={styles.reverseTitle}>
@@ -32,26 +29,44 @@ export default function Reverse() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          ret.elf
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/pico_ret"
+            download
+          >
+            ret.elf
+          </a>
         </p>
       </div>
       <div className={styles.reverseSolved}>
         <p>
-          This challenge was a straight forward reverse engineering task.
-          Upon opening the <strong>ret</strong> file, it displayed numerous unreadable symbols.
-          Thus, I utilized <strong>strings</strong> on the file to extract
-          readable strings and <strong>grep</strong> to search for the string
+          This challenge was a straight forward reverse engineering task. Upon
+          opening the <strong>ret</strong> file, it displayed numerous
+          unreadable symbols. Thus, I utilized <strong>strings</strong> on the
+          file to extract readable strings and <strong>grep</strong> to search
+          for the string
           <strong>"pico"</strong> within the extracted strings, which got me the
           flag.
         </p>
       </div>
-      <div
-        className={`${styles.reverseEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom1}
-      >
-        <Image src="/reverse.png" width={800} height={305} alt="logo" />
+      <div className={styles.reverseEvidence}>
+        <SyntaxHighlighter language="bash" style={gruvboxDark}>
+          {`
+┌──(tev㉿kali)-[~/pico]
+└─$ chmod _x ret
+
+┌──(tev㉿kali)-[~/pico]
+└─$ ./ret
+Enter the password to unlock this file: password
+You entered: password
+Access denied
+
+┌──(tev㉿kali)-[~/pico]
+└─$ strings ret | grep pico
+picoCTF{h
+Password correct, please see flag: picoCTF{3lf_r4v4r5ing_succe55ful_1de05085}
+  `}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.reverseFlag}>
         <span>Flag: </span>

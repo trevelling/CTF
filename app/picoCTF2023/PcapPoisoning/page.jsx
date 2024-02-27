@@ -38,7 +38,13 @@ export default function PcapPoisoning() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          trace.pcap
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/pico_trace.pcap"
+            download
+          >
+            trace.pcap
+          </a>
         </p>
       </div>
       <div className={styles.pcapPoisoningSolved}>
@@ -51,8 +57,8 @@ export default function PcapPoisoning() {
             style={{ color: "rgb(76, 211, 76)" }}
           >
             Wireshark
-          </a>
-          {" "}to view the packets.
+          </a>{" "}
+          to view the packets.
           <br />
           <br />
           We can observe the most common protocol being used by going to{" "}

@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export default function Moneyware() {
   const [isZoomed1, setIsZoomed1] = useState(false);
+
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
   };
@@ -38,10 +39,9 @@ export default function Moneyware() {
       </div>
       <div className={styles.moneywareSolved}>
         <p>
-          The question gave us a clue about bitcoins and the
-          title of the challenge name 'money-<strong>ware</strong>'<br />{" "}
-          Googling '<strong>1Mz7153HMuxXTuR2R1t78mGSdzaAtNbBWX</strong>' bring
-          us to{" "}
+          The question gave us a clue about bitcoins and the title of the
+          challenge name "money-<strong>ware</strong>"<br /> Googling "
+          <strong>1Mz7153HMuxXTuR2R1t78mGSdzaAtNbBWX</strong>" bring us to{" "}
           <a
             href="https://www.cnbc.com/2017/06/28/ransomware-cyberattack-petya-bitcoin-payment.html"
             target="blank"
@@ -50,8 +50,8 @@ export default function Moneyware() {
             this website
           </a>
           .<br />
-          <br /> Looking for a malware-type, we can see that it is '
-          <strong>petya</strong>'
+          <br /> Looking for a malware-type, we can see that it is "
+          <strong>petya</strong>"
         </p>
       </div>
       <div

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function RSA() {
   return (
@@ -26,21 +26,28 @@ export default function RSA() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          <a style={{ color: "white", textDecoration: "none" }} href="/RSA_RSA.txt" download>RSA.txt</a>
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/RSA_RSA.txt"
+            download
+          >
+            RSA.txt
+          </a>
         </p>
       </div>
       <div className={styles.rsaSolved}>
         <p>
-          <strong>RSA.txt</strong> explained what was RSA about and its origins. It provided us with <strong>n,e,c,p,q</strong>. 
-          This makes it very easy to solve it, 
-          as they gave us all the values to decrypt the cipher text.
+          <strong>RSA.txt</strong> explained what was RSA about and its origins.
+          It provided us with <strong>n,e,c,p,q</strong>. This makes it very
+          easy to solve it, as they gave us all the values to decrypt the cipher
+          text.
           <br />
           <br />
           To solve this challenge, we should inverse the encryption.
         </p>
       </div>
       <div className={styles.rsaEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
 from Crypto.Util.number import long_to_bytes
 
@@ -62,7 +69,6 @@ m = pow(c, d, n)
 # Convert the integer to the flag string
 flag = long_to_bytes(m)
 print(flag.decode())
-    
           `}
         </SyntaxHighlighter>
       </div>

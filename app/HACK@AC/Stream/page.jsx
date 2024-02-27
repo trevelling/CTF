@@ -57,15 +57,18 @@ export default function Stream() {
             style={{ color: "rgb(76, 211, 76)" }}
           >
             Wireshark
-          </a>
-          {" "}which we can use to view the packets.<br /><br /> The first packet in the hex dump was an encoded message.
-          This was recognisable through the "<strong>=</strong>" sign at the back, it was encoded with{" "}
+          </a>{" "}
+          which we can use to view the packets.
+          <br />
+          <br /> The first packet in the hex dump was an encoded message. This
+          was recognisable through the "<strong>=</strong>" sign at the back, it
+          was encoded with{" "}
           <a
             href="https://en.wikipedia.org/wiki/Base64"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-           base64
+            base64
           </a>
           .
         </p>
@@ -76,16 +79,16 @@ export default function Stream() {
       >
         <Image src="/stream1.png" width={800} height={500} alt="logo" />
       </div>
-      
+
       <div className={styles.streamSolved}>
         <p>
-        I took the encoded text and put it through a{" "}
-        <a
+          I took the encoded text and put it through a{" "}
+          <a
             href="https://www.base64decode.org/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-           base64 decoder
+            base64 decoder
           </a>
           .
         </p>

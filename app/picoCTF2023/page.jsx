@@ -16,8 +16,7 @@ export default function PicoCTF() {
       </div>
       <div className={styles.pico2023}>
         <p>Playing for fun to learn and improve my skills 😃!</p>
-        <p>
-        </p>
+        <p></p>
       </div>
       <table className={styles.pico2023Categories}>
         <thead>

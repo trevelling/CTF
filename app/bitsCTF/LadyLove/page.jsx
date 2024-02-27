@@ -46,7 +46,13 @@ export default function LadyLove() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          stolenpainting.jpeg
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/ladylove_stolenpainting.jpeg"
+            download
+          >
+            stolenpainting.jpeg
+          </a>
           <br />
           <br />
           <strong style={{ color: "rgb(255, 106, 61)" }}>HINT: </strong>16th
@@ -112,7 +118,8 @@ export default function LadyLove() {
           >
             Wikipedia
           </a>
-          , the meaning of her last name can be found where "<strong>Ece</strong>" means "<strong>queen</strong>".
+          , the meaning of her last name can be found where "
+          <strong>Ece</strong>" means "<strong>queen</strong>".
           <br />
         </p>
       </div>

@@ -1,20 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function BabyRev() {
-  const [isZoomed1, setIsZoomed1] = useState(false);
-  const [isZoomed2, setIsZoomed2] = useState(false);
-
-  const toggleZoom1 = () => {
-    setIsZoomed1(!isZoomed1);
-  };
-
-  const toggleZoom2 = () => {
-    setIsZoomed2(!isZoomed2);
-  };
   return (
     <div className={styles.babyRevContainer}>
       <div className={styles.babyRevTitle}>
@@ -37,7 +28,13 @@ export default function BabyRev() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          baby-rev.elf
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/babyrev_baby-rev"
+            download
+          >
+            baby-rev.elf
+          </a>
         </p>
       </div>
       <div className={styles.babyRevSolved}>
@@ -56,13 +53,34 @@ export default function BabyRev() {
           <br />
         </p>
       </div>
-      <div
-        className={`${styles.babyRevEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom1}
-      >
-        <Image src="/baby-rev1.png" width={600} height={380} alt="logo" />
+      <div className={styles.babyRevEvidence}>
+        <SyntaxHighlighter language="c" style={gruvboxDark}>
+          {`
+undefined8 main(void)
+{
+  size_t sVar1;
+  long in_FS_OFFSET;
+  char local_38 [40];
+  long local_10;
+  
+  local_10 = *(long *)(in_FS_OFFSET + 0x28);
+  printf("Enter a string: ");
+  fgets(local_38,0x20,stdin);
+  sVar1 = strlen(local_38);
+  if (sVar1 == 0x18) {
+    myfunc(local_38);
+  }
+  else {
+    puts(":P\n");
+  }
+  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {
+                    /* WARNING: Subroutine does not return */
+    __stack_chk_fail();
+  }
+  return 0;
+}
+  `}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.babyRevSolved}>
         <p>
@@ -73,13 +91,32 @@ export default function BabyRev() {
           flag by rearranging it.
         </p>
       </div>
-      <div
-        className={`${styles.babyRevEvidence} ${
-          isZoomed2 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom2}
-      >
-        <Image src="/baby-rev2.png" width={900} height={500} alt="logo" />
+      <div className={styles.babyRevEvidence}>
+        <SyntaxHighlighter language="c" style={gruvboxDark}>
+          {`
+void myfunc(char *param_1)
+{
+  if (*param_1 == 'B') {
+    if (((((((param_1[4] == 'C') && (param_1[0xd] == 'm')) && (param_1[0x13] == 'r')) &&
+          (((param_1[3] == 'S' && (param_1[10] == 'l')) &&
+           ((param_1[2] == 'T' && ((param_1[0xe] == 'e' && (param_1[0x11] == '0')))))))) &&
+         ((param_1[0x16] == '}' &&
+          (((param_1[7] == '{' && (param_1[5] == 'T')) && (param_1[0xf] == '_')))))) &&
+        (((param_1[1] == 'I' && (param_1[0x15] == 'v')) &&
+         (((param_1[8] == 'w' && ((param_1[0xb] == 'c' && (param_1[6] == 'F')))) &&
+          (param_1[0x14] == '3')))))) &&
+       ((((param_1[9] == '3' && (param_1[0xc] == '0')) && (param_1[0x10] == 't')) &&
+        (param_1[0x12] == '_')))) {
+      puts("Yippee :3\n");
+    }
+  }
+  else {
+    puts(":PP\n");
+  }
+  return;
+}
+  `}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.babyRevFlag}>
         <span>Flag: </span>

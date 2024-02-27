@@ -47,10 +47,13 @@ export default function Potato() {
       </div>
       <div className={styles.potatoSolved}>
         <p>
-          This was a very simple cryptography challenge. The <strong>enc</strong> file given to us was just cipher text that needed to be decrypted.
+          This was a very simple cryptography challenge. The{" "}
+          <strong>enc</strong> file given to us was just cipher text that needed
+          to be decrypted.
           <br />
           <br />
-          The cipher text was not only 40 characters long but one of the most common encryption that is not secure/broken is{" "}
+          The cipher text was not only 40 characters long but one of the most
+          common encryption that is not secure/broken is{" "}
           <a
             href="https://en.wikipedia.org/wiki/SHA-1"
             target="blank"
@@ -65,8 +68,8 @@ export default function Potato() {
             style={{ color: "rgb(76, 211, 76)" }}
           >
             SHA-1 decoder
-          </a>
-          {" "}to decrypt the cipher text to obtain the flag.
+          </a>{" "}
+          to decrypt the cipher text to obtain the flag.
         </p>
       </div>
       <div
@@ -75,12 +78,10 @@ export default function Potato() {
       >
         <Image src="/potato1.png" width={800} height={500} alt="logo" />
       </div>
-      
+
       <div className={styles.potatoFlag}>
         <span>Flag: </span>
-        <span style={{ color: "rgb(137, 207, 240)" }}>
-          ACSI{"{pandas}"}
-        </span>
+        <span style={{ color: "rgb(137, 207, 240)" }}>ACSI{"{pandas}"}</span>
       </div>
     </div>
   );

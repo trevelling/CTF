@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function BabyRSA() {
   const [isZoomed1, setIsZoomed1] = useState(false);
@@ -40,15 +40,30 @@ export default function BabyRSA() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
-          rsa_mat.sage, chall.txt
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/babyrsa_rsa_mat.sage"
+            download
+          >
+            rsa_mat.sage
+          </a>
+          ,{" "}
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/babyrsa_chall.txt"
+            download
+          >
+            chall.txt
+          </a>
         </p>
       </div>
       <div className={styles.babyRsaSolved}>
         <p>
-          RSA challenges are pretty standard. Opening up <strong>rsa_mat.sage</strong> shows
-          us code that encrypts a plaintext message using a custom method,
-          and prints the resulting ciphertext while chall.txt contains the
-          values of <strong>n,a,b,c, and d</strong>.
+          RSA challenges are pretty standard. Opening up{" "}
+          <strong>rsa_mat.sage</strong> shows us code that encrypts a plaintext
+          message using a custom method, and prints the resulting ciphertext
+          while chall.txt contains the values of <strong>n,a,b,c, and d</strong>
+          .
           <br />
           <br />
           This code generates an RSA key pair, splits a given plaintext pt into
@@ -59,31 +74,31 @@ export default function BabyRSA() {
         </p>
       </div>
       <div className={styles.babyRsaEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
-  #!/usr/bin/env python3
+#!/usr/bin/env python3
 
-  from Crypto.Util.number import bytes_to_long
-  from Crypto.PublicKey import RSA
-  from sage.all import matrix, Zmod
+from Crypto.Util.number import bytes_to_long
+from Crypto.PublicKey import RSA
+from sage.all import matrix, Zmod
             
-  key = RSA.generate(2048)
+key = RSA.generate(2048)
             
-  print(f"n = {key.n}")
+print(f"n = {key.n}")
             
-  pt = b"REDACTEDZ"
-  pt = [pt[p:p+len(pt)//4] for p in range(0, len(pt), len(pt)//4)]
+pt = b"REDACTEDZ"
+pt = [pt[p:p+len(pt)//4] for p in range(0, len(pt), len(pt)//4)]
             
-  g = matrix(Zmod(key.n), [[pt[0], pt[1]], [pt[2], pt[3]]]) 
+g = matrix(Zmod(key.n), [[pt[0], pt[1]], [pt[2], pt[3]]]) 
             
-  def encrypt(g):
-    return g ^ 65537
+def encrypt(g):
+  return g ^ 65537
             
-  c = encrypt(g)
+c = encrypt(g)
             
-  for i in c:
-    for j in i:
-      print(j)
+for i in c:
+  for j in i:
+    print(j)
           `}
         </SyntaxHighlighter>
       </div>
@@ -97,8 +112,7 @@ export default function BabyRSA() {
           >
             factordb
           </a>{" "}
-          to calcualte the <strong>p</strong> and <strong>q</strong>{" "}
-          from n.
+          to calcualte the <strong>p</strong> and <strong>q</strong> from n.
           <br />
         </p>
       </div>
@@ -121,19 +135,19 @@ export default function BabyRSA() {
         </p>
       </div>
       <div className={styles.babyRsaEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
-  from Crypto.Util.number import long_to_bytes
+from Crypto.Util.number import long_to_bytes
 
-   g = matrix(Zmod(n), [[a,b], [c,d]])
-   phi = (p*p - 1)*(p*p - p)*(q*q - 1)*(q*q - q)
-   d = pow(65537, -1, phi)
+g = matrix(Zmod(n), [[a,b], [c,d]])
+phi = (p*p - 1)*(p*p - p)*(q*q - 1)*(q*q - q)
+d = pow(65537, -1, phi)
              
-   pt = (g^d).lift()
+pt = (g^d).lift()
             
-   pt = long_to_bytes(pt[0][0]) + long_to_bytes(pt[0][1]) + long_to_bytes(pt[1][0]) + long_to_bytes(pt[0][1])
+pt = long_to_bytes(pt[0][0]) + long_to_bytes(pt[0][1]) + long_to_bytes(pt[1][0]) + long_to_bytes(pt[0][1])
    
-   print(pt)
+print(pt)
           `}
         </SyntaxHighlighter>
       </div>

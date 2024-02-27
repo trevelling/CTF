@@ -13,8 +13,6 @@
   color: white;
   background-color: rgb(20, 23, 28);
   padding-left: 15px;
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1.1px;
   font-size: 1em;
@@ -28,8 +26,6 @@
 .babyRevTitle {
   color: rgb(175, 12, 12);
   background-color: rgb(20, 23, 28);
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   letter-spacing: 1.1px;
   font-size: 40px;
   font-weight: bold;
@@ -43,8 +39,6 @@
 .babyRevSolved {
   color: white;
   background-color: rgb(20, 23, 28);
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1.1px;
   font-size: 1em;
@@ -60,8 +54,6 @@
   padding-left: 15px;
   padding-top: 3px;
   padding-bottom: 3px;
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 1.1px;
   font-size: 1em;
@@ -78,33 +70,4 @@
   margin-left: -1px;
   cursor: zoom-in;
   margin-top: 20px;
-}
-
-.babyRevEvidence.zoomed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
-  transition-duration: 0.25s;
-  touch-action: manipulation;
-}
-
-.babyRevEvidence.zoomed img {
-  width: 75vw; 
-  height: 35vh; 
-  transition: transform 0.25s;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
 }

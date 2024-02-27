@@ -7,15 +7,12 @@
   padding-top: 60px;
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
-    
 }
 
 .dfirQuestion {
   color: white;
   background-color: rgb(20, 23, 28);
   padding-left: 15px;
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1.1px;
   font-size: 1em;
@@ -29,8 +26,6 @@
 .dfirTitle {
   color: rgb(175, 12, 12);
   background-color: rgb(20, 23, 28);
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   letter-spacing: 1.1px;
   font-size: 40px;
   font-weight: bold;
@@ -44,8 +39,6 @@
 .dfirSolved {
   color: white;
   background-color: rgb(20, 23, 28);
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1.1px;
   font-size: 1em;
@@ -61,8 +54,6 @@
   padding-left: 15px;
   padding-top: 3px;
   padding-bottom: 3px;
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 1.1px;
   font-size: 1em;

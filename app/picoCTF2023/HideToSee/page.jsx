@@ -3,21 +3,14 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Hidetosee() {
   const [isZoomed1, setIsZoomed1] = useState(false);
-  const [isZoomed2, setIsZoomed2] = useState(false);
-  const [isZoomed3, setIsZoomed3] = useState(false);
 
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
-  };
-
-  const toggleZoom2 = () => {
-    setIsZoomed2(!isZoomed2);
-  };
-  const toggleZoom3 = () => {
-    setIsZoomed3(!isZoomed3);
   };
   return (
     <div className={styles.hideToSeeContainer}>
@@ -41,7 +34,13 @@ export default function Hidetosee() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          atbash.jpeg
+          <a
+            style={{ color: "white", textDecoration: "none" }}
+            href="/pico_atbash.jpeg"
+            download
+          >
+            atbash.jpeg
+          </a>
         </p>
       </div>
       <div className={styles.hideToSeeSolved}>
@@ -59,13 +58,13 @@ export default function Hidetosee() {
           on.
         </p>
       </div>
-      <div
-        className={`${styles.hideToSeeEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom1}
-      >
-        <Image src="/HideToSee1.png" width={600} height={350} alt="logo" />
+      <div className={styles.hideToSeeEvidence}>
+        <SyntaxHighlighter language="bash" style={gruvboxDark}>
+  {`
+┌──(tev㉿kali)-[~/pico]
+└─$ eog atbash.jpg    
+  `}
+</SyntaxHighlighter>
       </div>
       <div className={styles.hideToSeeSolved}>
         <p>
@@ -82,13 +81,23 @@ export default function Hidetosee() {
           what looks like a encrypted flag.
         </p>
       </div>
-      <div
-        className={`${styles.hideToSeeEvidence} ${
-          isZoomed2 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom2}
-      >
-        <Image src="/HideToSee2.png" width={800} height={350} alt="logo" />
+      <div className={styles.hideToSeeEvidence}>
+        <SyntaxHighlighter language="bash" style={gruvboxDark}>
+{`
+┌──(tev㉿kali)-[~/pico]
+└─$ steghide extract -sf atbash.jpg  
+Enter passphrase:
+wrote extracted data to "encrypted.txt".
+
+┌──(tev㉿kali)-[~/pico]
+└─$ ls
+atbash.jpg  encrypted.txt
+
+┌──(tev㉿kali)-[~/pico]
+└─$ cat encrypted.txt
+krxlXGU{zgyzhs_xizxp_xz005577y}
+`}
+</SyntaxHighlighter>
       </div>
       <div className={styles.hideToSeeSolved}>
         <p>
@@ -108,9 +117,9 @@ export default function Hidetosee() {
       </div>
       <div
         className={`${styles.hideToSeeEvidence} ${
-          isZoomed3 ? styles.zoomed : ""
+          isZoomed1 ? styles.zoomed : ""
         }`}
-        onClick={toggleZoom3}
+        onClick={toggleZoom1}
       >
         <Image src="/HideToSee3.png" width={600} height={320} alt="logo" />
       </div>
