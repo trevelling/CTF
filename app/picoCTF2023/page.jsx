@@ -99,7 +99,7 @@ export default function PicoCTF() {
           <tr>
             <td>
               <a
-                href="../picoCTF2023/rotation"
+                href="../picoCTF2023/SafeOpener2"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 Safe Opener 2
@@ -111,7 +111,7 @@ export default function PicoCTF() {
           <tr>
             <td>
               <a
-                href="../picoCTF2023/HideToSee"
+                href="../picoCTF2023/timer"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 timer

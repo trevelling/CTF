@@ -44,9 +44,16 @@ export default function DFIR2() {
       </div>
       <div className={styles.dfirSolved}>
         <p>
-          I started the search with the memory dump first. Since we are looking
+          I started with searching the memory dump first. Since we are looking
           for a password, we can use the windows.hashdump plugin in Vol3 to
-          extract the NTLM hashes and crack MogamBro's password hash.
+          extract the{" "}
+          <a
+            href="https://www.tarlogic.com/cybersecurity-glossary/ntlm-hash/"
+            target="blank"
+            style={{ color: "rgb(76, 211, 76)" }}
+          >
+            NTLM hashes 
+          </a>{" "}and crack MogamBro's password hash.
         </p>
       </div>
       <div
@@ -68,7 +75,7 @@ export default function DFIR2() {
           >
             password hash cracker
           </a>
-          .
+          {" "}to retrieve the flag.
         </p>
       </div>
       <div

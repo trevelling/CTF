@@ -1,4 +1,4 @@
-.oopContainer {
+.streamContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,7 @@
       "Segoe UI", Helvetica, Arial, sans-serif;
   }
   
-  .oopQuestion {
+  .streamQuestion {
     color: white;
     background-color: rgb(20, 23, 28);
     padding-left: 15px;
@@ -25,7 +25,7 @@
     width: 65%;
   }
   
-  .oopTitle {
+  .streamTitle {
     color: rgb(175, 12, 12);
     background-color: rgb(20, 23, 28);
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
@@ -40,7 +40,7 @@
     width: 65%;
   }
   
-  .oopSolved {
+  .streamSolved {
     color: white;
     background-color: rgb(20, 23, 28);
     font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
@@ -54,7 +54,7 @@
     width: 65%;
   }
   
-  .oopFlag {
+  .streamFlag {
     color: white;
     background-color: rgb(20, 23, 28);
     padding-left: 15px;
@@ -74,14 +74,14 @@
     overflow-x: auto;
   }
   
-  .oopEvidence {
+  .streamEvidence {
     width: 65%;
     margin-left: -1px;
     cursor: zoom-in;
     margin-top: 20px;
   }
   
-  .oopEvidence.zoomed {
+  .streamEvidence.zoomed {
     position: fixed;
     top: 0;
     left: 0;
@@ -98,7 +98,7 @@
     touch-action: manipulation;
   }
   
-  .oopEvidence.zoomed img {
+  .streamEvidence.zoomed img {
     width: 50vw; 
     height: 25vh; 
     transition: transform 0.25s;

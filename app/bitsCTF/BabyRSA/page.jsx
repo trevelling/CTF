@@ -45,10 +45,10 @@ export default function BabyRSA() {
       </div>
       <div className={styles.babyRsaSolved}>
         <p>
-          RSA challenges are pretty standard. Opening up rsa_mat.sage we will
-          get a code that encrypts a plaintext message using a custom method,
+          RSA challenges are pretty standard. Opening up <strong>rsa_mat.sage</strong> shows
+          us code that encrypts a plaintext message using a custom method,
           and prints the resulting ciphertext while chall.txt contains the
-          values of n,a,b,c, and d.
+          values of <strong>n,a,b,c, and d</strong>.
           <br />
           <br />
           This code generates an RSA key pair, splits a given plaintext pt into
@@ -89,7 +89,7 @@ export default function BabyRSA() {
       </div>
       <div className={styles.babyRsaSolved}>
         <p>
-          I used{" "}
+          We can use{" "}
           <a
             href="http://factordb.com/"
             target="blank"
@@ -97,7 +97,7 @@ export default function BabyRSA() {
           >
             factordb
           </a>{" "}
-          in order to calcualte the <strong>p</strong> and <strong>q</strong>{" "}
+          to calcualte the <strong>p</strong> and <strong>q</strong>{" "}
           from n.
           <br />
         </p>
@@ -114,6 +114,7 @@ export default function BabyRSA() {
         <p>
           With all the information I have <strong>p,q,n,a,b,c,d</strong> I am
           able to compute the plain text.
+          <br />
           <br />
           This python code simply reverses the ct that i got from{" "}
           <strong>rsa_mat.sage</strong>. Sub in the values obtained.

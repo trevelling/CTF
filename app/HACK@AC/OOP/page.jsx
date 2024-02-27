@@ -40,7 +40,7 @@ export default function OOP() {
           Objects are everywhere, even in the most unlikely of places.
           <br />
           <br />
-          <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
             href="/oop_objects.pcap"
@@ -54,7 +54,7 @@ export default function OOP() {
       </div>
       <div className={styles.oopSolved}>
         <p>
-          This is a pcap file as well as a forensics challenge. Thus I used{" "}
+          Since this is a forensics challenge with a <strong>pcap</strong> file , we can use{" "}
           <a
             href="https://www.wireshark.org/"
             target="blank"
@@ -62,9 +62,9 @@ export default function OOP() {
           >
             Wireshark
           </a>
-          {" "} to view the packets. I scrolled through the first few packets whilst
+          {" "} to view the packets.<br /><br /> I scrolled through the first few packets whilst
           looking at their hex dump and I noticed a packet that had a jpeg image in it. I thought at first 
-          that opening it would give me the flag but when I follow the HTTP stream, I saw "<strong>flag.png</strong>".
+          that opening it would give me the flag but when I follow the HTTP stream, I saw <strong>flag.png</strong>.
         </p>
       </div>
       <div
@@ -76,7 +76,7 @@ export default function OOP() {
       
       <div className={styles.oopSolved}>
         <p>
-         To see it clearer I decided to extract the 3 files shown. I did this by going to 
+         To see it clearer, we can extract the 3 files shown. We can do this by going to 
         <strong> View</strong> 🡢 <strong>Apply as Filter</strong> 🡢 <strong>ASCII</strong>.
         </p>
       </div>

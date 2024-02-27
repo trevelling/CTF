@@ -112,8 +112,7 @@ export default function LadyLove() {
           >
             Wikipedia
           </a>
-          , the meaning of her last name can be found where{" "}
-          <strong>Ece means queen.</strong>
+          , the meaning of her last name can be found where "<strong>Ece</strong>" means "<strong>queen</strong>".
           <br />
         </p>
       </div>

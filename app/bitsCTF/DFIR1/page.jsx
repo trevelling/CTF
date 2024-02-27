@@ -39,7 +39,7 @@ export default function DFIR1() {
       </div>
       <div className={styles.dfirSolved}>
         <p>
-          The authors provided us a memory dump, AD1 image and a pcap file for
+          The authors provided us with a memory dump, AD1 image and a pcap file for
           further analysis. The flag is given directly in the challenge
           description.
         </p>

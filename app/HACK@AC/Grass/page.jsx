@@ -56,7 +56,7 @@ export default function Grass() {
           the Leaves Shades the Branches
           <br />
           <br />
-          <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
             href="/Grass_Final.zip"
@@ -70,7 +70,7 @@ export default function Grass() {
       </div>
       <div className={styles.grassSolved}>
         <p>
-          When I unzipped Grass_Final.zip, I got back a Grass_Final.png.
+          Unzipping <strong>Grass_Final.zip</strong>, gives us <strong>Grass_Final.png</strong>.
           Immediately, I tried viewing the png using{" "}
           <a
             href="https://help.gnome.org/users/eog/stable/"
@@ -79,7 +79,7 @@ export default function Grass() {
           >
             eog
           </a>
-          . However, it did not let me and gave me a file format error. Thus, I
+          . However, it gave me a file format error. Thus, I
           tried using{" "}
           <a
             href="https://help.gnome.org/users/eog/stable/"
@@ -88,8 +88,8 @@ export default function Grass() {
           >
             exiftool
           </a>{" "}
-          to see any metadata of the file. Once again it shows a file format
-          error, which made me confused.
+          to see any metadata of the file. Once again, it showed a file format
+          error.
           <br />
         </p>
       </div>
@@ -125,7 +125,7 @@ export default function Grass() {
           </a>
           . Basically, we can now exploit this the same way. Seeing that is a
           png image, we can change to magic bytes of the corrupted
-          Grass_Final.png file. Here's the list of{" "}
+          <strong> Grass_Final.png</strong> file.<br /><br /> Here's the list of{" "}
           <a
             href="https://en.wikipedia.org/wiki/List_of_file_signatures"
             target="blank"
@@ -133,7 +133,7 @@ export default function Grass() {
           >
             file signatures
           </a>{" "}
-          for the magic bytes.
+          for their respecitive magic bytes.
           <br />
           <br />I used{" "}
           <a
@@ -156,7 +156,7 @@ export default function Grass() {
       </div>
       <div className={styles.grassSolved}>
         <p>
-          I changed the bytes of the corrupted png to match the magic bytes of a
+          We can alter the magic bytes of the corrupted png to match the magic bytes of a
           real png file.
         </p>
       </div>
@@ -168,8 +168,16 @@ export default function Grass() {
       </div>
       <div className={styles.grassSolved}>
         <p>
-          I then checked to see if the file is an actual png file and it is! I
-          ran eog on the file and it revealed an area of ACS(I).
+          The file is now an actual png file. I
+          ran{" "}
+          <a
+            href="https://help.gnome.org/users/eog/stable/"
+            target="blank"
+            style={{ color: "rgb(76, 211, 76)" }}
+          >
+            eog
+          </a>
+           {" "}on the file and it revealed an area of ACS(I).
         </p>
       </div>
       <div
@@ -191,8 +199,8 @@ export default function Grass() {
           flag was hidden in the photo 🤣.
           <br />
           <br />I re-looked at the challenge and realised the description gave
-          us a hint. Reading the capital letters of the description "the Leaves
-          Shades the Branches" gives us "
+          us a hint. Reading the capital letters of the description "<strong>the Leaves
+          Shades the Branches</strong>" gives us "
           <a
             href="https://www.analog.com/en/resources/glossary/lsb.html"
             target="blank"

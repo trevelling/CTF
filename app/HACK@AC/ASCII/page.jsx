@@ -32,39 +32,39 @@ export default function ASCII() {
       </div>
       <div className={styles.asciiSolved}>
         <p>
-          <strong>Output.txt</strong> showed a cryptic like-flag, while <strong>source.js</strong> had code then will return the flag to us.
+          <strong>Output.txt</strong> showed a cryptic like-flag, while <strong>source.js</strong> had code that returns the flag to us.
           <br />
           <br />
-          The provided js code defines a 
-          function (yes) that takes a string <strong>_0x6c57x2</strong>
-           as input and performs XOR and addition 
+          The provided JS code defines a 
+          function (yes) that takes a string <strong>_0x6c57x2 </strong>
+          as input and performs XOR and addition 
           operations on its characters to transform it 
           into a new string <strong>_0x6c57x5</strong>.
           Then, it logs the result to the console with a prefix.
           <br />
           <br />
-          To solve this challenge, I inversed the operation that is getting applied.
+          To solve this challenge, we can inverse the operation that is getting applied to retrieve the flag.
         </p>
       </div>
       <div className={styles.asciiEvidence}>
         <SyntaxHighlighter language="python" style={materialDark}>
           {`
-    # Original text
-    output_text = "ECSM{j³v³scµtx_m¹_sxr¸eng³"
+# Original text
+output_text = "ECSM{j³v³scµtx_m¹_sxr¸eng³"
 
-    def reverse_yes(input):
-        # Subtract 0x42 from each character
-        step1 = ''.join([chr(ord(char) - 0x42) for char in input])
+def reverse_yes(input):
+  # Subtract 0x42 from each character
+  step1 = ''.join([chr(ord(char) - 0x42) for char in input])
         
-        # XOR each character with 0x42
-        original_input = ''.join([chr(ord(char) ^ 0x42) for char in step1])
+  # XOR each character with 0x42
+  original_input = ''.join([chr(ord(char) ^ 0x42) for char in step1])
         
-        return original_input
+  return original_input
         
-    # Reverse the transformation to get the original input
-    original_input = reverse_yes(output_text)
+# Reverse the transformation to get the original input
+original_input = reverse_yes(output_text)
         
-    print(original_input)
+print(original_input)
           `}
         </SyntaxHighlighter>
       </div>

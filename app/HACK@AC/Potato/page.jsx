@@ -6,18 +6,8 @@ import Image from "next/image";
 
 export default function Potato() {
   const [isZoomed1, setIsZoomed1] = useState(false);
-  const [isZoomed2, setIsZoomed2] = useState(false);
-  const [isZoomed3, setIsZoomed3] = useState(false);
-
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
-  };
-
-  const toggleZoom2 = () => {
-    setIsZoomed2(!isZoomed2);
-  };
-  const toggleZoom3 = () => {
-    setIsZoomed3(!isZoomed3);
   };
   return (
     <div className={styles.potatoContainer}>
@@ -57,7 +47,7 @@ export default function Potato() {
       </div>
       <div className={styles.potatoSolved}>
         <p>
-          This is was a very simple challenge. The enc file given to us was just an encrypted plain text.
+          This was a very simple cryptography challenge. The <strong>enc</strong> file given to us was just cipher text that needed to be decrypted.
           <br />
           <br />
           The cipher text was not only 40 characters long but one of the most common encryption that is not secure/broken is{" "}
@@ -68,7 +58,15 @@ export default function Potato() {
           >
             SHA-1
           </a>
-          . Thus, we can just decrypt the cipher text to obtain the flag.
+          . We can use a{" "}
+          <a
+            href="https://md5decrypt.net/en/Sha1/"
+            target="blank"
+            style={{ color: "rgb(76, 211, 76)" }}
+          >
+            SHA-1 decoder
+          </a>
+          {" "}to decrypt the cipher text to obtain the flag.
         </p>
       </div>
       <div

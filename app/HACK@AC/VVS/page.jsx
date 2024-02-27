@@ -40,7 +40,7 @@ export default function VVS() {
           get the flag? Maybe I'm just dumb...
           <br />
           <br />
-          <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
             href="/VVS.zip"
@@ -62,7 +62,7 @@ export default function VVS() {
       <div className={styles.vvsSolved}>
         <p>
           Running the instance will bring us to a website with a login and
-          register page that requires us to input our username and password.
+          register page that requires us to input a username and password to get the flag.
           <br />
         </p>
       </div>
@@ -74,30 +74,30 @@ export default function VVS() {
       </div>
       <div className={styles.vvsSolved}>
         <p>
-          Using the given <strong>app.py</strong> file in the zipped file, the
-          code of concern is (register) function. The register function takes
+          From the given <strong>app.py</strong> file, the
+          code of concern is the function (register). This function takes
           username and password inputs from a form, hashes the password using
           SHA-256, inserts the username, hashed password, and a default value
           for admin into a SQLite database, and then redirects the user to the
-          index page with a success message.
+          index page with a success message. <br /><br />This is part of the code that is of concern.
         </p>
       </div>
       <div className={styles.vvsEvidence}>
         <SyntaxHighlighter language="python" style={materialDark}>
           {`
-  @app.route('/register', methods=['POST'])
-  def register():
-      username = request.form['username']
-      password = request.form['password']
-      phash = sha256(password.encode('utf-8')).hexdigest()
+@app.route('/register', methods=['POST'])
+def register():
+  username = request.form['username']
+  password = request.form['password']
+  phash = sha256(password.encode('utf-8')).hexdigest()
   
-      conn = sqlite3.connect('database.db')
-      cur = conn.cursor()
-      ## Wait how do I use the question mark thing again?
-      cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
-      conn.commit()
+  conn = sqlite3.connect('database.db')
+  cur = conn.cursor()
+  ## Wait how do I use the question mark thing again?
+  cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
+  conn.commit()
   
-      return redirect(url_for('index', message='Successfully registered!'))
+  return redirect(url_for('index', message='Successfully registered!'))
           `}
         </SyntaxHighlighter>
       </div>
@@ -105,9 +105,15 @@ export default function VVS() {
       Firstly, I tried many times to inject a payload into the username field of the registration form but realised the goal was to first create a new user as the database was empty.
       <br />
       <br />
-      The payload format should be:
-      <br />
-      <strong> [username]','[password hashed with SHA256]',1)--, where [username] is the desired username, [password hashed with SHA256] is the SHA-256 hashed password, 1 indicating an admin status.</strong> 
+      Payload:
+      <br /> 
+      <div className={styles.vvsEvidence}>
+        <SyntaxHighlighter language="python" style={materialDark}>
+          {`
+[username]','[password hashed with SHA256]',1--
+          `}
+        </SyntaxHighlighter>
+      </div>
       <br />
       <br />
       By injecting the password 
