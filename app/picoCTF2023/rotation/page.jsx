@@ -42,8 +42,8 @@ export default function Rotation() {
       </div>
       <div className={styles.rotationSolved}>
         <p>
-        This challenge provided with a plain ASCII file. Thus <strong>catting</strong> it out would result in a flag-like format. Pico challenges like this are very similar, where it looks like a flag.
-        The clue would be in the challenge name <strong>"rotation"</strong>.
+        This challenge provided with a plain ASCII file. Catting it out would result in a flag-like format. Pico challenges like this are very similar, where it looks like a flag.
+        The clue would be in the challenge name "<strong>rotation</strong>".
         </p>
       </div>
       <div
@@ -56,7 +56,7 @@ export default function Rotation() {
       </div>
       <div className={styles.rotationSolved}>
         <p>
-        Heading over to{" "}
+        We can use{" "}
         <a
             href="https://www.dcode.fr/en"
             target="blank"
@@ -64,8 +64,8 @@ export default function Rotation() {
           >
             dcode
           </a>
-          ,  I searched for <strong>rotation</strong> and found the <strong>"ROT Cipher"</strong>. By inputting the plain text, the program brute-forced all possible ROT Ciphers.
-          From there I used <strong>CTRL-F</strong> to quickly find the pico flag.
+          , and search for <strong>rotation</strong> to find the "<strong>ROT Cipher</strong>". By inputting the plain text, the program brute-forced all possible ROT Ciphers.
+          From there I used CTRL-F to quickly find the pico flag.
         </p>
       </div>
       <div

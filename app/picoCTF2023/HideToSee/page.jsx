@@ -102,7 +102,7 @@ export default function Hidetosee() {
           >
             cyberchef
           </a>
-          , I searched for rhw <strong>Atbash Cipher</strong>, derypted it, and
+          , I searched for <strong>Atbash Cipher</strong>, derypted it, and
           obtained the flag.
         </p>
       </div>

@@ -57,7 +57,7 @@ export default function Hideme() {
             exiftool
           </a>{" "}
           to carve out any other files that are hidden. Using the{" "}
-          <strong>-e</strong> to extract, low nad behold we have extracted
+          <strong>-e</strong> to extract, low and behold we have extracted
           different hidden files.
         </p>
       </div>

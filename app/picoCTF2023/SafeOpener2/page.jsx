@@ -34,12 +34,21 @@ export default function SafeOpener2() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          <a style={{ color: "white", textDecoration: "none" }} href="/safe_SafeOpener.class" download>SafeOpener.class</a>,{" "}
+          <a style={{ color: "white", textDecoration: "none" }} href="/safe_SafeOpener.class" download>SafeOpener.class</a>
         </p>
       </div>
       <div className={styles.safeSolved}>
         <p>
-          This was a very straight foward reverse engineering challenge. We can use file to see what file this is. 
+          This was another very straight foward reverse engineering challenge. We can use{" "}
+          <a
+            href="https://www.geeksforgeeks.org/file-command-in-linux-with-examples/"
+            target="blank"
+            style={{ color: "rgb(76, 211, 76)" }}
+          >
+            file
+          </a>
+          
+          {" "}to see what type file this is. 
           Since it is a complied Java class file, we need to 
           decompile it to see the code.
         </p>
@@ -50,7 +59,7 @@ export default function SafeOpener2() {
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/safe1.png" width={800} height={90} alt="logo" />
+        <Image src="/safe1.png" width={800} height={85} alt="logo" />
       </div>
       <div className={styles.safeSolved}>
         <p>
@@ -63,6 +72,9 @@ export default function SafeOpener2() {
             online Java decomplier
           </a>
           . From the decomplied code, we will get the flag.
+          <br />
+          <br />
+          This is the decomplied code.
         </p>
       </div>
       <div className={styles.safeEvidence}>

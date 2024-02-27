@@ -38,8 +38,7 @@ export default function Moneyware() {
       </div>
       <div className={styles.moneywareSolved}>
         <p>
-          Since this is an OSINT question, it got me thinking about research.
-          The question gave us a clue about <strong>bitcoins</strong> and the
+          The question gave us a clue about bitcoins and the
           title of the challenge name 'money-<strong>ware</strong>'<br />{" "}
           Googling '<strong>1Mz7153HMuxXTuR2R1t78mGSdzaAtNbBWX</strong>' bring
           us to{" "}

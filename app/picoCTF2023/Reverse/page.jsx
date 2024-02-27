@@ -37,8 +37,8 @@ export default function Reverse() {
       </div>
       <div className={styles.reverseSolved}>
         <p>
-          This challenge involved a straightforward reverse engineering task.
-          Upon opening the ELF file, it displayed numerous unreadable symbols.
+          This challenge was a straight forward reverse engineering task.
+          Upon opening the <strong>ret</strong> file, it displayed numerous unreadable symbols.
           Thus, I utilized <strong>strings</strong> on the file to extract
           readable strings and <strong>grep</strong> to search for the string
           <strong>"pico"</strong> within the extracted strings, which got me the

@@ -43,8 +43,8 @@ export default function PcapPoisoning() {
       </div>
       <div className={styles.pcapPoisoningSolved}>
         <p>
-          This is a simple forensics challenge. Seeing the challenge name "
-          <strong>Pcap</strong>", I ought to use{" "}
+          This is a simple forensics challenge. Since there was a
+          <strong>pcap</strong> file, I used{" "}
           <a
             href="https://www.wireshark.org/"
             target="blank"
@@ -52,8 +52,8 @@ export default function PcapPoisoning() {
           >
             Wireshark
           </a>
-          . Opening the pcap file in wireshark will result us in a lot of
-          different packets. <br />
+          {" "}to view the packets.
+          <br />
           <br />
           We can observe the most common protocol being used by going to{" "}
           <strong>Statistics 🡢 Protocol Hierarchy </strong>. We can see that the
