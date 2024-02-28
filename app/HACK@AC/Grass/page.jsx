@@ -14,14 +14,8 @@ export default function Grass() {
   };
   return (
     <div className={styles.grassContainer}>
-      <div className={styles.grassTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.grassTitle} style={{ color: "white"}}>
           Grass is Greener
-        </a>
         <br />
       </div>
       <div className={styles.grassQuestion}>
@@ -47,15 +41,15 @@ export default function Grass() {
       </div>
       <div className={styles.grassSolved}>
         <p>
-          Unzipping <strong>Grass_Final.zip</strong>, gives us{" "}
-          <strong>Grass_Final.png</strong>. Immediately, I tried viewing the png
+          Unzipping <code>Grass_Final.zip</code>, gives us{" "}
+          <code>Grass_Final.png</code>. Immediately, I tried viewing the png
           using{" "}
           <a
             href="https://help.gnome.org/users/eog/stable/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            eog
+            <code>eog</code>
           </a>
           . However, it gave me a file format error. Thus, I tried using{" "}
           <a
@@ -63,7 +57,7 @@ export default function Grass() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            exiftool
+            <code>exiftool</code>
           </a>{" "}
           to see any metadata of the file. Once again, it showed a file format
           error.
@@ -106,7 +100,7 @@ ERRORS DETECTED in Grass_Final.png
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            github repo
+            <code>github repo</code>
           </a>{" "}
           talking about{" "}
           <a
@@ -114,7 +108,7 @@ ERRORS DETECTED in Grass_Final.png
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            magic bytes
+            <code>magic bytes</code>
           </a>
           . Basically, we can now exploit this the same way. Seeing that is a
           png image, we can change to magic bytes of the corrupted
@@ -126,7 +120,7 @@ ERRORS DETECTED in Grass_Final.png
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            file signatures
+            <code>file signatures</code>
           </a>{" "}
           for their respecitive magic bytes.
           <br />
@@ -136,7 +130,7 @@ ERRORS DETECTED in Grass_Final.png
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            xxd
+            <code>xxd</code>
           </a>{" "}
           on the file to see its hexadecimal format. However, based on the png
           file signaures, it has been altered and is no longer a png despite the
@@ -177,7 +171,7 @@ ERRORS DETECTED in Grass_Final.png
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            eog
+            <code>eog</code>
           </a>{" "}
           on the file and it revealed an area of ACS(I).
         </p>
@@ -207,22 +201,22 @@ OK: Grass_Final.png (4032x3024, 32-bit RGB+alpha, non-interlaced, 69.1%).
           flag was hidden in the photo 🤣.
           <br />
           <br />I re-looked at the challenge and realised the description gave
-          us a hint. Reading the capital letters of the description "
-          <strong>the Leaves Shades the Branches</strong>" gives us "
+          us a hint. Reading the capital letters of the description 
+          <code>the Leaves Shades the Branches</code> gives us 
           <a
             href="https://www.analog.com/en/resources/glossary/lsb.html"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            LSB
+            <code>LSB</code>
           </a>
-          ". Then I knew I had to run{" "}
+          . Then I knew I had to run{" "}
           <a
             href="https://wiki.bi0s.in/steganography/zsteg/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            Zsteg
+            <code>zsteg</code>
           </a>{" "}
           on the image. There is the flag!
         </p>

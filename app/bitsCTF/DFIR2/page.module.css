@@ -108,3 +108,16 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+.dfirSolved code {
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: gitbook-code-font, Menlo, monospace;
+  background-color: rgb(34, 39, 46);
+  line-height: 1.7;
+  border-radius: 4px;
+  margin: 0px;
+  font-size: 1em;
+}

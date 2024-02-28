@@ -8,14 +8,8 @@ import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export default function Reverse() {
   return (
     <div className={styles.reverseContainer}>
-      <div className={styles.reverseTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.reverseTitle} style={{ color: "white"}}>
           Reverse
-        </a>
         <br />
       </div>
       <div className={styles.reverseQuestion}>
@@ -41,11 +35,11 @@ export default function Reverse() {
       <div className={styles.reverseSolved}>
         <p>
           This challenge was a straight forward reverse engineering task. Upon
-          opening the <strong>ret</strong> file, it displayed numerous
-          unreadable symbols. Thus, I utilized <strong>strings</strong> on the
-          file to extract readable strings and <strong>grep</strong> to search
+          opening the <code>ret</code> file, it displayed numerous
+          unreadable symbols. Thus, I utilized <code>strings</code> on the
+          file to extract readable strings and <code>grep</code> to search
           for the string
-          <strong>"pico"</strong> within the extracted strings, which got me the
+          <code>pico</code> within the extracted strings, which got me the
           flag.
         </p>
       </div>

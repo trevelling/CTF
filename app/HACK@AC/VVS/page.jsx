@@ -14,14 +14,8 @@ export default function VVS() {
   };
   return (
     <div className={styles.vvsContainer}>
-      <div className={styles.vvsTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.vvsTitle} style={{ color: "white"}}>
           Very Vulnerable Site
-        </a>
         <br />
       </div>
       <div className={styles.vvsQuestion}>
@@ -69,7 +63,7 @@ export default function VVS() {
       </div>
       <div className={styles.vvsSolved}>
         <p>
-          From the given <strong>app.py</strong> file, the
+          From the given <code>app.py</code> file, the
           code of concern is the function (register). This function takes
           username and password inputs from a form, hashes the password using
           SHA-256, inserts the username, hashed password, and a default value

@@ -11,14 +11,8 @@ export default function DFIR1() {
   };
   return (
     <div className={styles.dfirContainer}>
-      <div className={styles.dfirTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.dfirTitle} style={{ color: "white"}}>
           Intro to DFIR
-        </a>
         <br />
       </div>
       <div className={styles.dfirQuestion}>
@@ -39,7 +33,7 @@ export default function DFIR1() {
       </div>
       <div className={styles.dfirSolved}>
         <p>
-          The authors provided us with a memory dump, AD1 image and a pcap file
+          The authors provided us with a <code>memory dump</code>, <code>AD1 image</code> and a <code>pcap</code> file
           for further analysis. The flag is given directly in the challenge
           description.
         </p>

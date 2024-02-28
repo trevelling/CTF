@@ -8,14 +8,8 @@ import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export default function SafeOpener2() {
   return (
     <div className={styles.safeContainer}>
-      <div className={styles.safeTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.safeTitle} style={{ color: "white"}}>
           Safe Opener 2
-        </a>
         <br />
       </div>
       <div className={styles.safeQuestion}>
@@ -48,7 +42,7 @@ export default function SafeOpener2() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            file
+            <code>file</code>
           </a>{" "}
           to see what type file this is. Since it is a complied Java class file,
           we need to decompile it to see the code.
@@ -72,7 +66,7 @@ SafeOpener.class: complied Java class data, version 52.0 (Java 1.8)
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            online Java decomplier
+            <code>online Java decomplier</code>
           </a>
           . From the decomplied code, we will get the flag.
           <br />

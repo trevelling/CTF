@@ -21,14 +21,8 @@ export default function LadyLove() {
   };
   return (
     <div className={styles.ladyLoveContainer}>
-      <div className={styles.ladyLoveTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.ladyLoveTitle} style={{ color: "white"}}>
           LadyLove
-        </a>
         <br />
       </div>
       <div className={styles.ladyLoveQuestion}>
@@ -67,7 +61,7 @@ export default function LadyLove() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            reverse image search
+            <code>reverse image search</code>
           </a>{" "}
           on the painting to find more information on it. Going through the
           first website, it seems that the painter's name is Peter Adolf Hall.
@@ -90,7 +84,7 @@ export default function LadyLove() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            Wikipedia
+            <code>Wikipedia</code>
           </a>
           , it seems that he was born in Sweden but died in Belgium, suggesting
           that his LadyLove was also from Belgium. Due to low solves and after
@@ -116,10 +110,10 @@ export default function LadyLove() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            Wikipedia
+            <code>Wikipedia</code>
           </a>
-          , the meaning of her last name can be found where "
-          <strong>Ece</strong>" means "<strong>queen</strong>".
+          , the meaning of her last name can be found where 
+          <code>Ece</code> means <code>queen</code>.
           <br />
         </p>
       </div>

@@ -19,14 +19,8 @@ export default function BabyRSA() {
   };
   return (
     <div className={styles.babyRsaContainer}>
-      <div className={styles.babyRsaTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.babyRsaTitle} style={{ color: "white"}}>
           Baby Rsa
-        </a>
         <br />
       </div>
       <div className={styles.babyRsaQuestion}>
@@ -60,9 +54,9 @@ export default function BabyRSA() {
       <div className={styles.babyRsaSolved}>
         <p>
           RSA challenges are pretty standard. Opening up{" "}
-          <strong>rsa_mat.sage</strong> shows us code that encrypts a plaintext
+          <code>rsa_mat.sage</code> shows us code that encrypts a plaintext
           message using a custom method, and prints the resulting ciphertext
-          while chall.txt contains the values of <strong>n,a,b,c, and d</strong>
+          while chall.txt contains the values of <code>n,a,b,c, and d</code>
           .
           <br />
           <br />
@@ -110,9 +104,9 @@ for i in c:
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            factordb
+            <code>factordb</code>
           </a>{" "}
-          to calcualte the <strong>p</strong> and <strong>q</strong> from n.
+          to calcualte the <code>p</code> and <code>q</code> from n.
           <br />
         </p>
       </div>
@@ -126,12 +120,12 @@ for i in c:
       </div>
       <div className={styles.babyRsaSolved}>
         <p>
-          With all the information I have <strong>p,q,n,a,b,c,d</strong> I am
+          With all the information I have <code>p,q,n,a,b,c,d</code> I am
           able to compute the plain text.
           <br />
           <br />
           This python code simply reverses the ct that i got from{" "}
-          <strong>rsa_mat.sage</strong>. Sub in the values obtained.
+          <code>rsa_mat.sage</code>. Sub in the values obtained.
         </p>
       </div>
       <div className={styles.babyRsaEvidence}>

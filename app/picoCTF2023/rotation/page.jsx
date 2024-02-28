@@ -14,14 +14,8 @@ export default function Rotation() {
   };
   return (
     <div className={styles.rotationContainer}>
-      <div className={styles.rotationTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.rotationTitle} style={{ color: "white"}}>
           rotation
-        </a>
         <br />
       </div>
       <div className={styles.rotationQuestion}>
@@ -48,7 +42,7 @@ export default function Rotation() {
           This challenge provided with a plain ASCII file. Catting it out would
           result in a flag-like format. Pico challenges like this are very
           similar, where it looks like a flag. The clue would be in the
-          challenge name "<strong>rotation</strong>".
+          challenge name <code>rotation</code>.
         </p>
       </div>
       <div className={styles.rotationEvidence}>
@@ -68,11 +62,11 @@ xqkwKBN{z0bib1wv_l3kzgxb3l_429in00n}
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            dcode
+            <code>dcode</code>
           </a>
-          , and search for <strong>rotation</strong> to find the "
-          <strong>ROT Cipher</strong>". By inputting the plain text, the program
-          brute-forced all possible ROT Ciphers. From there I used CTRL-F to
+          , and search for <code>rotation</code> to find the 
+          <code>ROT Cipher</code>. By inputting the plain text, the program
+          brute-forced all possible ROT Ciphers. From there I used <code>CTRL-F</code>CTRL-F to
           quickly find the pico flag.
         </p>
       </div>

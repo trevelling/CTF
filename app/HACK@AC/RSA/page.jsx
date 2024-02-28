@@ -6,14 +6,8 @@ import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export default function RSA() {
   return (
     <div className={styles.rsaContainer}>
-      <div className={styles.rsaTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.rsaTitle} style={{ color: "white"}}>
           RandomlySelectedAlgorithm
-        </a>
         <br />
       </div>
       <div className={styles.rsaQuestion}>
@@ -37,8 +31,8 @@ export default function RSA() {
       </div>
       <div className={styles.rsaSolved}>
         <p>
-          <strong>RSA.txt</strong> explained what was RSA about and its origins.
-          It provided us with <strong>n,e,c,p,q</strong>. This makes it very
+          <code>RSA.txt</code> explained what was RSA about and its origins.
+          It provided us with <code>n,e,c,p,q</code>. This makes it very
           easy to solve it, as they gave us all the values to decrypt the cipher
           text.
           <br />

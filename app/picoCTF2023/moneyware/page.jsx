@@ -12,14 +12,8 @@ export default function Moneyware() {
   };
   return (
     <div className={styles.moneywareContainer}>
-      <div className={styles.moneywareTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.moneywareTitle} style={{ color: "white"}}>
           money-ware
-        </a>
         <br />
       </div>
       <div className={styles.moneywareQuestion}>
@@ -40,18 +34,18 @@ export default function Moneyware() {
       <div className={styles.moneywareSolved}>
         <p>
           The question gave us a clue about bitcoins and the title of the
-          challenge name "money-<strong>ware</strong>"<br /> Googling "
-          <strong>1Mz7153HMuxXTuR2R1t78mGSdzaAtNbBWX</strong>" bring us to{" "}
+          challenge name money-<code>ware</code><br /> Googling{" "}
+          <code>1Mz7153HMuxXTuR2R1t78mGSdzaAtNbBWX</code> bring us to{" "}
           <a
             href="https://www.cnbc.com/2017/06/28/ransomware-cyberattack-petya-bitcoin-payment.html"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            this website
+            <code>this website</code>
           </a>
           .<br />
-          <br /> Looking for a malware-type, we can see that it is "
-          <strong>petya</strong>"
+          <br /> Looking for a malware-type, we can see that it is{" "}
+          <code>petya</code>
         </p>
       </div>
       <div

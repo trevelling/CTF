@@ -17,14 +17,8 @@ export default function PcapPoisoning() {
   };
   return (
     <div className={styles.pcapPoisoningContainer}>
-      <div className={styles.pcapPoisoningTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.pcapPoisoningTitle} style={{ color: "white"}}>
           PcapPoisoning
-        </a>
         <br />
       </div>
       <div className={styles.pcapPoisoningQuestion}>
@@ -49,21 +43,20 @@ export default function PcapPoisoning() {
       </div>
       <div className={styles.pcapPoisoningSolved}>
         <p>
-          This is a simple forensics challenge. Since there was a
-          <strong>pcap</strong> file, I used{" "}
+          This is a simple forensics challenge. Since there was a <code>pcap</code> file, I used{" "}
           <a
             href="https://www.wireshark.org/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            Wireshark
+            <code>Wireshark</code>
           </a>{" "}
           to view the packets.
           <br />
           <br />
           We can observe the most common protocol being used by going to{" "}
-          <strong>Statistics 🡢 Protocol Hierarchy </strong>. We can see that the
-          most exchanged packets is <strong>TCP</strong>.
+          <code>Statistics</code> 🡢 <code>Protocol Hierarchy </code>. We can see that the
+          most exchanged packets is <code>TCP</code>.
         </p>
       </div>
       <div
@@ -77,7 +70,7 @@ export default function PcapPoisoning() {
       <div className={styles.pcapPoisoningSolved}>
         <p>
           Using the filter feature in Wireshark and inputting this filter,{" "}
-          <strong>tcp contains "pico"</strong> we will get the flag located in
+          <code>tcp contains "pico"</code> we will get the flag located in
           the Hex Dump.
           <br />
           <br />
@@ -87,7 +80,7 @@ export default function PcapPoisoning() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            Wireshark Cheat Sheet
+            <code>Wireshark Cheat Sheet</code>
           </a>
           .
         </p>

@@ -17,14 +17,8 @@ export default function Stream() {
   };
   return (
     <div className={styles.streamContainer}>
-      <div className={styles.streamTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.streamTitle} style={{ color: "white"}}>
           Stream of Consciousness
-        </a>
         <br />
       </div>
       <div className={styles.streamQuestion}>
@@ -56,19 +50,19 @@ export default function Stream() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            Wireshark
+            <code>Wireshark</code>
           </a>{" "}
           which we can use to view the packets.
           <br />
           <br /> The first packet in the hex dump was an encoded message. This
-          was recognisable through the "<strong>=</strong>" sign at the back, it
+          was recognisable through the <code>=</code> sign at the back, it
           was encoded with{" "}
           <a
             href="https://en.wikipedia.org/wiki/Base64"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            base64
+            <code>base64</code>
           </a>
           .
         </p>
@@ -88,7 +82,7 @@ export default function Stream() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            base64 decoder
+            <code>base64 decoder</code>
           </a>
           .
         </p>

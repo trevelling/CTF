@@ -14,14 +14,8 @@ export default function DFIR2() {
   };
   return (
     <div className={styles.dfirContainer}>
-      <div className={styles.dfirTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.dfirTitle} style={{ color: "white"}}>
           Access Granted!
-        </a>
         <br />
       </div>
       <div className={styles.dfirQuestion}>
@@ -49,7 +43,7 @@ export default function DFIR2() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            NTLM hashes 
+            <code>NTLM hashes</code>
           </a>{" "}and crack MogamBro's password hash.
         </p>
       </div>
@@ -72,14 +66,14 @@ MogamBro        1000    aad3b435b51404eeaad3b435b51404ee        8a320467c7c22e32
       </div>
       <div className={styles.dfirSolved}>
         <p>
-          Taking a look at <strong>MogamBro</strong>, we can put the hash inside
+          Taking a look at <code>MogamBro</code>, we can put the hash inside
           a{" "}
           <a
             href="https://crackstation.net/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            password hash cracker
+            <code>password hash cracker</code>
           </a>
           {" "}to retrieve the flag.
         </p>

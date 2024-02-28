@@ -14,14 +14,8 @@ export default function Hidetosee() {
   };
   return (
     <div className={styles.hideToSeeContainer}>
-      <div className={styles.hideToSeeTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.hideToSeeTitle} style={{ color: "white"}}>
           HideToSee
-        </a>
         <br />
       </div>
       <div className={styles.hideToSeeQuestion}>
@@ -51,10 +45,10 @@ export default function Hidetosee() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            eog
+            <code>eog</code>
           </a>
           , we can see that the image is an image of a cipher, mainly{" "}
-          <strong>Atbash</strong>. Which will be an important information later
+          <code>Atbash</code>. Which will be an important information later
           on.
         </p>
       </div>
@@ -74,10 +68,10 @@ export default function Hidetosee() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            steghide
+            <code>steghide</code>
           </a>{" "}
           in order to reveal any concealed files within the image. This showed a
-          file <strong>encrypted.txt</strong>. Cat-ting the file out will return
+          file <code>encrypted.txt</code>. Cat-ting the file out will return
           what looks like a encrypted flag.
         </p>
       </div>
@@ -102,16 +96,16 @@ krxlXGU{zgyzhs_xizxp_xz005577y}
       <div className={styles.hideToSeeSolved}>
         <p>
           Recalling that the file and image were encrypted with the{" "}
-          <strong>Atbash Cipher</strong>, I assumed this was the encryption
+          <code>Atbash Cipher</code>, I assumed this was the encryption
           method used. Navigating to{" "}
           <a
             href="https://gchq.github.io/CyberChef/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            cyberchef
+            <code>cyberchef</code>
           </a>
-          , I searched for <strong>Atbash Cipher</strong>, derypted it, and
+          , I searched for <code>Atbash Cipher</code>, derypted it, and
           obtained the flag.
         </p>
       </div>

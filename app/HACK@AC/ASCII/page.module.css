@@ -26,7 +26,6 @@
 .asciiTitle {
   color: rgb(175, 12, 12);
   background-color: rgb(20, 23, 28);
-
   letter-spacing: 1.1px;
   font-size: 40px;
   font-weight: bold;
@@ -101,4 +100,17 @@
   transform: translate(-50%, -50%);
   max-width: 100%;
   max-height: 100%;
+}
+
+.asciiSolved code {
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: gitbook-code-font, Menlo, monospace;
+  background-color: rgb(34, 39, 46);
+  line-height: 1.7;
+  border-radius: 4px;
+  margin: 0px;
+  font-size: 1em;
 }

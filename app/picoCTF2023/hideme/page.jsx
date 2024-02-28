@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import styles from "./page.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -8,14 +8,8 @@ import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export default function Hideme() {
   return (
     <div className={styles.hideMeContainer}>
-      <div className={styles.hideMeTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.hideMeTitle} style={{ color: "white"}}>
           hideme
-        </a>
         <br />
       </div>
       <div className={styles.hideMeQuestion}>
@@ -47,10 +41,10 @@ export default function Hideme() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            exiftool
+            <code>exiftool</code>
           </a>{" "}
           to carve out any other files that are hidden. Using the{" "}
-          <strong>-e</strong> to extract, low and behold we have extracted
+          <code>-e</code> to extract, low and behold we have extracted
           different hidden files.
         </p>
       </div>
@@ -72,10 +66,10 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
       </div>
       <div className={styles.hideMeSolved}>
         <p>
-          Upon extracting I got <strong>_flag.png.extracted</strong>, and
-          discovered a <strong>secret</strong> directory in it. The{" "}
-          <strong>secret</strong> directory contains yet another intriguing file{" "}
-          <strong>flag.png</strong>.
+          Upon extracting I got <code>_flag.png.extracted</code>, and
+          discovered a <code>secret</code> directory in it. The{" "}
+          <code>secret</code> directory contains yet another intriguing file{" "}
+          <code>flag.png</code>.
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
@@ -99,15 +93,15 @@ flag.png
       </div>
       <div className={styles.hideMeSolved}>
         <p>
-          To see what is inside <strong>flag.png</strong>, we can use{" "}
+          To see what is inside <code>flag.png</code>, we can use{" "}
           <a
             href="https://help.gnome.org/users/eog/stable/"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            eog
+            <code>eog</code>
           </a>
-          , to view the <strong>flag.png</strong>. This will
+          , to view the <code>flag.png</code>. This will
           give us the flag.
         </p>
       </div>

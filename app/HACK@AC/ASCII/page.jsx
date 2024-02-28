@@ -6,14 +6,8 @@ import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export default function ASCII() {
   return (
     <div className={styles.asciiContainer}>
-      <div className={styles.asciiTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.asciiTitle} style={{ color: "white"}}>
           ASCII Me Anything
-        </a>
         <br />
       </div>
       <div className={styles.asciiQuestion}>
@@ -46,14 +40,14 @@ export default function ASCII() {
       </div>
       <div className={styles.asciiSolved}>
         <p>
-          <strong>Output.txt</strong> showed a cryptic like-flag, while{" "}
-          <strong>source.js</strong> had code that returns the flag to us.
+          <code>Output.txt</code> showed a cryptic like-flag, while{" "}
+          <code>source.js</code> had code that returns the flag to us.
           <br />
           <br />
           The provided JS code defines a function (yes) that takes a string{" "}
-          <strong>_0x6c57x2 </strong>
+          <code>_0x6c57x2</code>{" "}
           as input and performs XOR and addition operations on its characters to
-          transform it into a new string <strong>_0x6c57x5</strong>. Then, it
+          transform it into a new string <code>_0x6c57x5</code>. Then, it
           logs the result to the console with a prefix.
           <br />
           <br />

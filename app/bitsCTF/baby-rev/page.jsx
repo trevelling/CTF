@@ -8,14 +8,8 @@ import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 export default function BabyRev() {
   return (
     <div className={styles.babyRevContainer}>
-      <div className={styles.babyRevTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.babyRevTitle} style={{ color: "white"}}>
           baby-rev
-        </a>
         <br />
       </div>
       <div className={styles.babyRevQuestion}>
@@ -45,11 +39,11 @@ export default function BabyRev() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            Ghidra
+            <code>Ghidra</code>
           </a>
           . This code computes if the input string length is 18 characters long
-          and if it is will call <strong>myfunc(local_38)</strong> else, it
-          outpits "<strong>:P</strong>".
+          and if it is will call <code>myfunc(local_38)</code> else, it
+          outpits <code>:P</code>.
           <br />
         </p>
       </div>
@@ -85,7 +79,7 @@ undefined8 main(void)
       <div className={styles.babyRevSolved}>
         <p>
           In this function, it compares character by character, if every
-          character is correct it outputs "<strong>Yippee :3</strong>".
+          character is correct it outputs <code>Yippee :3</code>.
           <br />
           This indicated to me that inputting the same string will result in the
           flag by rearranging it.

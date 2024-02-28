@@ -11,14 +11,8 @@ export default function Potato() {
   };
   return (
     <div className={styles.potatoContainer}>
-      <div className={styles.potatoTitle}>
-        <a
-          href="https://blog.yes-but-no.org/ybn-ctf-2023/ctf"
-          target="blank"
-          style={{ color: "white", textDecoration: "none" }}
-        >
+      <div className={styles.potatoTitle} style={{ color: "white"}}>
           Potato
-        </a>
         <br />
       </div>
       <div className={styles.potatoQuestion}>
@@ -48,7 +42,7 @@ export default function Potato() {
       <div className={styles.potatoSolved}>
         <p>
           This was a very simple cryptography challenge. The{" "}
-          <strong>enc</strong> file given to us was just cipher text that needed
+          <code>enc</code> file given to us was just cipher text that needed
           to be decrypted.
           <br />
           <br />
@@ -59,7 +53,7 @@ export default function Potato() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            SHA-1
+            <code>SHA-1</code>
           </a>
           . We can use a{" "}
           <a
@@ -67,7 +61,7 @@ export default function Potato() {
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            SHA-1 decoder
+            <code>SHA-1 decoder</code>
           </a>{" "}
           to decrypt the cipher text to obtain the flag.
         </p>
