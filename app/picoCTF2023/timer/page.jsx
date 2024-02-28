@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 

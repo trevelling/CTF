@@ -115,7 +115,7 @@ krxlXGU{zgyzhs_xizxp_xz005577y}
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/HideToSee3.png" width={600} height={320} alt="logo" />
+        <Image src="/pico2023/HideToSee3.png" width={700} height={320} alt="logo" />
       </div>
       <div className={styles.hideToSeeFlag}>
         <span>Flag: </span>

@@ -84,7 +84,7 @@ MogamBro        1000    aad3b435b51404eeaad3b435b51404ee        8a320467c7c22e32
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/DFIR2.png" width={750} height={320} alt="logo" />
+        <Image src="/BitsCTF/DFIR2.png" width={750} height={320} alt="logo" />
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>

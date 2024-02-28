@@ -35,7 +35,7 @@ export default function YBNCTF() {
         className={`${styles.ybnCertification} ${isZoomed ? styles.zoomed : ""}`}
         onClick={toggleZoom}
       >
-        <Image src="/ybnctf.jpg" width={500} height={350} alt="logo" />
+        <Image src="/YBNCTF/ybnctf.jpg" width={500} height={350} alt="logo" />
       </div>
     </div>
   );

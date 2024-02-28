@@ -76,7 +76,7 @@ xqkwKBN{z0bib1wv_l3kzgxb3l_429in00n}
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/rotation2.png" width={850} height={500} alt="logo" />
+        <Image src="/pico2023/rotation2.png" width={850} height={500} alt="logo" />
       </div>
       <div className={styles.rotationFlag}>
         <span>Flag: </span>

@@ -71,7 +71,7 @@ export default function Stream() {
         className={`${styles.streamEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/stream1.png" width={800} height={500} alt="logo" />
+        <Image src="/HACK@AC/stream1.png" width={800} height={500} alt="logo" />
       </div>
 
       <div className={styles.streamSolved}>

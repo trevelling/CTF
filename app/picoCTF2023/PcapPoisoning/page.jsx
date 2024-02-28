@@ -65,7 +65,7 @@ export default function PcapPoisoning() {
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/PcapPoisoning1.png" width={800} height={325} alt="logo" />
+        <Image src="/pico2023/PcapPoisoning1.png" width={800} height={325} alt="logo" />
       </div>
       <div className={styles.pcapPoisoningSolved}>
         <p>
@@ -91,7 +91,7 @@ export default function PcapPoisoning() {
         }`}
         onClick={toggleZoom2}
       >
-        <Image src="/PcapPoisoning2.png" width={800} height={400} alt="logo" />
+        <Image src="/pico2023/PcapPoisoning2.png" width={800} height={400} alt="logo" />
       </div>
       <div className={styles.pcapPoisoningFlag}>
         <span>Flag: </span>
