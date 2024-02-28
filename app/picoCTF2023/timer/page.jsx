@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Timer() {
   const [isZoomed1, setIsZoomed1] = useState(false);
@@ -39,82 +38,43 @@ export default function Timer() {
       </div>
       <div className={styles.timerSolved}>
         <p>
-          This was a very straight foward reverse engineering challenge. We can use file to see what file this is. 
-          Since it is a complied Java class file, we need to 
-          decompile it to see the code.
-        </p>
-      </div>
-      <div
-        className={`${styles.timerEvidence} ${
-          isZoomed1 ? styles.zoomed : ""
-        }`}
-        onClick={toggleZoom1}
-      >
-        <Image src="/safe1.png" width={800} height={90} alt="logo" />
-      </div>
-      <div className={styles.timerSolved}>
-        <p>
-          We can use many open-source tools that decompile Java class code. Since this is a simple challenge, I just used a{" "}
+          Opening up <code>timer.apk</code> in{" "}
           <a
-            href="http://www.javadecompilers.com/"
+            href="https://github.com/skylot/jadx"
             target="blank"
             style={{ color: "rgb(76, 211, 76)" }}
           >
-            online Java decomplier
+            <code>jadx</code>
           </a>
-          . From the decomplied code, we will get the flag.
+          {" "}will allow us to decomplie the code to see more information. Heading over to <code>AndriordManifest.xml</code>, the flag is hiding in plain sight.
         </p>
       </div>
       <div className={styles.timerEvidence}>
-        <SyntaxHighlighter language="python" style={materialDark}>
+        <SyntaxHighlighter language="xml" style={gruvboxDark}>
           {`
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Base64;
-import java.util.Base64.Encoder;
-        
-public class SafeOpener {
-    public static void main(String[] args) throws IOException {
-        BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
-        Encoder encoder = Base64.getEncoder();
-        String encodedkey = "";
-        String key = "";
-        
-        for(int i = 0; i < 3; ++i) {
-            System.out.print("Enter password for the safe: ");
-            key = keyboard.readLine();
-            encodedkey = encoder.encodeToString(key.getBytes());
-            System.out.println(encodedkey);
-            boolean isOpen = openSafe(encodedkey);
-            if (isOpen) {
-                break;
-            }
-        
-            System.out.println("You have  " + (2 - i) + " attempt(s) left");
-        }
-        
-    }
-        
-    public static boolean openSafe(String password) {
-        String encodedkey = "picoCTF{SAf3_0p3n3rr_y0u_solv3d_it_0e57c117}";
-        if (password.equals(encodedkey)) {
-            System.out.println("Sesame open");
-            return true;
-        } else {
-            System.out.println("Password is incorrect\n");
-            return false;
-        }
-    }
-}
-            
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="picoCTF{t1m3r_r3v3rs3d_succ355fully_17496}" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" package="com.example.timer" platformBuildVersionCode="32" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="32"/>
+    <application android:theme="@style/Theme.Timer" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:debuggable="true" android:allowBackup="true" android:supportsRtl="true" android:fullBackupContent="@xml/backup_rules" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="@xml/data_extraction_rules">
+        <activity android:name="com.example.timer.MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.example.timer.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+    </application>
+</manifest>
           `}
         </SyntaxHighlighter>
       </div>
       <div className={styles.timerFlag}>
         <span>Flag: </span>
         <span style={{ color: "rgb(137, 207, 240)" }}>
-          picoCTF{"{SAf3_0p3n3rr_y0u_solv3d_it_0e57c117}"}
+          picoCTF{"{t1m3r_r3v3rs3d_succ355fully_17496}"}
         </span>
       </div>
     </div>

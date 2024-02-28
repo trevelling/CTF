@@ -117,6 +117,17 @@ export default function PicoCTF() {
             </td>
             <td>Reverse Engineering</td>
           </tr>
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/VirtualMachine0"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Virtual Machine 0
+              </a>
+            </td>
+            <td>Reverse Engineering</td>
+          </tr>
         </tbody>
       </table>
     </div>

@@ -28,7 +28,7 @@ export default function HACKAC() {
           Hosted by ACS(I), it is a 12 hour cybersecurity competition designed
           for beginners to enter the realm of cybersecurity.
           <br /><br />
-          Due to time constraints, we weren't able to play the full 12 hours.
+          Due to time constraints, I wasn't able to play the full 12 hours.
         </p>
       </div>
       <table className={styles.acsCategories}>
