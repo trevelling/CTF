@@ -7,13 +7,23 @@ export default function Navbar() {
       <div className={styles.sideBarTop}>
         <p className={styles.sideBarLogoName}>👨‍💻 CTFs</p>
       </div>
-      <a
-        className={styles.navitem}
-        href="https://trevelling.github.io/tev/"
-        target="blank"
-      >
-        Personal Website 🏠
-      </a>
+      <div className={styles.navLinks}>
+        <a
+          className={styles.navitem}
+          href="https://trevelling.github.io/tev/"
+          target="blank"
+        >
+          Personal Website 🏠
+        </a>
+        <a
+          className={styles.navitem}
+          href="https://github.com/trevelling"
+          target="blank"
+        >
+          Github 😺
+        </a>
+      </div>
     </nav>
   );
 }
+

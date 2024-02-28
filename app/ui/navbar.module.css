@@ -15,6 +15,7 @@
   font-size: 16px;
   font-weight: 700;
   padding-right: 10px;
+  margin-left: 10px; 
 }
 
 .sideBarLogoName {
@@ -27,4 +28,8 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
+}
+
+.navLinks {
+  display: flex;
 }
