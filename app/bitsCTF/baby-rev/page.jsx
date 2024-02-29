@@ -24,7 +24,7 @@ export default function BabyRev() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/babyrev_baby-rev"
+            href="/baby-rev"
             download
           >
             baby-rev.elf

@@ -42,7 +42,7 @@ export default function LadyLove() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/ladylove_stolenpainting.jpeg"
+            href="/stolenpainting.jpeg"
             download
           >
             stolenpainting.jpeg

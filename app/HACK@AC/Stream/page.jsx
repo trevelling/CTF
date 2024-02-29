@@ -33,7 +33,7 @@ export default function Stream() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/stream_stream.pcap"
+            href="/stream.pcap"
             download
           >
             stream.pcap

@@ -1,15 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import styles from "./page.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Timer() {
-  const [isZoomed1, setIsZoomed1] = useState(false);
-  const toggleZoom1 = () => {
-    setIsZoomed1(!isZoomed1);
-  };
   return (
     <div className={styles.timerContainer}>
       <div className={styles.timerTitle}>
@@ -32,7 +28,7 @@ export default function Timer() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          <a style={{ color: "white", textDecoration: "none" }} href="/timer_timer.apk" download>timer.apk</a>
+          <a style={{ color: "white", textDecoration: "none" }} href="/timer.apk" download>timer.apk</a>
         </p>
       </div>
       <div className={styles.timerSolved}>

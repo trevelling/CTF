@@ -30,7 +30,7 @@ export default function VM0() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/pico_Virtual-Machine-0.zip"
+            href="/Virtual-Machine-0.zip"
             download
           >
             Virtual-Machine-0.zip
@@ -38,7 +38,7 @@ export default function VM0() {
           ,{" "}
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/pico_input.txt"
+            href="/input.txt"
             download
           >
             input.txt
@@ -74,7 +74,7 @@ export default function VM0() {
         className={`${styles.vm0Evidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/pico_vm0.png" width={800} height={400} alt="logo" />
+        <Image src="/pico2023/vm01.png" width={800} height={400} alt="logo" />
       </div>
       <div className={styles.vm0Solved}>
         <p>

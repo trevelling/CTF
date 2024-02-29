@@ -26,7 +26,7 @@ export default function Hideme() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/pico_flag.png"
+            href="/flag.png"
             download
           >
             flag.png

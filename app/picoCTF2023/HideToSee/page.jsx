@@ -30,7 +30,7 @@ export default function Hidetosee() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/pico_atbash.jpeg"
+            href="/atbash.jpeg"
             download
           >
             atbash.jpeg
@@ -115,7 +115,7 @@ krxlXGU{zgyzhs_xizxp_xz005577y}
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/HideToSee3.png" width={700} height={320} alt="logo" />
+        <Image src="/pico2023/HideToSee1.png" width={700} height={320} alt="logo" />
       </div>
       <div className={styles.hideToSeeFlag}>
         <span>Flag: </span>

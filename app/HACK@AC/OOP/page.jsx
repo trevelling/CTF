@@ -37,7 +37,7 @@ export default function OOP() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/oop_objects.pcap"
+            href="/objects.pcap"
             download
           >
             objects.pcap
