@@ -74,7 +74,7 @@ export default function VM0() {
         className={`${styles.vm0Evidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/vm01.png" width={800} height={400} alt="logo" />
+        <Image src="/pico2023/vm01.png" width={800} height={400} alt="logo" className={styles.vm0Image} />
       </div>
       <div className={styles.vm0Solved}>
         <p>

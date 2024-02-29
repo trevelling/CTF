@@ -70,7 +70,7 @@ export default function Potato() {
         className={`${styles.potatoEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/HACK@AC/potato1.png" width={800} height={500} alt="logo" />
+        <Image src="/HACK@AC/potato1.png" width={800} height={500} alt="logo" className={styles.potatoImage} />
       </div>
 
       <div className={styles.potatoFlag}>

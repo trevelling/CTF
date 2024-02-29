@@ -74,7 +74,7 @@ export default function FindAndOpen() {
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/FindAndOpen1.png" width={900} height={400} alt="logo" />
+        <Image src="/pico2023/FindAndOpen1.png" width={900} height={400} alt="logo" className={styles.findAndOpenImage} />
       </div>
       <div className={styles.findAndOpenSolved}>
         <p>

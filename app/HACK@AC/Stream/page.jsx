@@ -71,7 +71,7 @@ export default function Stream() {
         className={`${styles.streamEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/HACK@AC/stream1.png" width={800} height={500} alt="logo" />
+        <Image src="/HACK@AC/stream1.png" width={800} height={500} alt="logo" className={styles.streamImage} />
       </div>
 
       <div className={styles.streamSolved}>
@@ -91,7 +91,7 @@ export default function Stream() {
         className={`${styles.streamEvidence} ${isZoomed2 ? styles.zoomed : ""}`}
         onClick={toggleZoom2}
       >
-        <Image src="/stream2.png" width={800} height={400} alt="logo" />
+        <Image src="/stream2.png" width={800} height={400} alt="logo" className={styles.streamImage}  />
       </div>
       <div className={styles.streamFlag}>
         <span>Flag: </span>

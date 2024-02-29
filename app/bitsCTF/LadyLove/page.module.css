@@ -67,7 +67,7 @@
 .ladyLoveEvidence {
   width: 65%;
   margin-left: -1px;
-  cursor: zoom-in;
+  cursor: pointer;
   margin-top: 20px;
 }
 
@@ -83,7 +83,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  cursor: pointer;
   transition-duration: 0.25s;
   touch-action: manipulation;
 }
@@ -99,9 +98,13 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(2);
+  border-radius: 4px;
 }
 
+.ladyLoveImage {
+  border-radius: 4px; 
+}
 
 .ladyLoveSolved code {
   padding-right: 6px;

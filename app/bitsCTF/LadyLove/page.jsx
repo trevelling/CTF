@@ -74,7 +74,7 @@ export default function LadyLove() {
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/BitsCTF/LadyLove1.png" width={800} height={400} alt="logo" />
+        <Image src="/BitsCTF/LadyLove1.png" width={800} height={400} alt="logo" className={styles.ladyLoveImage}/>
       </div>
       <div className={styles.ladyLoveSolved}>
         <p>
@@ -99,7 +99,7 @@ export default function LadyLove() {
         }`}
         onClick={toggleZoom2}
       >
-        <Image src="/BitsCTF/LadyLove2.png" width={800} height={650} alt="logo" />
+        <Image src="/BitsCTF/LadyLove2.png" width={800} height={650} alt="logo" className={styles.ladyLoveImage}/>
       </div>
       <div className={styles.ladyLoveSolved}>
         <p>
@@ -123,7 +123,7 @@ export default function LadyLove() {
         }`}
         onClick={toggleZoom3}
       >
-        <Image src="/BitsCTF/LadyLove3.png" width={800} height={650} alt="logo" />
+        <Image src="/BitsCTF/LadyLove3.png" width={800} height={650} alt="logo" className={styles.ladyLoveImage} />
       </div>
       <div className={styles.ladyLoveFlag}>
         <span>Flag: </span>

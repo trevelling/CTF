@@ -122,7 +122,7 @@ export default function HACKAC() {
         className={`${styles.acsCertification} ${isZoomed ? styles.zoomed : ""}`}
         onClick={toggleZoom}
       >
-        <Image src="/HACK@AC/acsctf.png" width={650} height={350} alt="logo" />
+        <Image src="/HACK@AC/acsctf.png" width={650} height={350} alt="logo" className={styles.acsImage}/>
       </div>
     </div>
   );

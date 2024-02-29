@@ -116,7 +116,7 @@ for i in c:
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/BitsCTF/BabyRSA1.png" width={900} height={100} alt="logo" />
+        <Image src="/BitsCTF/BabyRSA1.png" width={900} height={100} alt="logo" className={styles.babyRsaImage}/>
       </div>
       <div className={styles.babyRsaSolved}>
         <p>
@@ -154,7 +154,7 @@ print(pt)
         }`}
         onClick={toggleZoom2}
       >
-        <Image src="/BitsCTF/BabyRSA2.png" width={800} height={350} alt="logo" />
+        <Image src="/BitsCTF/BabyRSA2.png" width={800} height={350} alt="logo" className={styles.babyRsaImage}/>
       </div>
 
       <div className={styles.babyRsaFlag}>

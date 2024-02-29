@@ -42,7 +42,7 @@ export default function DFIR1() {
         className={`${styles.dfirEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/BitsCTF/DFIR1.png" width={700} height={255} alt="logo" />
+        <Image src="/BitsCTF/DFIR1.png" width={700} height={255} alt="logo" className={styles.dfirImage}/>
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>

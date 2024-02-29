@@ -54,7 +54,7 @@ export default function Moneyware() {
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/moneyware.png" width={500} height={80} alt="logo" />
+        <Image src="/pico2023/moneyware.png" width={500} height={80} alt="logo" className={styles.moenywareImage} />
       </div>
       <div className={styles.moneywareFlag}>
         <span>Flag: </span>
