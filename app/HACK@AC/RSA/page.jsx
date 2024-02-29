@@ -22,7 +22,7 @@ export default function RSA() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/RSA.txt"
+            href="/HACK@AC/RSA.txt"
             download
           >
             RSA.txt

@@ -25,7 +25,7 @@ export default function Reverse() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/ret"
+            href="/pico2023/ret"
             download
           >
             ret.elf

@@ -28,7 +28,7 @@ export default function Timer() {
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
-          <a style={{ color: "white", textDecoration: "none" }} href="/timer.apk" download>timer.apk</a>
+          <a style={{ color: "white", textDecoration: "none" }} href="/pico2023/timer.apk" download>timer.apk</a>
         </p>
       </div>
       <div className={styles.timerSolved}>

@@ -36,7 +36,7 @@ export default function BabyRSA() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/rsa_mat.sage"
+            href="/bitsCTF/rsa_mat.sage"
             download
           >
             rsa_mat.sage
@@ -44,7 +44,7 @@ export default function BabyRSA() {
           ,{" "}
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/chall.txt"
+            href="/bitsCTF/chall.txt"
             download
           >
             chall.txt

@@ -30,7 +30,7 @@ export default function Potato() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/enc"
+            href="/HACK@AC/enc"
             download
           >
             enc

@@ -23,7 +23,7 @@ export default function ASCII() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/output.txt"
+            href="/HACK@AC/output.txt"
             download
           >
             output.txt
@@ -31,7 +31,7 @@ export default function ASCII() {
           ,{" "}
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/source.js"
+            href="/HACK@AC/source.js"
             download
           >
             source.js

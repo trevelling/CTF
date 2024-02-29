@@ -32,7 +32,7 @@ export default function VVS() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/VVS.zip"
+            href="/HACK@AC/VVS.zip"
             download
           >
             VeryVulnerableSite.zip

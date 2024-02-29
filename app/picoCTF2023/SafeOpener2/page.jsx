@@ -26,7 +26,7 @@ export default function SafeOpener2() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/SafeOpener.class"
+            href="/pico2023/SafeOpener.class"
             download
           >
             SafeOpener.class

@@ -30,7 +30,7 @@ export default function VM0() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/Virtual-Machine-0.zip"
+            href="/pico2023/Virtual-Machine-0.zip"
             download
           >
             Virtual-Machine-0.zip
@@ -38,7 +38,7 @@ export default function VM0() {
           ,{" "}
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/input.txt"
+            href="/pico2023/input.txt"
             download
           >
             input.txt

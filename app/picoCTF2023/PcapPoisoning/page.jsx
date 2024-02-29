@@ -34,7 +34,7 @@ export default function PcapPoisoning() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/trace.pcap"
+            href="/pico2023/trace.pcap"
             download
           >
             trace.pcap

@@ -30,7 +30,7 @@ export default function Rotation() {
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
-            href="/encrypted.txt"
+            href="/pico2023/encrypted.txt"
             download
           >
             encrypted.txt
