@@ -17,7 +17,7 @@ export default function Sidebar() {
     <div className={styles.sideBarContainer}>
       <aside className={styles.sideBar}>
         <div className={styles.sideBarList}>
-          {sideBarItems.map(({ name, href, isLink, className }) => (
+          {sideBarItems.map(({ name, href, isLink, icon, className }) => (
             <li
               key={name}
               className={`${styles.sideBarItem} ${
@@ -38,6 +38,7 @@ export default function Sidebar() {
                         style={{ textDecoration: "none" }}
                       >
                         {name}
+                        <span>{icon}</span>
                       </span>
                     </span>
                   </Link>
@@ -48,6 +49,7 @@ export default function Sidebar() {
                   style={{ textDecoration: "none" }}
                 >
                   {name}
+                  <span>{icon}</span>
                 </span>
               )}
             </li>
@@ -63,11 +65,13 @@ const sideBarItems = [
     name: "🚩 Home ",
     href: "/",
     isLink: true,
+    icon: "⇲",
   },
   {
     name: "🛠️ Tools",
     href: "/tools",
     isLink: true,
+    icon: "⇲",
   },
   {
     name: "2024",
@@ -75,24 +79,28 @@ const sideBarItems = [
     className: "ctf",
   },
   {
-    name: "📁 BrainHack CDDC",
+    name: "📁 BrainHack CDDC ",
     href: "/BrainHack2024",
     isLink: true,
+    icon: "⇲",
   },
   {
     name: "📁 Lag and Crash",
     href: "/LNC",
     isLink: true,
+    icon: "⇲",
   },
   {
     name: "📁 HACK@AC",
     href: "/HACK@AC",
     isLink: true,
+    icon: "⇲",
   },
   {
     name: "📁 Bits CTF",
     href: "/bitsCTF",
     isLink: true,
+    icon: "⇲",
   },
   {
     name: "2023",
@@ -103,10 +111,13 @@ const sideBarItems = [
     name: "📁 picoCTF",
     href: "/picoCTF2023",
     isLink: true,
+    icon: "⇲",
   },
   {
     name: "📁 YBN CTF",
     href: "/ybnCTF",
     isLink: true,
+    icon: "⇲",
   },
 ];
+

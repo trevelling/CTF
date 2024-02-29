@@ -10,7 +10,7 @@ export default function PicoCTF() {
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          PICO CTF 🚩
+          picoCTF 2023 🚩
         </a>
         <br />
       </div>
@@ -55,6 +55,28 @@ export default function PicoCTF() {
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 hideme
+              </a>
+            </td>
+            <td>Forensics</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/whoisit"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                who is it
+              </a>
+            </td>
+            <td>Forensics</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/FindAndOpen"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                FindAndOpen
               </a>
             </td>
             <td>Forensics</td>

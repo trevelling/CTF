@@ -58,7 +58,7 @@ export default function VM0() {
           >
             <code>COLLADA</code>
           </a> 
-          {" "} type file using{" "}
+          {" "}file using{" "}
           <a
             href="https://www.blender.org/download/"
             target="blank"
@@ -79,7 +79,7 @@ export default function VM0() {
       <div className={styles.vm0Solved}>
         <p>
           The challenge description told us how to get the flag. We need to see how many times the <code>red gear</code> goes around the <code>blue gear</code>
-          . The driver gear (the bigger one) has 40 teeths, while the driven gear (the smaller one) has 8 teeths. So, if the driver gear makes 1 rotation, the driven gear will make <code>5</code> rotations. Multiplying this number in python with <code>input.txt</code>, converting the value to hex and then ASCII yields the flag.
+          . The driver gear (the bigger one) has 40 teeths, while the driven gear (the smaller one) has 8 teeths. So, if the driver gear makes 1 rotation, the driven gear will make <code>5</code> rotations. Multiplying this number in python with <code>input.txt</code>, converting the value to <code>hex</code> and then <code>ASCII</code> yields the flag.
         </p>
       </div>
       <div className={styles.vm0Evidence}>
