@@ -98,16 +98,19 @@
 }
 
 .dfirEvidence.zoomed img {
-  width: 75vw; 
-  height: 35vh; 
-  transition: transform 0.25s;
+  object-fit: contain;
+  min-width: 0; 
+  min-height: 0; 
+  max-width: 100%; 
+  max-height: 100%; 
+  width: auto; 
+  height: auto; 
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
 }
+
 
 .dfirSolved code {
   padding-right: 6px;
