@@ -64,7 +64,7 @@ export default function BitsCTF() {
           <tr>
             <td>
               <a
-                href="../bitsCTF/baby-rev"
+                href="../bitsCTF/babyrev"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 baby-rev

@@ -139,6 +139,13 @@ const About = () => {
           </tr>
           <tr>
             <td>
+                HACKBASH x A.YCEP
+            </td>
+            <td>Jeporady</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>
                 Lag and Crash
             </td>
             <td>Jeporady</td>

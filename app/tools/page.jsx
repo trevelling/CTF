@@ -17,7 +17,7 @@ export default function Tools() {
         </p>
       </div>
       <div className={styles.forensicsTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Forensics</div>
+        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la Forensics</div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -88,7 +88,7 @@ export default function Tools() {
         </tbody>
       </table>
       <div className={styles.cryptographyTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Cryptography</div>
+        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la Cryptography</div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -136,7 +136,7 @@ export default function Tools() {
         </tbody>
       </table>
       <div className={styles.steganographyTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la Steganography</div>
+        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la Steganography</div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -167,7 +167,7 @@ export default function Tools() {
         </tbody>
       </table>
       <div className={styles.revEngineeringTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>
+        <div style={{ color: "rgb(255, 255, 255)" }}>
           ~# ls -la Reverse-Engineering
         </div>
       </div>
@@ -248,7 +248,7 @@ export default function Tools() {
         </tbody>
       </table>
       <div className={styles.webExploitationTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>
+        <div style={{ color: "rgb(255, 255, 255)" }}>
           ~# ls -la Web-Exploitation
         </div>
       </div>
@@ -316,7 +316,7 @@ export default function Tools() {
         </tbody>
       </table>
       <div className={styles.binaryExploitationTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>
+        <div style={{ color: "rgb(255, 255, 255)" }}>
           ~# ls -la Binary-Exploitation
         </div>
       </div>
@@ -331,7 +331,7 @@ export default function Tools() {
         <tbody></tbody>
       </table>
       <div className={styles.osintTitle}>
-        <div style={{ color: "rgb(76, 211, 76)" }}>~# ls -la OSINT</div>
+        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la OSINT</div>
       </div>
       <table className={styles.toolstable}>
         <thead>
