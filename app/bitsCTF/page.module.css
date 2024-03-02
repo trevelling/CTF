@@ -1,18 +1,16 @@
 .bitsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  padding-top: 100px;
+  margin: 20px;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 .bits {
   color: white;
   background-color: rgb(20, 23, 28);
   padding-left: 15px;
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1.1px;
   font-size: 1em;
@@ -26,8 +24,6 @@
 .bitsTitle {
   color: rgb(175, 12, 12);
   background-color: rgb(20, 23, 28);
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   letter-spacing: 1.1px;
   font-size: 40px;
   font-weight: bold;
@@ -39,8 +35,6 @@
 }
 
 .bitsCategories {
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   width: 50%;
   margin: 18px;
   color: #ffffff;

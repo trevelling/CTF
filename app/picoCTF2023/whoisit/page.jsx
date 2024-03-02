@@ -14,7 +14,7 @@ export default function WhoIsIt() {
       </div>
       <div className={styles.whoIsItQuestion}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat Question</strong>
+          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}>~# cat Question</strong>
           <br />
         </p>
         <p>

@@ -20,7 +20,7 @@ export default function VVS() {
       </div>
       <div className={styles.vvsQuestion}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat Question</strong>
+          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}>~# cat Question</strong>
           <br />
         </p>
         <p>
@@ -95,7 +95,6 @@ def register():
       <br />
       <br />
       Payload:
-      <br /> 
       <div className={styles.vvsEvidence}>
         <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
@@ -117,7 +116,7 @@ def register():
       <div className={styles.vvsEvidence}>
         <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
-  cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
+cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
           `}
         </SyntaxHighlighter>
       </div>

@@ -12,7 +12,7 @@ export default function ASCII() {
       </div>
       <div className={styles.asciiQuestion}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat Question</strong>
+          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}>~# cat Question</strong>
           <br />
         </p>
         <p>

@@ -20,7 +20,7 @@ export default function Grass() {
       </div>
       <div className={styles.grassQuestion}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat Question</strong>
+          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}>~# cat Question</strong>
           <br />
         </p>
         <p>
@@ -59,7 +59,7 @@ export default function Grass() {
           >
             <code>exiftool</code>
           </a>{" "}
-          to see any metadata of the file. Once again, it showed a file format
+          to see the metadata of the file. Once again, it showed a file format
           error.
           <br />
         </p>

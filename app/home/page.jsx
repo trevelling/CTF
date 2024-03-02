@@ -14,7 +14,7 @@ const About = () => {
       </div>
       <div className={styles.about}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>
+          <strong className={styles.command} style={{ color: "white" }}>
             {" "}
             ~# cat Introduction
           </strong>
@@ -33,7 +33,7 @@ const About = () => {
       </div>
       <div className={styles.aboutCTF}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>~# man CTFs</strong>
+          <strong className={styles.command} style={{ color: "white" }}>~# man CTFs</strong>
           <br />
         </p>
         <p>
@@ -63,8 +63,8 @@ const About = () => {
                 picoCTF 
               </a>
             </td>
-            <td>Jeporady</td>
-            <td>🏆 NIL points</td>
+            <td>Jeporady (Individual)</td>
+            <td>&lt; 5%</td>
           </tr>
           <tr>
             <td>       
@@ -75,9 +75,9 @@ const About = () => {
           </tr>
           <tr>
             <td>  
-                TISC             
+                TISC           
             </td>
-            <td>Jeporady</td>
+            <td>Jeporady (Individual)</td>
             <td>Level 2</td>
           </tr>
           <tr>
@@ -106,13 +106,25 @@ const About = () => {
           </tr>
         </thead>
         <tbody>
+        <tr>
+            <td>
+              <a
+                href="/picoCTF2024"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                picoCTF
+              </a>
+            </td>
+            <td>Jeporady (Individual)</td>
+            <td>&lt; 5%</td>
+          </tr>
           <tr>
             <td>
               <a
                 href="/bitsCTF"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
-                Bits CTF
+                Bits CTF 
               </a>
             </td>
             <td>Jeporady</td>
@@ -162,7 +174,7 @@ const About = () => {
       </table>
       <div className={styles.license}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat LICENSE</strong>
+          <strong className={styles.command}style={{  color: "white" }}>~# cat LICENSE</strong>
           <br />
         </p>
         <p>All original code is licensed under the MIT license.</p>

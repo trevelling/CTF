@@ -4,7 +4,7 @@
 }
 
 .sideBar {
-  width: 16rem;
+  width: 20rem;
   border-right: 1px solid rgb(40, 47, 48);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-right-color: rgb(43, 46, 57);
@@ -56,10 +56,6 @@
   font-weight: bold;
 }
 
-.sideBarIcon {
-  font-size: 1.2rem;
-}
-
 .sideBarName {
   font-size: 14px;
   text-decoration: none;
@@ -72,7 +68,7 @@
 .ctf {
   font-weight: 750;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1.2px;
   padding-bottom: 4px;
   padding-top: 4px;

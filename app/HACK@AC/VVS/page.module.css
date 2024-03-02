@@ -1,10 +1,8 @@
 .vvsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  padding-top: 60px;
+  margin: 20px;
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
 }
@@ -13,11 +11,9 @@
   color: white;
   background-color: rgb(20, 23, 28);
   padding-left: 15px;
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1.1px;
-  font-size: 1em;
+  font-size: 16px;
   opacity: 0.9;
   text-align: left;
   border-left: 4px solid rgb(40, 47, 48);
@@ -28,8 +24,6 @@
 .vvsTitle {
   color: rgb(175, 12, 12);
   background-color: rgb(20, 23, 28);
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   letter-spacing: 1.1px;
   font-size: 40px;
   font-weight: bold;
@@ -43,11 +37,9 @@
 .vvsSolved {
   color: white;
   background-color: rgb(20, 23, 28);
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 400;
   letter-spacing: 1.1px;
-  font-size: 1em;
+  font-size: 16px;
   opacity: 0.9;
   text-align: left;
   margin: 20px;
@@ -60,11 +52,9 @@
   padding-left: 15px;
   padding-top: 3px;
   padding-bottom: 3px;
-  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 1.1px;
-  font-size: 1em;
+  font-size: 16px;
   opacity: 0.9;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.1);
@@ -76,9 +66,8 @@
 
 .vvsEvidence {
   width: 65%;
-  margin-left: -1px;
   cursor: pointer;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .vvsEvidence.zoomed {
@@ -127,4 +116,8 @@
   border-radius: 4px;
   margin: 0px;
   font-size: 1em;
+}
+
+.command{
+  font-size: 24px;
 }

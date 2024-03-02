@@ -8,7 +8,7 @@ export default function Tools() {
     <div className={styles.toolsContainer}>
       <div className={styles.tools}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}> ~# cat Tools</strong>
+          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}> ~# cat Tools</strong>
           <br />
         </p>
         <p>
