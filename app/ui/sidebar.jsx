@@ -62,13 +62,13 @@ export default function Sidebar() {
 
 const sideBarItems = [
   {
-    name: "🚩 Home ",
+    name: "Home ",
     href: "/",
     isLink: true,
     icon: "⇲",
   },
   {
-    name: "🛠️ Tools",
+    name: "Tools",
     href: "/tools",
     isLink: true,
     icon: "⇲",
@@ -79,25 +79,25 @@ const sideBarItems = [
     className: "ctf",
   },
   {
-    name: "📁 BrainHack CDDC ",
+    name: "BrainHack CDDC ",
     href: "/BrainHack2024",
     isLink: true,
     icon: "⇲",
   },
   {
-    name: "📁 Lag and Crash",
+    name: "Lag and Crash",
     href: "/LNC",
     isLink: true,
     icon: "⇲",
   },
   {
-    name: "📁 HACK@AC",
+    name: "HACK@AC",
     href: "/HACK@AC",
     isLink: true,
     icon: "⇲",
   },
   {
-    name: "📁 Bits CTF",
+    name: "Bits CTF",
     href: "/bitsCTF",
     isLink: true,
     icon: "⇲",
@@ -108,13 +108,13 @@ const sideBarItems = [
     className: "ctf",
   },
   {
-    name: "📁 picoCTF",
+    name: "picoCTF",
     href: "/picoCTF2023",
     isLink: true,
     icon: "⇲",
   },
   {
-    name: "📁 YBN CTF",
+    name: "YBN CTF",
     href: "/ybnCTF",
     isLink: true,
     icon: "⇲",

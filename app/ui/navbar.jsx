@@ -5,7 +5,8 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.sideBarTop}>
-        <p className={styles.sideBarLogoName}>👨‍💻 CTFs</p>
+        <span className={styles.sideBarLogo}>👨‍💻</span>
+        <span className={styles.sideBarLogoName}>CTFs</span>
       </div>
       <div className={styles.navLinks}>
         <a

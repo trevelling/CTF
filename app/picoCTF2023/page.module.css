@@ -3,8 +3,17 @@
   flex-direction: column;
   margin: 20px;
   position: relative;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
   "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .pico2023Container {
+    margin-left: 0; 
+    width: 100%;
+  }
 }
 
 .pico2023 {
@@ -22,7 +31,7 @@
 }
 
 .pico2023Title {
-  color: rgb(175, 12, 12);
+  color: rgb(255, 255, 255);
   background-color: rgb(20, 23, 28);
   letter-spacing: 1.1px;
   font-size: 40px;

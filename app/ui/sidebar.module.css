@@ -1,7 +1,9 @@
 .sideBarContainer{
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
+  
 }
+
 
 .sideBar {
   width: 20rem;
@@ -10,7 +12,9 @@
   border-right-color: rgb(43, 46, 57);
   border-right-width: 1px;
   position: relative;
-  margin-top: 15px;
+  margin-left: 15px; 
+  padding-top: 16px;
+  padding-bottom: 76px;
 }
 
 .sideBarTop {
@@ -29,7 +33,6 @@
 }
 
 .sideBarItem {
-  margin-bottom: 0.8rem;
   justify-content: flex-end;
 }
 
@@ -42,8 +45,9 @@
   border-radius: 5px;
   width: 97%;
   padding-top: 1px;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   line-height: 22px;
+  margin-top: 10px;
 }
 
 .sideBarLink:hover {
@@ -54,15 +58,18 @@
   background-color: rgba(56, 71, 56, 0.5);
   color: rgb(76, 211, 76);
   font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: px;
 }
 
 .sideBarName {
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   margin-left: 15px;
   display: flex;
   justify-content: space-between;
   padding-right: 6px;
+  margin-left: 12px; 
 }
 
 .ctf {
@@ -70,6 +77,5 @@
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1.2px;
-  padding-bottom: 4px;
-  padding-top: 4px;
+  margin-top: 30px;
 }

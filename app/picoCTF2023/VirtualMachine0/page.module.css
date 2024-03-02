@@ -3,8 +3,17 @@
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .vm0Container {
+    margin-left: 0; 
+    width: 100%;
+  }
 }
 
 .vm0Question {
@@ -22,7 +31,7 @@
 }
 
 .vm0Title {
-  color: rgb(175, 12, 12);
+  color: rgb(255, 255, 255);
   background-color: rgb(20, 23, 28);
   letter-spacing: 1.1px;
   font-size: 16px;
