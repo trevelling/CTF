@@ -90,11 +90,13 @@ def register():
           `}
         </SyntaxHighlighter>
       </div>
+      
       <div className={styles.vvsSolved}>
       Firstly, I tried many times to inject a payload into the username field of the registration form but realised the goal was to first create a new user as the database was empty.
       <br />
       <br />
       Payload:
+      </div>
       <div className={styles.vvsEvidence}>
         <SyntaxHighlighter language="python" style={gruvboxDark}>
           {`
@@ -102,8 +104,7 @@ def register():
           `}
         </SyntaxHighlighter>
       </div>
-      <br />
-      <br />
+      <div className={styles.vvsSolved}>
       By injecting the password 
       directly into the username field, it bypasses the 
       python code's hashing process. After 
@@ -120,6 +121,7 @@ cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}'
           `}
         </SyntaxHighlighter>
       </div>
+      
       <div className={styles.vvsFlag}>
         <span>Flag: </span>
         <span style={{ color: "rgb(137, 207, 240)" }}>

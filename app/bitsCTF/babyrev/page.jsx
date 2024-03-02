@@ -43,7 +43,7 @@ export default function BabyRev() {
           </a>
           . This code computes if the input string length is 18 characters long
           and if it is will call <code>myfunc(local_38)</code> else, it
-          outpits <code>:P</code>.
+          outputs <code>:P</code>.
           <br />
         </p>
       </div>
@@ -79,7 +79,7 @@ undefined8 main(void)
       <div className={styles.babyRevSolved}>
         <p>
           In this function, it compares character by character, if every
-          character is correct it outputs <code>Yippee :3</code>.
+          character is correct, it outputs the flag.
           <br />
           This indicated to me that inputting the same string will result in the
           flag by rearranging it.

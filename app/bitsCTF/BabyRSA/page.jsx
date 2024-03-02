@@ -56,14 +56,14 @@ export default function BabyRSA() {
           RSA challenges are pretty standard. Opening up{" "}
           <code>rsa_mat.sage</code> shows us code that encrypts a plaintext
           message using a custom method, and prints the resulting ciphertext
-          while chall.txt contains the values of <code>n,a,b,c, and d</code>
+          while <code>chall.txt</code> contains the values of <code>n,a,b,c, and d</code>
           .
           <br />
           <br />
           This code generates an RSA key pair, splits a given plaintext pt into
           four equal parts, and then constructs a 2x2 matrix g using these four
           parts. It encrypts the matrix g using the encrypt function and prints
-          the resulting ciphertext c.
+          the resulting ciphertext <code>c</code>.
           <br />
         </p>
       </div>

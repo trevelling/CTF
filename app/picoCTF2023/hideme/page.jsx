@@ -14,7 +14,7 @@ export default function Hideme() {
       </div>
       <div className={styles.hideMeQuestion}>
         <p>
-          <strong style={{ color: "rgb(76, 211, 76)" }}>~# cat Question</strong>
+          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}>~# cat Question</strong>
           <br />
         </p>
         <p>
@@ -23,7 +23,7 @@ export default function Hideme() {
           out that there was more than what meets the eye here.
           <br />
           <br />
-          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}>FILE: </strong>
+          <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
           <a
             style={{ color: "white", textDecoration: "none" }}
             href="/pico2023/flag.png"

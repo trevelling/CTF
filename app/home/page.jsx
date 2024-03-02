@@ -174,7 +174,7 @@ const About = () => {
       </table>
       <div className={styles.license}>
         <p>
-          <strong className={styles.command}style={{  color: "white" }}>~# cat LICENSE</strong>
+          <strong className={styles.command} style={{  color: "white" }}>~# cat LICENSE</strong>
           <br />
         </p>
         <p>All original code is licensed under the MIT license.</p>
