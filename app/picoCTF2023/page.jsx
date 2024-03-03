@@ -81,6 +81,17 @@ export default function PicoCTF() {
             </td>
             <td>Forensics</td>
           </tr>
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/MSB"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                MSB
+              </a>
+            </td>
+            <td>Forensics</td>
+          </tr>
 
           <tr>
             <td>
@@ -112,6 +123,17 @@ export default function PicoCTF() {
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
                 Reverse
+              </a>
+            </td>
+            <td>Reverse Engineering</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/Nowayout"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                No way out
               </a>
             </td>
             <td>Reverse Engineering</td>

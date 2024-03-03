@@ -14,7 +14,7 @@ export default function Navbar() {
           href="https://trevelling.github.io/tev/"
           target="blank"
         >
-          Personal Website 
+          Home
         </a>
         <a
           className={styles.navitem}

@@ -62,10 +62,11 @@ export default function Sidebar() {
 
 const sideBarItems = [
   {
-    name: "Home ",
+    name: "🚩   Tev's CTF Writeups",
     href: "/",
     isLink: true,
     icon: "⇲",
+    className: "home"
   },
   {
     name: "Tools",
@@ -76,7 +77,7 @@ const sideBarItems = [
   {
     name: "2024",
     isLink: false,
-    className: "ctf",
+    className: "ctfYear",
   },
   {
     name: "BrainHack CDDC ",
@@ -105,7 +106,7 @@ const sideBarItems = [
   {
     name: "2023",
     isLink: false,
-    className: "ctf",
+    className: "ctfYear",
   },
   {
     name: "picoCTF",
