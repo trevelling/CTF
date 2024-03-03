@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
 
 export default function Potato() {
   const [isZoomed1, setIsZoomed1] = useState(false);
@@ -41,12 +44,20 @@ export default function Potato() {
       </div>
       <div className={styles.potatoSolved}>
         <p>
-          This was a very simple cryptography challenge. The{" "}
-          <code>enc</code> file given to us was just cipher text that needed
-          to be decrypted.
-          <br />
-          <br />
-          The cipher text was not only 40 characters long but one of the most
+         <code>enc</code>
+        </p>
+      </div>
+      <div className={styles.potatoEvidence}>
+        <SyntaxHighlighter language="text" style={gruvboxDark}>
+          {`
+add564b5920b7f9ee6e97a5e836040a73f5efb3d
+          `}
+        </SyntaxHighlighter>
+      </div>
+      <div className={styles.potatoSolved}>
+        <p>
+          This was a very simple cryptography challenge, we just needed
+          to decrypt the cipher text. The cipher text was not only 40 characters long but one of the most
           common encryption that is not secure/broken is{" "}
           <a
             href="https://en.wikipedia.org/wiki/SHA-1"

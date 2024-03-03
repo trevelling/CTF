@@ -30,6 +30,18 @@
   width: 65%;
 }
 
+.asciiSolution {
+  color: white;
+  background-color: rgb(20, 23, 28);
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  font-size: 16px;
+  opacity: 0.9;
+  text-align: left;
+  margin: 20px;
+  width: 65%;
+}
+
 .asciiTitle {
   color: rgb(175, 12, 12);
   background-color: rgb(20, 23, 28);

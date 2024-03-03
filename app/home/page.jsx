@@ -12,30 +12,22 @@ const About = () => {
         <span>CTF </span>
         <span aria-hidden="true">CTF</span>
       </div>
+      
       <div className={styles.about}>
-        <p>
-          <strong className={styles.command} style={{ color: "white" }}>
-            {" "}
-            ~# cat Introduction
-          </strong>
-          <br />
-        </p>
-        <p>
-          Hi! i'm Tev, a CTF player 🚩 in SG!
-          <br />
-        </p>
-        <p>
-          A blog documenting writeup's and tools of various ctf's I
-          participate in 🙂!
-          <br />
-          <br />
-        </p>
       </div>
-      <div className={styles.aboutCTF}>
-        <p>
-          <strong className={styles.command} style={{ color: "white" }}>~# man CTFs</strong>
-          <br />
-        </p>
+      <p>
+          <strong className={styles.intro} style={{ color: "white" }}>~# cat Introduction</strong>
+      </p>
+      <p style={{paddingLeft: "16px", fontWeight: "600" }}>
+      Hi I'm Tev! Here you can find writeups from various CTFs that I've participated in 👨‍💻.
+      </p>
+      <p>
+          <strong className={styles.intro} style={{ color: "white" }}>~# man CTFs</strong>
+      </p>
+      <p style={{paddingLeft: "16px", fontWeight: "600" }}>
+      In case you don't know what CTFs are, here's a nice definition: 
+      </p>
+      <div className={styles.aboutCTF} >
         <p>
           A capture the flag (CTF) contest is a special kind of cybersecurity
           competition designed to challenge its participants to solve computer
@@ -172,11 +164,10 @@ const About = () => {
           </tr>
         </tbody>
       </table>
+      <p>
+          <strong className={styles.intro} style={{ color: "white" }}>~# cat LICENSE</strong>
+      </p>
       <div className={styles.license}>
-        <p>
-          <strong className={styles.command} style={{  color: "white" }}>~# cat LICENSE</strong>
-          <br />
-        </p>
         <p>All original code is licensed under the MIT license.</p>
       </div>
       <footer className={styles.footer}>    

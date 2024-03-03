@@ -26,21 +26,21 @@ export default function Sidebar() {
             >
               {isLink ? (
                 <span style={{ textDecoration: "none" }}>
-                  <Link href={href}>
+                  <Link href={href} style={{ textDecoration: "none" }}>
+                  <span
+                    className={`${styles.sideBarLink} ${
+                      activeLink === href ? styles.activeLink : ""
+                    }`}
+                    onClick={() => handleLinkClick(href, isLink)}
+                  >
                     <span
-                      className={`${styles.sideBarLink} ${
-                        activeLink === href ? styles.activeLink : ""
-                      }`}
-                      onClick={() => handleLinkClick(href, isLink)}
+                      className={styles.sideBarName}
+                      style={{ textDecoration: "none" }}
                     >
-                      <span
-                        className={styles.sideBarName}
-                        style={{ textDecoration: "none" }}
-                      >
-                        {name}
-                        <span>{icon}</span>
-                      </span>
+                      {name}
+                      <span>{icon}</span>
                     </span>
+                  </span>
                   </Link>
                 </span>
               ) : (
@@ -65,14 +65,55 @@ const sideBarItems = [
     name: "🚩   Tev's CTF Writeups",
     href: "/",
     isLink: true,
-    icon: "⇲",
-    className: "home"
+  },
+  {
+    name: "Home",
+    href: "https://trevelling.github.io/tev/",
+    isLink: true,
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 5H8.2C7.08 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
+          stroke="#ffffff"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    name: "Github",
+    href: "https://github.com/trevelling",
+    isLink: true,
+    icon: (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 5H8.2C7.08 5 6.51962 5 6.0918 5.21799C5.71547 5.40973 5.40973 5.71547 5.21799 6.0918C5 6.51962 5 7.08009 5 8.2002V15.8002C5 16.9203 5 17.4801 5.21799 17.9079C5.40973 18.2842 5.71547 18.5905 6.0918 18.7822C6.5192 19 7.07899 19 8.19691 19H15.8031C16.921 19 17.48 19 17.9074 18.7822C18.2837 18.5905 18.5905 18.2839 18.7822 17.9076C19 17.4802 19 16.921 19 15.8031V14M20 9V4M20 4H15M20 4L13 11"
+          stroke="#ffffff"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
   },
   {
     name: "Tools",
     href: "/tools",
     isLink: true,
-    icon: "⇲",
   },
   {
     name: "2024",
@@ -83,25 +124,25 @@ const sideBarItems = [
     name: "BrainHack CDDC ",
     href: "/BrainHack2024",
     isLink: true,
-    icon: "⇲",
+
   },
   {
     name: "Lag and Crash",
     href: "/LNC",
     isLink: true,
-    icon: "⇲",
+
   },
   {
     name: "HACK@AC",
     href: "/HACK@AC",
     isLink: true,
-    icon: "⇲",
+  
   },
   {
     name: "Bits CTF",
     href: "/bitsCTF",
     isLink: true,
-    icon: "⇲",
+  
   },
   {
     name: "2023",
@@ -112,13 +153,11 @@ const sideBarItems = [
     name: "picoCTF",
     href: "/picoCTF2023",
     isLink: true,
-    icon: "⇲",
   },
   {
     name: "YBN CTF",
     href: "/ybnCTF",
     isLink: true,
-    icon: "⇲",
   },
 ];
 

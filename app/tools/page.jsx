@@ -6,11 +6,10 @@ import styles from "./page.module.css";
 export default function Tools() {
   return (
     <div className={styles.toolsContainer}>
+       <p>
+          <strong className={styles.intro} style={{ color: "white" }}>~# cat Tools</strong>
+      </p>
       <div className={styles.tools}>
-        <p>
-          <strong className={styles.command} style={{ color: "rgb(255, 255, 255)" }}> ~# cat Tools</strong>
-          <br />
-        </p>
         <p>
           Different open-source tools recommended and used during CTFs are
           documented here 🛠️.

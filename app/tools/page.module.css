@@ -19,14 +19,13 @@
 .tools {
   color: white;
   background-color: rgb(20, 23, 28);
-  padding-left: 15px;
+  padding-left: 16px;
   font-weight: 400;
   letter-spacing: 1.1px;
   font-size: 16px;
   opacity: 0.9;
   text-align: left;
   border-left: 4px solid rgb(40, 47, 48);
-  margin: 20px;
   width: 65%;
 }
 
@@ -41,6 +40,13 @@
   font-weight: 700;
   text-align: left;
   margin: 20px;
+}
+
+.intro{
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding-left: 16px;
 }
 
 .toolstable {

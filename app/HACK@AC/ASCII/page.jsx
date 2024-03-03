@@ -40,10 +40,54 @@ export default function ASCII() {
       </div>
       <div className={styles.asciiSolved}>
         <p>
-          <code>Output.txt</code> showed a cryptic like-flag, while{" "}
-          <code>source.js</code> had code that returns the flag to us.
-          <br />
-          <br />
+          <code>Output.txt</code>
+        </p>
+      </div>
+      <div className={styles.asciiEvidence}>
+        <SyntaxHighlighter language="text" style={gruvboxDark}>
+          {`
+ECSM{j³v³scµtx_m¹_sxr¸eng³
+          `}
+        </SyntaxHighlighter>
+      </div>
+      <div className={styles.asciiSolved}>
+        <p>
+          <code>Source.js</code>
+        </p>
+      </div>
+      <div className={styles.asciiEvidence}>
+        <SyntaxHighlighter language="javascript" style={gruvboxDark}>
+          {`
+var _0xb3e0 = [
+  "",
+  "\x6A\x6F\x69\x6E",
+  "\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74",
+  "\x66\x72\x6F\x6D\x43\x68\x61\x72\x43\x6F\x64\x65",
+  "\x6D\x61\x70",
+  "\x66\x72\x6F\x6D",
+  "\x45\x6E\x63\x72\x79\x70\x74\x65\x64\x20\x73\x74\x72\x69\x6E\x67\x3A\x20",
+  "\x6C\x6F\x67",
+];
+function yes(_0x6c57x2) {
+  const _0x6c57x3 = Array[_0xb3e0[5]](_0x6c57x2)
+    [_0xb3e0[4]]((_0x6c57x4) => {
+      return String[_0xb3e0[3]](_0x6c57x4[_0xb3e0[2]](0) ^ 0x42);
+    })
+    [_0xb3e0[1]](_0xb3e0[0]);
+  const _0x6c57x5 = Array[_0xb3e0[5]](_0x6c57x3)
+    [_0xb3e0[4]]((_0x6c57x4) => {
+      return String[_0xb3e0[3]](_0x6c57x4[_0xb3e0[2]](0) + 0x42);
+    })
+    [_0xb3e0[1]](_0xb3e0[0]);
+  return _0x6c57x5;
+}
+const possibly = yes(flag);
+          `}
+        </SyntaxHighlighter>
+      </div>
+
+      <div className={styles.asciiSolved}>
+        <p>
           The provided JS code defines a function (yes) that takes a string{" "}
           <code>_0x6c57x2</code>{" "}
           as input and performs XOR and addition operations on its characters to
