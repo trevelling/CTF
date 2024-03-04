@@ -1,10 +1,21 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function OOP() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/HACK@AC/Grass");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/HACK@AC/Stream");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed1, setIsZoomed1] = useState(false);
   const [isZoomed2, setIsZoomed2] = useState(false);
   const [isZoomed3, setIsZoomed3] = useState(false);
@@ -66,10 +77,10 @@ export default function OOP() {
         </p>
       </div>
       <div
-        className={`${styles.oopEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.oopEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/HACK@AC/oop1.png" width={800} height={500} alt="logo" className={styles.oopImage}/>
+        <Image src="/HACK@AC/oop1.png" width={900} height={600} alt="logo" className={styles.oopImage}/>
       </div>
 
       <div className={styles.oopSolved}>
@@ -81,10 +92,10 @@ export default function OOP() {
         </p>
       </div>
       <div
-        className={`${styles.oopEvidence} ${isZoomed2 ? styles.zoomed : ""}`}
+        className={`${styles.oopEvidencePic} ${isZoomed2 ? styles.zoomed : ""}`}
         onClick={toggleZoom2}
       >
-        <Image src="/oop2.png" width={800} height={140} alt="logo" className={styles.oopImage} />
+        <Image src="/oop2.png" width={900} height={150} alt="logo" className={styles.oopImage} />
       </div>
       <div className={styles.oopSolved}>
         <p>
@@ -93,10 +104,10 @@ export default function OOP() {
         </p>
       </div>
       <div
-        className={`${styles.oopEvidence} ${isZoomed3 ? styles.zoomed : ""}`}
+        className={`${styles.oopEvidencePic} ${isZoomed3 ? styles.zoomed : ""}`}
         onClick={toggleZoom3}
       >
-        <Image src="/oop3.png" width={800} height={400} alt="logo" className={styles.oopImage} />
+        <Image src="/oop3.png" width={900} height={500} alt="logo" className={styles.oopImage} />
       </div>
       <div className={styles.oopFlag}>
         <span>Flag: </span>
@@ -104,6 +115,19 @@ export default function OOP() {
           ACSI{"{s0_m4ny_0bj4c+5}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Grass is Greener</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>Stream of Consciousness</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

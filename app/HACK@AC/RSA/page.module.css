@@ -1,9 +1,8 @@
 .rsaContainer {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  align-items: center;
   position: relative;
-  margin-left: 250px;
   transition: margin-left 0.3s ease;
   font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif;
@@ -13,6 +12,15 @@
   .rsaContainer {
     margin-left: 0; 
     width: 100%;
+  }
+  .buttonContainer{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button1, .button2 {
+    width: 100%; 
+    max-width: 250px;
   }
 }
 
@@ -27,7 +35,7 @@
   text-align: left;
   border-left: 4px solid rgb(40, 47, 48);
   margin: 20px;
-  width: 65%;
+  width: 60%;
 }
 
 .rsaTitle {
@@ -40,7 +48,7 @@
   opacity: 0.9;
   text-align: left;
   margin: 20px;
-  width: 65%;
+  width: 60%;
 }
 
 .rsaSolved {
@@ -52,7 +60,7 @@
   opacity: 0.9;
   text-align: left;
   margin: 20px;
-  width: 65%;
+  width: 60%;
 }
 
 .rsaFlag {
@@ -68,16 +76,69 @@
   text-align: left;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
-  margin: 20px;
-  width: 65%;
+  margin-left: 18px;
+  width: 60%;
+  margin-bottom: 25px;
+  margin-top: 25px;
   overflow-x: auto;
 }
 
 .rsaEvidence {
-  width: 65%;
+  position: relative;
+  width: 60%;
   margin-left: -1px;
-  cursor: pointer;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #282a36;
+  border-radius: 4px;
+}
+
+.copyButton {
+  align-self: flex-end;
+  border: none;
+  background-color: #282a36;
+  color: white;
+  padding-top: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.rsaEvidence.zoomed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition-duration: 0.25s;
+  touch-action: manipulation;
+}
+
+.rsaEvidence.zoomed img {
+  object-fit: contain;
+  min-width: 0; 
+  min-height: 0; 
+  max-width: 100%; 
+  max-height: 100%; 
+  width: auto; 
+  height: auto; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  border-radius: 4px;
+}
+
+.rsaImage {
+  border-radius: 4px; 
 }
 
 .rsaSolved code {
@@ -96,3 +157,101 @@
 .command{
   font-size: 24px;
 }
+.buttonContainer {
+  display: flex;
+}
+
+.button1 {
+  width: 446px;
+  padding-right: 20px;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgb(40, 47, 48);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, color 0.3s, transform 0.3s ease-out;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0) inset;
+  margin-left: 20px;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; 
+  align-items: flex-end;
+}
+
+.button2 {
+  width: 446px; 
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgb(40, 47, 48);
+  border-radius: 4px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, color 0.3s, transform 0.3s ease-out;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0) inset;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buttonPrevious,
+.buttonNext{
+  font-size: 13px;
+  padding-bottom: 4px;
+}
+
+.buttonText{
+  font-weight: 550;
+  font-size: 16px;
+}
+.button1:hover .buttonText {
+  color: rgb(76, 211, 76);
+}
+
+.button2:hover .buttonText {
+  color: rgb(76, 211, 76);
+}
+
+
+.line {
+  border-bottom: 1px solid rgb(40, 47, 48);
+  margin: 20px;
+  width: 61%;
+  margin-left: 40px;
+}
+
+.arrow {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button1 .arrow {
+  background-image: url("data:image/svg+xml,%3Csvg height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 227.096 227.096' xml:space='preserve' fill='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cg%3E%3Cpolygon style='fill:%23ffffff;' points='152.835,39.285 146.933,45.183 211.113,109.373 0,109.373 0,117.723 211.124,117.723 146.933,181.902 152.835,187.811 227.096,113.55 '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: -440px;
+}
+
+.button2 .arrow {
+  background-image: url("data:image/svg+xml,%3Csvg height='185px' width='185px' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 227.096 227.096' xml:space='preserve' fill='%23ffffff' stroke='%23ffffff' transform='rotate(180)'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cg%3E%3Cpolygon style='fill:%23ffffff;' points='152.835,39.285 146.933,45.183 211.113,109.373 0,109.373 0,117.723 211.124,117.723 146.933,181.902 152.835,187.811 227.096,113.55 '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  left: -440px; 
+}
+

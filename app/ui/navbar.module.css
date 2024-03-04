@@ -23,11 +23,9 @@
 }
 
 .sideBarLogoName {
-  font-size: 24px;
+  font-size: 20px;
   opacity: 0.8;
-  border-radius: 0.2rem;
-  font-weight: bold;
-  font-weight: 650;
+  font-weight: 620;
   color: white;
   padding: 10px;
   margin-left: 5px;

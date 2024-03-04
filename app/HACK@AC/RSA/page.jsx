@@ -1,9 +1,56 @@
-import React from "react";
-import styles from "./page.module.css";
+"use client";
+
+import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
+import styles from "./page.module.css";;
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function RSA() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/HACK@AC/Stream");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/HACK@AC/Potato");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const [copied1, setCopied1] = useState(false);
+  const [copied2, setCopied2] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/HACK@AC]
+└─$ exiftool Grass_Final.png
+ExifTool Version Number         : 12.67
+File Name                       : Grass_Final.png
+Directory                       : .
+File Size                       : 15 MB
+File Modification Date/Time     : 2023:05:15 15:42:42-04:00
+File Access Date/Time           : 2023:05:15 15:42:42-04:00
+File Inode Change Date/Time     : 2024:02:27 05:29:42-05:00
+File Permissions                : -rw-r--r--
+Error                           : File format error
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
+  const copyCode2 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/HACK@AC]
+└─$ pngcheck -v Grass_Final.png
+File: Grass_Final.png (15081104 bytes)
+  this is neither a PNG or JNG image nor MNG stream
+ERRORS DETECTED in Grass_Final.png
+    `);
+    setCopied2(true);
+    setTimeout(() => setCopied2(false), 1500);
+  };
   return (
     <div className={styles.rsaContainer}>
       <div className={styles.rsaTitle} style={{ color: "white"}}>
@@ -35,9 +82,11 @@ export default function RSA() {
         </p>
       </div>
       <div className={styles.rsaEvidence}>
-        <SyntaxHighlighter language="text" style={gruvboxDark}>
-          {`
-RSA
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="text" style={dracula}>
+          {`RSA
 
 RSA (Rivest-Shamir-Adleman) is a widely used public-key encryption algorithm that allows for secure data transmission1. It relies on the difficulty of factoring a very large number into its prime factors, and uses concepts of primes and modular arithmetic.
 
@@ -79,8 +128,7 @@ c = 7695921409160162060615103901058161401322980801713028256750030700397006381994
 p = 79683944517959696670617631384131219775576650611292688567988662400264431266819
 q = 108662147670716818049624938161195710612908147677637733268728580525147068371357
 
-(After decryption, use the long_to_bytes function to convert the integer to the flag string)
-          `}
+(After decryption, use the long_to_bytes function to convert the integer to the flag string)`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.rsaSolved}>
@@ -94,9 +142,11 @@ q = 1086621476707168180496249381611957106129081476776377332687285805251470683713
         </p>
       </div>
       <div className={styles.rsaEvidence}>
-        <SyntaxHighlighter language="python" style={gruvboxDark}>
-          {`
-from Crypto.Util.number import long_to_bytes
+        <button onClick={copyCode2} className={styles.copyButton}>
+          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="python" style={dracula}>
+          {`from Crypto.Util.number import long_to_bytes
 
 n = 8658628546195742416426846064560031781994710710324915841146332112158193600986064369896954438498015317717916206099831713871181185450145194452521938644103383
 e = 65537
@@ -115,17 +165,28 @@ m = pow(c, d, n)
     
 # Convert the integer to the flag string
 flag = long_to_bytes(m)
-print(flag.decode())
-          `}
+print(flag.decode())`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.rsaFlag}>
         <span>Flag: </span>
-
         <span style={{ color: "rgb(137, 207, 240)" }}>
           ACSI{"{i_l0ve_RS@}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Stream of Conciousness</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>Potato</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

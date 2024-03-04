@@ -3,8 +3,19 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function HACKAC() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/LNC")
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/HACK@AC/ASCII");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed, setIsZoomed] = useState(false);
 
   const toggleZoom = () => {
@@ -122,8 +133,21 @@ export default function HACKAC() {
         className={`${styles.acsCertification} ${isZoomed ? styles.zoomed : ""}`}
         onClick={toggleZoom}
       >
-        <Image src="/HACK@AC/acsctf.png" width={650} height={350} alt="logo" className={styles.acsImage}/>
+        <Image src="/HACK@AC/acsctf.png" width={730} height={350} alt="logo" className={styles.acsImage}/>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Lag and Crash</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>ASCII Me Anything</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

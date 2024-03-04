@@ -1,16 +1,67 @@
 "use client";
 
 import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function VVS() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/HACK@AC/ASCII");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/HACK@AC/Grass");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed1, setIsZoomed1] = useState(false);
 
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
+  };
+  const [copied1, setCopied1] = useState(false);
+  const [copied2, setCopied2] = useState(false);
+  const [copied3, setCopied3] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+@app.route('/register', methods=['POST'])
+def register():
+  username = request.form['username']
+  password = request.form['password']
+  phash = sha256(password.encode('utf-8')).hexdigest()
+      
+  conn = sqlite3.connect('database.db')
+  cur = conn.cursor()
+  ## Wait how do I use the question mark thing again?
+  cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
+  onn.commit()
+      
+  return redirect(url_for('index', message='Successfully registered!'))
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
+  const copyCode2 = () => {
+    navigator.clipboard.writeText(`
+[username]','[password hashed with SHA256]',1--
+    `);
+    setCopied2(true);
+    setTimeout(() => setCopied2(false), 1500);
+  };
+
+  const copyCode3 = () => {
+    navigator.clipboard.writeText(`
+cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
+    `);
+    setCopied3(true);
+    setTimeout(() => setCopied3(false), 1500);
   };
   return (
     <div className={styles.vvsContainer}>
@@ -56,7 +107,7 @@ export default function VVS() {
         </p>
       </div>
       <div
-        className={`${styles.vvsEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.vvsEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
         <Image src="/HACK@AC/VVS1.png" width={700} height={250} alt="logo" className={styles.vvsImage} />
@@ -72,9 +123,11 @@ export default function VVS() {
         </p>
       </div>
       <div className={styles.vvsEvidence}>
-        <SyntaxHighlighter language="python" style={gruvboxDark}>
-          {`
-@app.route('/register', methods=['POST'])
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="python" style={dracula}>
+          {`@app.route('/register', methods=['POST'])
 def register():
   username = request.form['username']
   password = request.form['password']
@@ -86,11 +139,9 @@ def register():
   cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
   conn.commit()
   
-  return redirect(url_for('index', message='Successfully registered!'))
-          `}
+  return redirect(url_for('index', message='Successfully registered!'))`}
         </SyntaxHighlighter>
       </div>
-      
       <div className={styles.vvsSolved}>
       Firstly, I tried many times to inject a payload into the username field of the registration form but realised the goal was to first create a new user as the database was empty.
       <br />
@@ -98,12 +149,14 @@ def register():
       Payload:
       </div>
       <div className={styles.vvsEvidence}>
-        <SyntaxHighlighter language="python" style={gruvboxDark}>
-          {`
-[username]','[password hashed with SHA256]',1--
-          `}
+        <button onClick={copyCode2} className={styles.copyButton}>
+          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="python" style={dracula}>
+          {`[username]','[password hashed with SHA256]',1--`}
         </SyntaxHighlighter>
       </div>
+
       <div className={styles.vvsSolved}>
       By injecting the password 
       directly into the username field, it bypasses the 
@@ -115,19 +168,33 @@ def register():
       The SQL payload was based on this line of the code.
       </div>
       <div className={styles.vvsEvidence}>
-        <SyntaxHighlighter language="python" style={gruvboxDark}>
-          {`
-cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
-          `}
+        <button onClick={copyCode3} className={styles.copyButton}>
+          {copied3 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="python" style={dracula}>
+          {`cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")`}
         </SyntaxHighlighter>
       </div>
-      
+    
       <div className={styles.vvsFlag}>
         <span>Flag: </span>
         <span style={{ color: "rgb(137, 207, 240)" }}>
           ACSI{"{a_v3ry_v8lner4b13_p4g3_w1th_55t1_7wt_5q1i}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>ASCII Me Anything</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>Grass is Greener</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

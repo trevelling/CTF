@@ -1,7 +1,20 @@
+"use client";
+
 import React from "react";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 export default function BitsCTF() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/HACK@AC")
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/HACK@AC/ASCII");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className={styles.bitsContainer}>
       <div className={styles.bitsTitle}>
@@ -85,6 +98,19 @@ export default function BitsCTF() {
           </tr>
         </tbody>
       </table>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>HACK@AC 2024</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>ASCII Me Anything</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

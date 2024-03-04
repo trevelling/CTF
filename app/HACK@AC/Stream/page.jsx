@@ -1,10 +1,21 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Stream() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/HACK@AC/OOP");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/HACK@AC/RSA");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed1, setIsZoomed1] = useState(false);
   const [isZoomed2, setIsZoomed2] = useState(false);
 
@@ -68,10 +79,10 @@ export default function Stream() {
         </p>
       </div>
       <div
-        className={`${styles.streamEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.streamEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/HACK@AC/stream1.png" width={800} height={500} alt="logo" className={styles.streamImage} />
+        <Image src="/HACK@AC/stream1.png" width={900} height={500} alt="logo" className={styles.streamImage} />
       </div>
 
       <div className={styles.streamSolved}>
@@ -88,10 +99,10 @@ export default function Stream() {
         </p>
       </div>
       <div
-        className={`${styles.streamEvidence} ${isZoomed2 ? styles.zoomed : ""}`}
+        className={`${styles.streamEvidencePic} ${isZoomed2 ? styles.zoomed : ""}`}
         onClick={toggleZoom2}
       >
-        <Image src="/stream2.png" width={800} height={400} alt="logo" className={styles.streamImage}  />
+        <Image src="/stream2.png" width={900} height={500} alt="logo" className={styles.streamImage}  />
       </div>
       <div className={styles.streamFlag}>
         <span>Flag: </span>
@@ -99,6 +110,19 @@ export default function Stream() {
           ACSI{"{str34m_0f_th0ugh+}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Object Orientated Programming</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>RandomlySelectedAlgorithm</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

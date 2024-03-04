@@ -3,8 +3,19 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function YBNCTF() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023")
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/home");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed, setIsZoomed] = useState(false);
 
   const toggleZoom = () => {
@@ -35,8 +46,21 @@ export default function YBNCTF() {
         className={`${styles.ybnCertification} ${isZoomed ? styles.zoomed : ""}`}
         onClick={toggleZoom}
       >
-        <Image src="/YBNCTF/ybnctf.jpg" width={500} height={350} alt="logo" className={styles.ybnImage}/>
+        <Image src="/YBNCTF/ybnctf.jpg" width={735} height={420} alt="logo" className={styles.ybnImage}/>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>picoCTF 2023</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>Home</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }
