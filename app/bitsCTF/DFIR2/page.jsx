@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -10,8 +10,17 @@ import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IoCopy } from "react-icons/io5";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function DFIR2() {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/bitsCTF/DFIR1");
@@ -50,6 +59,7 @@ MogamBro        1000    aad3b435b51404eeaad3b435b51404ee        8a320467c7c22e32
 
   return (
     <div className={styles.dfirContainer}>
+      {loading && <Preloader />}
       <div className={styles.dfirTitle} style={{ color: "white"}}>
           Access Granted!
         <br />

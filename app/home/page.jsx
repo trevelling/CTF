@@ -1,12 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 const About = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("https://trevelling.github.io/tev/");
@@ -20,6 +31,7 @@ const About = () => {
 
   return (
     <div className={styles.aboutContainer}> 
+    {loading && <Preloader />}
       <div className={styles.introtitle} style={{ color: "white" }}>
           Tev's CTF Writeups 🏴
       </div>
@@ -192,7 +204,6 @@ const About = () => {
     </div>
   );
 }
-
 
 export default About;
 

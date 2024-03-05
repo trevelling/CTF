@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -12,6 +13,15 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function NoWayOut() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/picoCTF2023/Reverse");
@@ -76,6 +86,7 @@ else
   };
   return (
     <div className={styles.noWayOutContainer}>
+      {loading && <Preloader />}
       <div className={styles.noWayOutTitle} style={{ color: "white"}}>
           No way out
         <br />

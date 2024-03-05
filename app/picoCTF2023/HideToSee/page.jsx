@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -12,6 +13,15 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function Hidetosee() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/picoCTF2023/MSB");
@@ -61,6 +71,7 @@ krxlXGU{zgyzhs_xizxp_xz005577y}
   };
   return (
     <div className={styles.hideToSeeContainer}>
+      {loading && <Preloader />}
       <div className={styles.hideToSeeTitle} style={{ color: "white"}}>
           HideToSee
         <br />

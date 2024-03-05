@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -12,6 +13,15 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function Rotation() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/picoCTF2023/HideToSee");
@@ -42,6 +52,7 @@ xqkwKBN{z0bib1wv_l3kzgxb3l_429in00n}
 
   return (
     <div className={styles.rotationContainer}>
+      {loading && <Preloader />}
       <div className={styles.rotationTitle} style={{ color: "white"}}>
           rotation
         <br />

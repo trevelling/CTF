@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -12,6 +13,15 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function VM0() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/picoCTF2023/timer");
@@ -44,6 +54,7 @@ print(flag)
   };
   return (
     <div className={styles.vm0Container}>
+      {loading && <Preloader />}
       <div className={styles.vm0Title} style={{ color: "white"}}>
           Virtual Machine 0
         <br />

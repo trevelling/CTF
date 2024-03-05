@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -9,8 +9,19 @@ import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IoCopy } from "react-icons/io5";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function ASCII() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/HACK@AC");
@@ -88,6 +99,7 @@ print(original_input)
   };
   return (
     <div className={styles.asciiContainer}>
+      {loading && <Preloader />}
       <div className={styles.asciiTitle} style={{ color: "white" }}>
         ASCII Me Anything
         <br />

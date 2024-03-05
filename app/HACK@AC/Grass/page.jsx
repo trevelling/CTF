@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -10,8 +10,19 @@ import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IoCopy } from "react-icons/io5";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function Grass() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+  
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/HACK@AC/VVS");
@@ -123,6 +134,7 @@ b4,abgr,msb,xy      .. text: "ouos_Gos/1/5/1/1"
   };
   return (
     <div className={styles.grassContainer}>
+      {loading && <Preloader />}
       <div className={styles.grassTitle} style={{ color: "white"}}>
           Grass is Greener
         <br />

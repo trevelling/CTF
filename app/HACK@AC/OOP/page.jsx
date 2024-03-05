@@ -1,13 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function OOP() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/HACK@AC/Grass");
@@ -34,6 +44,7 @@ export default function OOP() {
   };
   return (
     <div className={styles.oopContainer}>
+      {loading && <Preloader />}
       <div className={styles.oopTitle} style={{ color: "white"}}>
           Object Orientated Programming
         <br />

@@ -1,12 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function Tools() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/home");
@@ -19,6 +29,7 @@ export default function Tools() {
   };
   return (
     <div className={styles.toolsContainer}>
+      {loading && <Preloader />}
           <div className={styles.intro} style={{ color: "white" }}>~# cat Tools</div>
       <div className={styles.tools}>
           Different open-source tools recommended and used during CTFs are

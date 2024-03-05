@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -9,8 +9,17 @@ import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IoCopy } from "react-icons/io5";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function BabyRev() {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/bitsCTF/LadyLove");
@@ -84,6 +93,7 @@ undefined8 main(void)
   };
   return (
     <div className={styles.babyRevContainer}>
+      {loading && <Preloader />}
       <div className={styles.babyRevTitle} style={{ color: "white"}}>
           baby-rev
         <br />

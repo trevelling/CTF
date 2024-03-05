@@ -1,12 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function HACKAC() {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/tools")
@@ -18,7 +26,8 @@ export default function HACKAC() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className={styles.brainHackContainer}>
+    <div className={styles.brainHackContainer}>  
+    {loading && <Preloader />}
       <div className={styles.brainHackTitle}>
         <a
           href="https://www.dsta.gov.sg/brainhack"

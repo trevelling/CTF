@@ -1,13 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function DFIR1() {
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/bitsCTF");
@@ -24,6 +33,7 @@ export default function DFIR1() {
   };
   return (
     <div className={styles.dfirContainer}>
+      {loading && <Preloader />}
       <div className={styles.dfirTitle} style={{ color: "white"}}>
           Intro to DFIR
         <br />

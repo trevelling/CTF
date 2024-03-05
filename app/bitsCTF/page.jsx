@@ -1,12 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function BitsCTF() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/HACK@AC")
@@ -19,6 +28,7 @@ export default function BitsCTF() {
   };
   return (
     <div className={styles.bitsContainer}>
+      {loading && <Preloader />}
       <div className={styles.bitsTitle}>
         <a
           href="https://ctf.bitskrieg.org/"

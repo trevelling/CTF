@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";;
@@ -9,8 +9,19 @@ import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { IoCopy } from "react-icons/io5";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function RSA() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/HACK@AC/Stream");
@@ -103,6 +114,7 @@ print(flag.decode())
   };
   return (
     <div className={styles.rsaContainer}>
+      {loading && <Preloader />}
       <div className={styles.rsaTitle} style={{ color: "white"}}>
           RandomlySelectedAlgorithm
         <br />
@@ -228,7 +240,7 @@ print(flag.decode())`}
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>Stream of Conciousness</div>
-          <span className={styles.arrow}><BsArrowRight /></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>

@@ -1,13 +1,23 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function LadyLove() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/bitsCTF/DFIR2");
@@ -34,6 +44,7 @@ export default function LadyLove() {
   };
   return (
     <div className={styles.ladyLoveContainer}>
+      {loading && <Preloader />}
       <div className={styles.ladyLoveTitle} style={{ color: "white"}}>
           LadyLove
         <br />

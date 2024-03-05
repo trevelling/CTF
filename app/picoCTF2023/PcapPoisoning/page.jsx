@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,6 +9,15 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function PcapPoisoning() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/picoCTF2023/moneyware");
@@ -30,6 +40,7 @@ export default function PcapPoisoning() {
   };
   return (
     <div className={styles.pcapPoisoningContainer}>
+      {loading && <Preloader />}
       <div className={styles.pcapPoisoningTitle} style={{ color: "white"}}>
           PcapPoisoning
         <br />

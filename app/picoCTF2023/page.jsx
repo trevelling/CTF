@@ -1,12 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function PicoCTF() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/bitsCTF")
@@ -19,6 +29,7 @@ export default function PicoCTF() {
   };
   return (
     <div className={styles.pico2023Container}>
+      {loading && <Preloader />}
       <div className={styles.pico2023Title}>
         <a
           href="https://play.picoctf.org/practice?originalEvent=72&page=1"

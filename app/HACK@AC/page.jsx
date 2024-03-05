@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,6 +9,16 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function HACKAC() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/LNC")
@@ -26,6 +37,7 @@ export default function HACKAC() {
 
   return (
     <div className={styles.acsContainer}>
+      {loading && <Preloader />}
       <div className={styles.acsTitle}>
         <a
           href="https://8059blank.github.io/hackac/HACK@AC-Information"

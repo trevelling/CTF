@@ -1,13 +1,24 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
+import Preloader from "@/app/ui/preloader";
 
 export default function Stream() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const router = useRouter();
   const handlePrevious = () => {
     router.push("/HACK@AC/OOP");
@@ -30,6 +41,7 @@ export default function Stream() {
   };
   return (
     <div className={styles.streamContainer}>
+      {loading && <Preloader />}
       <div className={styles.streamTitle} style={{ color: "white"}}>
           Stream of Consciousness
         <br />
