@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 import styles from "./page.module.css";;
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { IoCopy } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function RSA() {
   const router = useRouter();
@@ -69,7 +72,7 @@ export default function RSA() {
     (After decryption, use the long_to_bytes function to convert the integer to the flag string)
     `);
     setCopied1(true);
-    setTimeout(() => setCopied1(false), 1500);
+    setTimeout(() => setCopied1(false), 50);
   };
 
   const copyCode2 = () => {
@@ -96,7 +99,7 @@ flag = long_to_bytes(m)
 print(flag.decode())
     `);
     setCopied2(true);
-    setTimeout(() => setCopied2(false), 1500);
+    setTimeout(() => setCopied2(false), 50);
   };
   return (
     <div className={styles.rsaContainer}>
@@ -130,7 +133,7 @@ print(flag.decode())
       </div>
       <div className={styles.rsaEvidence}>
         <button onClick={copyCode1} className={styles.copyButton}>
-          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied1 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="text" style={dracula}>
           {`RSA
@@ -190,7 +193,7 @@ q = 1086621476707168180496249381611957106129081476776377332687285805251470683713
       </div>
       <div className={styles.rsaEvidence}>
         <button onClick={copyCode2} className={styles.copyButton}>
-          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied2 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="python" style={dracula}>
           {`from Crypto.Util.number import long_to_bytes
@@ -225,15 +228,18 @@ print(flag.decode())`}
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>Stream of Conciousness</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>Potato</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }

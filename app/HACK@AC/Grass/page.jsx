@@ -7,6 +7,9 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { IoCopy } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function Grass() {
   const router = useRouter();
@@ -46,7 +49,7 @@ File Permissions                : -rw-r--r--
 Error                           : File format error
     `);
     setCopied1(true);
-    setTimeout(() => setCopied1(false), 1500);
+    setTimeout(() => setCopied1(false), 50);
   };
 
   const copyCode2 = () => {
@@ -58,7 +61,7 @@ File: Grass_Final.png (15081104 bytes)
 ERRORS DETECTED in Grass_Final.png
     `);
     setCopied2(true);
-    setTimeout(() => setCopied2(false), 1500);
+    setTimeout(() => setCopied2(false), 50);
   };
 
   const copyCode3 = () => {
@@ -68,7 +71,7 @@ ERRORS DETECTED in Grass_Final.png
 00000000: 8940 4e47 0d0a 1a0a
     `);
     setCopied3(true);
-    setTimeout(() => setCopied3(false), 1500);
+    setTimeout(() => setCopied3(false), 50);
   };
 
   const copyCode4 = () => {
@@ -80,7 +83,7 @@ ERRORS DETECTED in Grass_Final.png
 8 bytes copied, 0.000240838 s, 33.2 kB/s
     `);
     setCopied4(true);
-    setTimeout(() => setCopied4(false), 1500);
+    setTimeout(() => setCopied4(false), 50);
   };
 
   const copyCode5 = () => {
@@ -93,7 +96,7 @@ OK: Grass_Final.png (4032x3024, 32-bit RGB+alpha, non-interlaced, 69.1%).
 └─$ eog Grass_Final.png
     `);
     setCopied5(true);
-    setTimeout(() => setCopied5(false), 1500);
+    setTimeout(() => setCopied5(false), 50);
   };
 
   const copyCode6 = () => {
@@ -116,7 +119,7 @@ b4,rgb,msb,xy       .. text: "0qe7FW76!S2!"
 b4,abgr,msb,xy      .. text: "ouos_Gos/1/5/1/1"
     `);
     setCopied6(true);
-    setTimeout(() => setCopied6(false), 1500);
+    setTimeout(() => setCopied6(false), 50);
   };
   return (
     <div className={styles.grassContainer}>
@@ -172,7 +175,7 @@ b4,abgr,msb,xy      .. text: "ouos_Gos/1/5/1/1"
       </div>
       <div className={styles.grassEvidence}>
         <button onClick={copyCode1} className={styles.copyButton}>
-          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied1 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`┌──(tev㉿kali)-[~/HACK@AC]
@@ -190,7 +193,7 @@ Error                           : File format error`}
       </div>
       <div className={styles.grassEvidence}>
         <button onClick={copyCode2} className={styles.copyButton}>
-          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied2 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`┌──(tev㉿kali)-[~/HACK@AC]
@@ -247,7 +250,7 @@ ERRORS DETECTED in Grass_Final.png`}
       </div>
       <div className={styles.grassEvidence}>
         <button onClick={copyCode3} className={styles.copyButton}>
-          {copied3 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied3 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`┌──(tev㉿kali)-[~/HACK@AC]
@@ -263,7 +266,7 @@ ERRORS DETECTED in Grass_Final.png`}
       </div>
       <div className={styles.grassEvidence}>
         <button onClick={copyCode4} className={styles.copyButton}>
-          {copied4 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied4 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`┌──(tev㉿kali)-[~/HACK@AC]
@@ -289,7 +292,7 @@ ERRORS DETECTED in Grass_Final.png`}
       </div>
       <div className={styles.grassEvidence}>
         <button onClick={copyCode5} className={styles.copyButton}>
-          {copied5 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied5 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`┌──(tev㉿kali)-[~/HACK@AC]
@@ -335,7 +338,7 @@ OK: Grass_Final.png (4032x3024, 32-bit RGB+alpha, non-interlaced, 69.1%).
       </div>
       <div className={styles.grassEvidence}>
         <button onClick={copyCode6} className={styles.copyButton}>
-          {copied6 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied6 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`┌──(tev㉿kali)-[~/HACK@AC]
@@ -366,15 +369,18 @@ b4,abgr,msb,xy      .. text: "ouos_Gos/1/5/1/1"`}
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>Very Vulnerable Site</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>Object Orientated Programming</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }

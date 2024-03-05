@@ -149,6 +149,7 @@
   cursor: pointer;
   transition: box-shadow 0.3s, color 0.3s, transform 0.3s ease-out;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0) inset;
+
   margin-top: 15px;
   position: relative;
   display: flex;
@@ -159,9 +160,10 @@
 
 .button2 {
   width: 356px; 
-  padding-left: 20px;
+
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 20px;
   font-size: 16px;
   background-color: rgba(0, 0, 0, 0);
   color: rgba(255, 255, 255, 0.9);
@@ -189,11 +191,13 @@
   font-weight: 550;
   font-size: 16px;
 }
-.button1:hover .buttonText {
+.button1:hover .buttonText,
+.button1:hover .arrow {
   color: rgb(76, 211, 76);
 }
 
-.button2:hover .buttonText {
+.button2:hover .buttonText,
+.button2:hover .arrow {
   color: rgb(76, 211, 76);
 }
 
@@ -202,29 +206,25 @@
   border-bottom: 1px solid rgb(40, 47, 48);
   margin: 20px;
   width: 49%;
+  margin-left: 40px;
 }
 
 .arrow {
   position: absolute;
-  width: 25px;
-  height: 25px;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 24px;
+  padding-top: 5px;
 }
 
 .button1 .arrow {
-  background-image: url("data:image/svg+xml,%3Csvg height='800px' width='800px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 227.096 227.096' xml:space='preserve' fill='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cg%3E%3Cpolygon style='fill:%23ffffff;' points='152.835,39.285 146.933,45.183 211.113,109.373 0,109.373 0,117.723 211.124,117.723 146.933,181.902 152.835,187.811 227.096,113.55 '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
-  right: -355px;
+  left: 20px; 
 }
 
 .button2 .arrow {
-  background-image: url("data:image/svg+xml,%3Csvg height='185px' width='185px' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 227.096 227.096' xml:space='preserve' fill='%23ffffff' stroke='%23ffffff' transform='rotate(180)'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cg%3E%3Cpolygon style='fill:%23ffffff;' points='152.835,39.285 146.933,45.183 211.113,109.373 0,109.373 0,117.723 211.124,117.723 146.933,181.902 152.835,187.811 227.096,113.55 '/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 25px;
-  height: 25px;
-  left: -355px; 
+  right: 20px; 
 }
-

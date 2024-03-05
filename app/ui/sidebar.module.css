@@ -43,10 +43,10 @@
   transition: background-color 0.3s ease;
   border-radius: 5px;
   width: 97%;
-  padding-top: 1px;
-  padding-bottom: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   line-height: 22px;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .sideBarLink:hover {
@@ -66,12 +66,8 @@
   display: flex;
   justify-content: space-between;
   padding-right: 6px;
-  margin-left: 12px; 
-  padding-top: 4px;
-}
+  margin-left: 12px;
 
-.sideBarName svg {
-  padding-bottom: -8px;
 }
 
 .ctfYear {
@@ -80,5 +76,19 @@
   text-transform: uppercase;
   letter-spacing: 1.2px;
   margin-top: 30px;
+}
+
+.icon {
+  font-size: 20px; 
+  border-radius: 100px;
+  padding-top: 2px;
+  padding-right: 5px;
+}
+
+.icon2 {
+  font-size: 15px; 
+  border-radius: 100px;
+  padding-top: 2px;
+  padding-right: 5px;
 }
 

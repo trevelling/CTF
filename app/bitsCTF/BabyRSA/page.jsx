@@ -7,6 +7,9 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { IoCopy } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function BabyRSA() {
   const router = useRouter();
@@ -61,7 +64,7 @@ for i in c:
     print(j)
     `);
     setCopied1(true);
-    setTimeout(() => setCopied1(false), 1500);
+    setTimeout(() => setCopied1(false), 50);
   };
 
   const copyCode2 = () => {
@@ -74,7 +77,7 @@ c = 2265026749183115896149349494563541984497899399281956261403088030358789047813
 d = 21918251154970082314222727740598056021059485736289135003915749232429908966741747423007921579944599958250485131086510119153324415101442340819161587864992420876845822880037498353379555319411381764829992580481479390290007103089320444053573660373539839479887140094345654253438765837610846183906780001563278053108924452477590722136992300951542317836042467648565676610116549645312286546804494679220834545780288823406596099528171318966103110446627459454678950065440952742712213009905322683034224640705258686542355943237539849218298957686667728849048771501755939158694731521586755665323051264657459810178627357183164938178482
     `);
     setCopied2(true);
-    setTimeout(() => setCopied2(false), 1500);
+    setTimeout(() => setCopied2(false), 50);
   };
 
   const copyCode3 = () => {
@@ -92,7 +95,7 @@ pt = long_to_bytes(pt[0][0]) + long_to_bytes(pt[0][1]) + long_to_bytes(pt[1][0])
 print(pt)
     `);
     setCopied3(true);
-    setTimeout(() => setCopied3(false), 1500);
+    setTimeout(() => setCopied3(false), 50);
   };
   return (
     <div className={styles.babyRsaContainer}>
@@ -144,7 +147,7 @@ print(pt)
       </div>
       <div className={styles.babyRsaEvidence}>
         <button onClick={copyCode1} className={styles.copyButton}>
-          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied1 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="python" style={dracula}>
           {`#!/usr/bin/env python3
@@ -179,7 +182,7 @@ for i in c:
       </div>
       <div className={styles.babyRsaEvidence}>
         <button onClick={copyCode2} className={styles.copyButton}>
-          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied2 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="text" style={dracula}>
           {`n = 23036769723266886125458649758956702648712087220176816714653838673509877792118247880199359383510351312176460013557289096284919848198450380140055143077150138568183361851259869327791757963071569189728166204980100709764185330342160274626199317196467443629331873914435565361740711829939685538189329988893139409587357168398853766369829738504476214206419533085521724453948450717252383742145150063213519788568096297255648618658652421978414668802766216274568505191139490500068196963713850595634438745810451971497700218653640156817206666005050648173171079623763116133293956506581891112418298346805489471936353543559531981211007
@@ -224,7 +227,7 @@ d = 2191825115497008231422272774059805602105948573628913500391574923242990896674
       </div>
       <div className={styles.babyRsaEvidence}>
         <button onClick={copyCode3} className={styles.copyButton}>
-          {copied3 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied3 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="python" style={dracula}>
           {`from Crypto.Util.number import long_to_bytes
@@ -263,15 +266,18 @@ print(pt)`}
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>baby-rev</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>picoCTF 2O23</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }

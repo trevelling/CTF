@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function PcapPoisoning() {
   const router = useRouter();
@@ -115,15 +117,18 @@ export default function PcapPoisoning() {
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>money-ware</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>hideme</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }

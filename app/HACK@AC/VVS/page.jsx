@@ -7,6 +7,9 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { IoCopy } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function VVS() {
   const router = useRouter();
@@ -45,7 +48,7 @@ def register():
   return redirect(url_for('index', message='Successfully registered!'))
     `);
     setCopied1(true);
-    setTimeout(() => setCopied1(false), 1500);
+    setTimeout(() => setCopied1(false), 50);
   };
 
   const copyCode2 = () => {
@@ -53,7 +56,7 @@ def register():
 [username]','[password hashed with SHA256]',1--
     `);
     setCopied2(true);
-    setTimeout(() => setCopied2(false), 1500);
+    setTimeout(() => setCopied2(false), 50);
   };
 
   const copyCode3 = () => {
@@ -61,7 +64,7 @@ def register():
 cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")
     `);
     setCopied3(true);
-    setTimeout(() => setCopied3(false), 1500);
+    setTimeout(() => setCopied3(false), 50);
   };
   return (
     <div className={styles.vvsContainer}>
@@ -124,7 +127,7 @@ cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}'
       </div>
       <div className={styles.vvsEvidence}>
         <button onClick={copyCode1} className={styles.copyButton}>
-          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied1 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="python" style={dracula}>
           {`@app.route('/register', methods=['POST'])
@@ -150,7 +153,7 @@ def register():
       </div>
       <div className={styles.vvsEvidence}>
         <button onClick={copyCode2} className={styles.copyButton}>
-          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied2 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="python" style={dracula}>
           {`[username]','[password hashed with SHA256]',1--`}
@@ -169,7 +172,7 @@ def register():
       </div>
       <div className={styles.vvsEvidence}>
         <button onClick={copyCode3} className={styles.copyButton}>
-          {copied3 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied3 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="python" style={dracula}>
           {`cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}', '{phash}', 0)")`}
@@ -186,15 +189,18 @@ def register():
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>ASCII Me Anything</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>Grass is Greener</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }

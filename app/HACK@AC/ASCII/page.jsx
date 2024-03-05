@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { IoCopy } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function ASCII() {
   const router = useRouter();
@@ -27,7 +30,7 @@ export default function ASCII() {
 ECSM{j³v³scµtx_m¹_sxr¸eng³
     `);
     setCopied1(true);
-    setTimeout(() => setCopied1(false), 1500);
+    setTimeout(() => setCopied1(false), 50);
   };
 
   const copyCode2 = () => {
@@ -58,7 +61,7 @@ function yes(_0x6c57x2) {
 const possibly = yes(flag);
     `);
     setCopied2(true);
-    setTimeout(() => setCopied2(false), 1500);
+    setTimeout(() => setCopied2(false), 50);
   };
 
   const copyCode3 = () => {
@@ -81,7 +84,7 @@ original_input = reverse_yes(output_text)
 print(original_input)
     `);
     setCopied3(true);
-    setTimeout(() => setCopied3(false), 1500);
+    setTimeout(() => setCopied3(false), 50);
   };
   return (
     <div className={styles.asciiContainer}>
@@ -129,7 +132,7 @@ print(original_input)
       </div>
       <div className={styles.asciiEvidence}>
         <button onClick={copyCode1} className={styles.copyButton}>
-          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied1 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="text" style={dracula}>
           {`ECSM{j³v³scµtx_m¹_sxr¸eng³`}
@@ -142,7 +145,7 @@ print(original_input)
       </div>
       <div className={styles.asciiEvidence}>
         <button onClick={copyCode2} className={styles.copyButton}>
-          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied2 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="javascript" style={dracula}>
           {`var _0xb3e0 = [
@@ -186,7 +189,7 @@ const possibly = yes(flag);`}
       </div>
       <div className={styles.asciiEvidence}>
         <button onClick={copyCode3} className={styles.copyButton}>
-          {copied3 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied3 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="python" style={dracula}>
           {`# Original text
@@ -218,15 +221,18 @@ print(original_input)`}
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>HACK@AC</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>Very Vulnerable Site</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }

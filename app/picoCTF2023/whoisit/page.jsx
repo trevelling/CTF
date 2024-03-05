@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { IoCopy } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function WhoIsIt() {
   const router = useRouter();
@@ -116,7 +119,7 @@ QW1vdW50OiAgJDEsMDAwLDAwMAo=
 ----_NmP-426c22a2e0d8fc9a-Part_1--
     `);
     setCopied1(true);
-    setTimeout(() => setCopied1(false), 1500);
+    setTimeout(() => setCopied1(false), 50);
   };
 
   const copyCode2 = () => {
@@ -124,7 +127,7 @@ QW1vdW50OiAgJDEsMDAwLDAwMAo=
 IP Address of Sender: 173.249.33.206
     `);
     setCopied2(true);
-    setTimeout(() => setCopied2(false), 1500);
+    setTimeout(() => setCopied2(false), 50);
   };
 
   const copyCode3 = () => {
@@ -275,7 +278,7 @@ IP Address of Sender: 173.249.33.206
 00000000: 8940 4e47 0d0a 1a0a
     `);
     setCopied3(true);
-    setTimeout(() => setCopied3(false), 1500);
+    setTimeout(() => setCopied3(false), 50);
   };
   return (
     <div className={styles.whoIsItContainer}>
@@ -317,7 +320,7 @@ IP Address of Sender: 173.249.33.206
       </div>
       <div className={styles.whoIsItEvidence}>
         <button onClick={copyCode1} className={styles.copyButton}>
-          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied1 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="text" style={dracula}>
           {`Delivered-To: francismanzi@gmail.com
@@ -418,7 +421,7 @@ QW1vdW50OiAgJDEsMDAwLDAwMAo=
       </div>
       <div className={styles.whoIsItEvidence}>
         <button onClick={copyCode2} className={styles.copyButton}>
-          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied2 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="text" style={dracula}>
           {`IP Address of Sender: 173.249.33.206`}
@@ -431,7 +434,7 @@ QW1vdW50OiAgJDEsMDAwLDAwMAo=
       </div>
       <div className={styles.whoIsItEvidence}>
         <button onClick={copyCode3} className={styles.copyButton}>
-          {copied3 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied3 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`┌──(tev㉿kali)-[~/pico]
@@ -590,15 +593,19 @@ source:         RIPE
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>hideMe</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>FindAndOpen</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }
+

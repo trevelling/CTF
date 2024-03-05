@@ -7,7 +7,9 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-
+import { IoCopy } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 export default function Potato() {
   const router = useRouter();
@@ -33,7 +35,7 @@ export default function Potato() {
 add564b5920b7f9ee6e97a5e836040a73f5efb3d
     `);
     setCopied1(true);
-    setTimeout(() => setCopied1(false), 1500);
+    setTimeout(() => setCopied1(false), 50);
   };
   return (
     <div className={styles.potatoContainer}>
@@ -72,7 +74,7 @@ add564b5920b7f9ee6e97a5e836040a73f5efb3d
       </div>
       <div className={styles.potatoEvidence}>
         <button onClick={copyCode1} className={styles.copyButton}>
-          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+          {copied1 ? <IoCopyOutline /> : <IoCopy />}
         </button>
         <SyntaxHighlighter language="bash" style={dracula}>
           {`add564b5920b7f9ee6e97a5e836040a73f5efb3d`}
@@ -116,15 +118,18 @@ add564b5920b7f9ee6e97a5e836040a73f5efb3d
         <button className={styles.button1} onClick={handlePrevious}>
           <div className={styles.buttonPrevious}>Previous</div>
           <div className={styles.buttonText}>RandomlySelectedAlgorithm</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowLeft /></span>
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
           <div className={styles.buttonText}>Bits CTF 2024</div>
-          <span className={styles.arrow}></span>
+          <span className={styles.arrow}><BsArrowRight /></span>
         </button>
       </div>
       <div className={styles.line}></div>
+      <footer className={styles.footer}>    
+          &copy; 2024 Tev
+      </footer>
     </div>
   );
 }
