@@ -33,16 +33,16 @@ const About = () => {
     <div className={styles.aboutContainer}> 
     {loading && <Preloader />}
       <div className={styles.introtitle} style={{ color: "white" }}>
-          Tev's CTF Writeups 🏴
+          Tev&apos;s CTF Writeups 🏴
       </div>
       <div className={styles.introtext} style={{paddingLeft: "16px"}}>
-      Here you can find writeups from various CTFs that I've participated in.
+      Here you can find writeups from various CTFs that I&apos;ve participated in.
       </div>
       <div className={styles.intro} style={{ color: "white" }} >
           ~# man CTFs
       </div>
       <div className={styles.introtext} style={{paddingLeft: "16px"}}>
-      In case you don't know what CTFs are, here's a nice definition: 
+      In case you don&apos;t know what CTFs are, here&apos;s a nice definition: 
       </div>
       <div className={styles.aboutCTF} >
           A capture the flag (CTF) contest is a special kind of cybersecurity
@@ -71,7 +71,7 @@ const About = () => {
               </a>
             </td>
             <td>Jeporady (Individual)</td>
-            <td>&lt; 5%</td>
+            <td>&lt; -</td>
           </tr>
           <tr>
             <td>       
@@ -123,7 +123,7 @@ const About = () => {
               </a>
             </td>
             <td>Jeporady (Individual)</td>
-            <td>&lt; 5%</td>
+            <td>&lt; -</td>
           </tr>
           <tr>
             <td>

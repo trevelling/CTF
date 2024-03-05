@@ -13,6 +13,8 @@ import { BsArrowLeft } from "react-icons/bs";
 import Preloader from "@/app/ui/preloader";
 
 export default function DFIR2() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
@@ -71,7 +73,7 @@ MogamBro        1000    aad3b435b51404eeaad3b435b51404ee        8a320467c7c22e32
         </p>
         <p>
           First things first. MogamBro is so dumb that he might be using the
-          same set of passwords everywhere, so lets try cracking his PC's
+          same set of passwords everywhere, so lets try cracking his PC&apos;s
           password for some luck.
           <br />
           <br />
@@ -90,7 +92,7 @@ MogamBro        1000    aad3b435b51404eeaad3b435b51404ee        8a320467c7c22e32
             style={{ color: "rgb(76, 211, 76)" }}
           >
             <code>NTLM hashes</code>
-          </a>{" "}and crack MogamBro's password hash.
+          </a>{" "}and crack MogamBro&apos;s password hash.
         </p>
       </div>
       <div className={styles.dfirEvidence}>

@@ -13,6 +13,8 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 export default function MSB() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
@@ -78,7 +80,7 @@ Part of out.txt:
           <br />
         </p>
         <p>
-        This image passes LSB statistical analysis, but we can't help but think there must be something to the visual artifacts present in this image...
+        This image passes LSB statistical analysis, but we can&apos;t help but think there must be something to the visual artifacts present in this image...
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILES: </strong>

@@ -91,7 +91,7 @@ cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}'
         <p>
           So i think this site is pretty unbreakable. The flag seems to be
           impossible to obtain to me, but apparently there are multiple ways to
-          get the flag? Maybe I'm just dumb...
+          get the flag? Maybe I&apos;m just dumb...
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
@@ -174,7 +174,7 @@ def register():
       <div className={styles.vvsSolved}>
       By injecting the password 
       directly into the username field, it bypasses the 
-      python code's hashing process. After 
+      python code&apos;s hashing process. After 
       registering with this payload, you can log into 
       the created account with the displayed flag.
       <br />

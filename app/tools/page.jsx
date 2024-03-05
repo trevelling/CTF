@@ -167,7 +167,7 @@ export default function Tools() {
         </thead>
         <tbody>
           <tr>
-            <td>Aperi'Solve</td>
+            <td>Aperi&apos;Solve</td>
             <td>Website</td>
             <td>Online platform which performs layer analysis on image.</td>
           </tr>

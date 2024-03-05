@@ -303,7 +303,7 @@ IP Address of Sender: 173.249.33.206
           <br />
         </p>
         <p>
-          Someone just sent you an email claiming to be Google's co-founder Larry Page but you suspect a scam. Can you help us identify whose mail server the email actually originated from?
+          Someone just sent you an email claiming to be Google&apos;s co-founder Larry Page but you suspect a scam. Can you help us identify whose mail server the email actually originated from?
           <br />
           Flag Format: picoCTF{'{'}FirstnameLastname{'}'}
           <br />

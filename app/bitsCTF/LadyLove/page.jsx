@@ -58,9 +58,9 @@ export default function LadyLove() {
           Sir-Steals-A-Lot is a world famous art thief. Lately he stole this
           painting. When he was caught he claimed to have done it because the
           painting commemorates the location of the crowned glory of his lady
-          love. They fell in love in her hometown but her grandfather wouldn't
+          love. They fell in love in her hometown but her grandfather wouldn&apos;t
           let her marry a thief like him.! Answer is the meaning of his
-          LadyLove's last name. Wrap the answer in the flag.
+          LadyLove&apos;s last name. Wrap the answer in the flag.
           <br />
           <br />
           <strong style={{ color: "rgb(137, 207, 240)" }}>FILE: </strong>
@@ -74,7 +74,7 @@ export default function LadyLove() {
           <br />
           <br />
           <strong style={{ color: "rgb(255, 106, 61)" }}>HINT: </strong>16th
-          February 2024 is his LadyLove's 111th birthday.
+          February 2024 is his LadyLove&apos;s 111th birthday.
         </p>
       </div>
       <div className={styles.ladyLoveSolved}>
@@ -88,7 +88,7 @@ export default function LadyLove() {
             <code>reverse image search</code>
           </a>{" "}
           on the painting to find more information on it. Going through the
-          first website, it seems that the painter's name is Peter Adolf Hall.
+          first website, it seems that the painter&apos;s name is Peter Adolf Hall.
           <br />
         </p>
       </div>

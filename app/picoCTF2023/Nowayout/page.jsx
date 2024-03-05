@@ -176,8 +176,8 @@ else
       </div>
       <div className={styles.noWayOutSolved}>
         <p>
-          This is the new modified code. Now, when the player presses the <code>jump button</code>,<code>this.moveDirection.y</code> will be set to <code>this.jumpSpeed</code>, regardless of the player's ability to move <code>(this.canMove)</code>, the players's grounding status <code>(this.characterController.IsGrounded)</code>, or whether the player is climbing <code>(this.isClimbing)</code>.
-          We can now sort of "fly" and head over to the flag
+          This is the new modified code. Now, when the player presses the <code>jump button</code>,<code>this.moveDirection.y</code> will be set to <code>this.jumpSpeed</code>, regardless of the player&apos;s ability to move <code>(this.canMove)</code>, the players&apos;s grounding status <code>(this.characterController.IsGrounded)</code>, or whether the player is climbing <code>(this.isClimbing)</code>.
+          We can now sort of &quot;fly&quot; and head over to the flag
         </p>
       </div>
       <div className={styles.noWayOutEvidence}>

@@ -8,6 +8,16 @@ import { BsArrowLeft } from "react-icons/bs";
 import Preloader from "@/app/ui/preloader";
 
 export default function HACKAC() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);

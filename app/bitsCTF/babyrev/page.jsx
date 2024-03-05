@@ -12,6 +12,8 @@ import { BsArrowLeft } from "react-icons/bs";
 import Preloader from "@/app/ui/preloader";
 
 export default function BabyRev() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);

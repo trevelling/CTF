@@ -19,7 +19,6 @@ g = matrix(Zmod(key.n), [[pt[0], pt[1]], [pt[2], pt[3]]])
 def encrypt(g):
     return g ^ 65537
 
-
 c = encrypt(g)
 
 for i in c:

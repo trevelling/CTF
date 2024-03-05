@@ -94,7 +94,7 @@ export default function PcapPoisoning() {
       <div className={styles.pcapPoisoningSolved}>
         <p>
           Using the filter feature in Wireshark and inputting this filter,{" "}
-          <code>tcp contains "pico"</code> we will get the flag located in
+          <code>tcp contains &quot;pico&quot;</code> we will get the flag located in
           the Hex Dump.
           <br />
           <br />

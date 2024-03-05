@@ -237,7 +237,7 @@ ERRORS DETECTED in Grass_Final.png`}
           png image, we can change to magic bytes of the corrupted
           <strong> Grass_Final.png</strong> file.
           <br />
-          <br /> Here's the list of{" "}
+          <br /> Here&apos;s the list of{" "}
           <a
             href="https://en.wikipedia.org/wiki/List_of_file_signatures"
             target="blank"
