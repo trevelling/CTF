@@ -3,8 +3,19 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function LadyLove() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/bitsCTF/DFIR2");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/bitsCTF/babyrev");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed1, setIsZoomed1] = useState(false);
   const [isZoomed2, setIsZoomed2] = useState(false);
   const [isZoomed3, setIsZoomed3] = useState(false);
@@ -69,12 +80,12 @@ export default function LadyLove() {
         </p>
       </div>
       <div
-        className={`${styles.ladyLoveEvidence} ${
+        className={`${styles.ladyLoveEvidencePic} ${
           isZoomed1 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/BitsCTF/LadyLove1.png" width={800} height={400} alt="logo" className={styles.ladyLoveImage}/>
+        <Image src="/BitsCTF/LadyLove1.png" width={900} height={500} alt="logo" className={styles.ladyLoveImage}/>
       </div>
       <div className={styles.ladyLoveSolved}>
         <p>
@@ -94,12 +105,12 @@ export default function LadyLove() {
         </p>
       </div>
       <div
-        className={`${styles.ladyLoveEvidence} ${
+        className={`${styles.ladyLoveEvidencePic} ${
           isZoomed2 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom2}
       >
-        <Image src="/BitsCTF/LadyLove2.png" width={800} height={650} alt="logo" className={styles.ladyLoveImage}/>
+        <Image src="/BitsCTF/LadyLove2.png" width={900} height={700} alt="logo" className={styles.ladyLoveImage}/>
       </div>
       <div className={styles.ladyLoveSolved}>
         <p>
@@ -118,17 +129,30 @@ export default function LadyLove() {
         </p>
       </div>
       <div
-        className={`${styles.ladyLoveEvidence} ${
+        className={`${styles.ladyLoveEvidencePic} ${
           isZoomed3 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom3}
       >
-        <Image src="/BitsCTF/LadyLove3.png" width={800} height={650} alt="logo" className={styles.ladyLoveImage} />
+        <Image src="/BitsCTF/LadyLove3.png" width={900} height={700} alt="logo" className={styles.ladyLoveImage} />
       </div>
       <div className={styles.ladyLoveFlag}>
         <span>Flag: </span>
         <span style={{ color: "rgb(137, 207, 240)" }}>BITSCTF{"{queen}"}</span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Access Granted!</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>baby-rev</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

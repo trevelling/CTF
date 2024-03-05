@@ -110,7 +110,7 @@ cur.execute(f"INSERT INTO users (username, password, admin) VALUES ('{username}'
         className={`${styles.vvsEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/HACK@AC/VVS1.png" width={700} height={250} alt="logo" className={styles.vvsImage} />
+        <Image src="/HACK@AC/VVS1.png" width={900} height={350} alt="logo" className={styles.vvsImage} />
       </div>
       <div className={styles.vvsSolved}>
         <p>

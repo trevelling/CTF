@@ -1,16 +1,43 @@
 "use client";
 
 import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function VM0() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/timer");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/ybnCTF");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [isZoomed1, setIsZoomed1] = useState(false);
 
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
+  };
+
+  const [copied1, setCopied1] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+x = 39722847074734820757600524178581224432297292490103995916782275668358702105
+x = x * 5
+hex_x = hex(x)
+flag = bytes.fromhex(hex_x[2:]).decode('ascii')
+print(flag)
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
   };
   return (
     <div className={styles.vm0Container}>
@@ -71,10 +98,10 @@ export default function VM0() {
         </p>
       </div>
       <div
-        className={`${styles.vm0Evidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.vm0EvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/vm01.png" width={800} height={400} alt="logo" className={styles.vm0Image} />
+        <Image src="/pico2023/vm01.png" width={900} height={500} alt="logo" className={styles.vm0Image} />
       </div>
       <div className={styles.vm0Solved}>
         <p>
@@ -83,14 +110,15 @@ export default function VM0() {
         </p>
       </div>
       <div className={styles.vm0Evidence}>
-        <SyntaxHighlighter language="python" style={gruvboxDark}>
-          {`
-x = 39722847074734820757600524178581224432297292490103995916782275668358702105
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="python" style={dracula}>
+          {`x = 39722847074734820757600524178581224432297292490103995916782275668358702105
 x = x * 5
 hex_x = hex(x)
 flag = bytes.fromhex(hex_x[2:]).decode('ascii')
-print(flag)
-  `}
+print(flag)`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.vm0Flag}>
@@ -99,6 +127,19 @@ print(flag)
           ACSI{"{g34r5_0f_m0r3_5ca97824}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>timer</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>YBN CTF 2023</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

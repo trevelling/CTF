@@ -1,16 +1,58 @@
 "use client";
 
 import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function FindAndOpen() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/whoisit");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/MSB");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [isZoomed1, setIsZoomed1] = useState(false);
 
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
+  };
+
+  const [copied1, setCopied1] = useState(false);
+  const [copied2, setCopied2] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico]
+└─$ echo "VGhpcyBpcyB0aGUgc2VjcmV0OiBwaWNvQ1RGe1IzNERJTkdfTE9LZF8=" | base64 -d
+This is the secret: picoCTF{R34DING_LOKd_
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
+  const copyCode2 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico]
+└─$ unzip flag.zip
+Archive:  flag.zip
+[flag.zip] flag password: picoCTF{R34DING_LOKd_
+  extracting: flag 
+    
+┌──(tev㉿kali)-[~/pico]
+└─$ cat flag
+picoCTF{R34DING_LOKd_fil56_succ3ss_419835ef}
+    `);
+    setCopied2(true);
+    setTimeout(() => setCopied2(false), 1500);
   };
   return (
     <div className={styles.findAndOpenContainer}>
@@ -69,12 +111,12 @@ export default function FindAndOpen() {
         </p>
       </div>
       <div
-        className={`${styles.findAndOpenEvidence} ${
+        className={`${styles.findAndOpenEvidencePic} ${
           isZoomed1 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/FindAndOpen1.png" width={900} height={400} alt="logo" className={styles.findAndOpenImage} />
+        <Image src="/pico2023/FindAndOpen1.png" width={900} height={450} alt="logo" className={styles.findAndOpenImage} />
       </div>
       <div className={styles.findAndOpenSolved}>
         <p>
@@ -90,12 +132,13 @@ export default function FindAndOpen() {
         </p>
       </div>
       <div className={styles.findAndOpenEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-          {`
-┌──(tev㉿kali)-[~/pico]
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico]
 └─$ echo "VGhpcyBpcyB0aGUgc2VjcmV0OiBwaWNvQ1RGe1IzNERJTkdfTE9LZF8=" | base64 -d
-This is the secret: picoCTF{R34DING_LOKd_
-  `}
+This is the secret: picoCTF{R34DING_LOKd_`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.findAndOpenSolved}>
@@ -104,9 +147,11 @@ This is the secret: picoCTF{R34DING_LOKd_
         </p>
       </div>
       <div className={styles.findAndOpenEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-          {`
-┌──(tev㉿kali)-[~/pico]
+        <button onClick={copyCode2} className={styles.copyButton}>
+          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico]
 └─$ unzip flag.zip
 Archive:  flag.zip
 [flag.zip] flag password: picoCTF{R34DING_LOKd_
@@ -114,8 +159,7 @@ Archive:  flag.zip
 
 ┌──(tev㉿kali)-[~/pico]
 └─$ cat flag
-picoCTF{R34DING_LOKd_fil56_succ3ss_419835ef}
-        `}
+picoCTF{R34DING_LOKd_fil56_succ3ss_419835ef}`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.findAndOpenFlag}>
@@ -124,6 +168,19 @@ picoCTF{R34DING_LOKd_fil56_succ3ss_419835ef}
           picoCTF{"{R34DING_LOKd_fil56_succ3ss_419835ef}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>who is it</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>MSB</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

@@ -30,17 +30,7 @@ export default function Potato() {
 
   const copyCode1 = () => {
     navigator.clipboard.writeText(`
-┌──(tev㉿kali)-[~/HACK@AC]
-└─$ exiftool Grass_Final.png
-ExifTool Version Number         : 12.67
-File Name                       : Grass_Final.png
-Directory                       : .
-File Size                       : 15 MB
-File Modification Date/Time     : 2023:05:15 15:42:42-04:00
-File Access Date/Time           : 2023:05:15 15:42:42-04:00
-File Inode Change Date/Time     : 2024:02:27 05:29:42-05:00
-File Permissions                : -rw-r--r--
-Error                           : File format error
+add564b5920b7f9ee6e97a5e836040a73f5efb3d
     `);
     setCopied1(true);
     setTimeout(() => setCopied1(false), 1500);

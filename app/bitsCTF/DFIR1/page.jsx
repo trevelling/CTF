@@ -3,8 +3,19 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function DFIR1() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/bitsCTF");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/bitsCTF/DFIR2");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed1, setIsZoomed1] = useState(false);
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
@@ -39,10 +50,10 @@ export default function DFIR1() {
         </p>
       </div>
       <div
-        className={`${styles.dfirEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.dfirEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/BitsCTF/DFIR1.png" width={700} height={255} alt="logo" className={styles.dfirImage}/>
+        <Image src="/BitsCTF/DFIR1.png" width={900} height={300} alt="logo" className={styles.dfirImage}/>
       </div>
       <div className={styles.dfirFlag}>
         <span>Flag: </span>
@@ -50,6 +61,20 @@ export default function DFIR1() {
           BITSCTF{"{DFIR_r0ck55}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Bits CTF 2024</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>Access Granted!</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }
+

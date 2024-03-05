@@ -2,21 +2,28 @@
 
 import React from "react";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Tools() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/home");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/BrainHack2024");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className={styles.toolsContainer}>
-       <p>
-          <strong className={styles.intro} style={{ color: "white" }}>~# cat Tools</strong>
-      </p>
+          <div className={styles.intro} style={{ color: "white" }}>~# cat Tools</div>
       <div className={styles.tools}>
-        <p>
           Different open-source tools recommended and used during CTFs are
           documented here 🛠️.
-        </p>
       </div>
-      <div className={styles.forensicsTitle}>
-        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la Forensics</div>
+      <div className={styles.forensicsTitle} style={{ color: "rgb(255, 255, 255)" }}>
+       ~# ls -la Forensics
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -86,8 +93,8 @@ export default function Tools() {
           </tr>
         </tbody>
       </table>
-      <div className={styles.cryptographyTitle}>
-        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la Cryptography</div>
+      <div className={styles.cryptographyTitle}  style={{ color: "rgb(255, 255, 255)" }}>
+        ~# ls -la Cryptography
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -134,8 +141,8 @@ export default function Tools() {
           </tr>
         </tbody>
       </table>
-      <div className={styles.steganographyTitle}>
-        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la Steganography</div>
+      <div className={styles.steganographyTitle} style={{ color: "rgb(255, 255, 255)" }}>
+        ~# ls -la Steganography
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -165,10 +172,8 @@ export default function Tools() {
           </tr>
         </tbody>
       </table>
-      <div className={styles.revEngineeringTitle}>
-        <div style={{ color: "rgb(255, 255, 255)" }}>
+      <div className={styles.revEngineeringTitle} style={{ color: "rgb(255, 255, 255)" }}>
           ~# ls -la Reverse-Engineering
-        </div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -246,10 +251,8 @@ export default function Tools() {
           </tr>
         </tbody>
       </table>
-      <div className={styles.webExploitationTitle}>
-        <div style={{ color: "rgb(255, 255, 255)" }}>
+      <div className={styles.webExploitationTitle} style={{ color: "rgb(255, 255, 255)" }}>
           ~# ls -la Web-Exploitation
-        </div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -314,10 +317,8 @@ export default function Tools() {
           </tr>
         </tbody>
       </table>
-      <div className={styles.binaryExploitationTitle}>
-        <div style={{ color: "rgb(255, 255, 255)" }}>
+      <div className={styles.binaryExploitationTitle} style={{ color: "rgb(255, 255, 255)" }}>
           ~# ls -la Binary-Exploitation
-        </div>
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -329,8 +330,8 @@ export default function Tools() {
         </thead>
         <tbody></tbody>
       </table>
-      <div className={styles.osintTitle}>
-        <div style={{ color: "rgb(255, 255, 255)" }}>~# ls -la OSINT</div>
+      <div className={styles.osintTitle} style={{ color: "rgb(255, 255, 255)" }}>
+        ~# ls -la OSINT
       </div>
       <table className={styles.toolstable}>
         <thead>
@@ -369,6 +370,19 @@ export default function Tools() {
           </tr>
         </tbody>
       </table>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Home</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>BrainHack CDDC 2024</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

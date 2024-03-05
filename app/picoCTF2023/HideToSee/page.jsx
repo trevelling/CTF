@@ -1,16 +1,60 @@
 "use client";
 
 import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Hidetosee() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/MSB");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/rotation");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [isZoomed1, setIsZoomed1] = useState(false);
 
   const toggleZoom1 = () => {
     setIsZoomed1(!isZoomed1);
+  };
+
+  const [copied1, setCopied1] = useState(false);
+  const [copied2, setCopied2] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico]
+└─$ eog atbash.jpg
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
+  const copyCode2 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico]
+└─$ steghide extract -sf atbash.jpg  
+Enter passphrase:
+wrote extracted data to "encrypted.txt".
+    
+┌──(tev㉿kali)-[~/pico]
+└─$ ls
+atbash.jpg  encrypted.txt
+    
+┌──(tev㉿kali)-[~/pico]
+└─$ cat encrypted.txt
+krxlXGU{zgyzhs_xizxp_xz005577y}
+    `);
+    setCopied2(true);
+    setTimeout(() => setCopied2(false), 1500);
   };
   return (
     <div className={styles.hideToSeeContainer}>
@@ -53,12 +97,13 @@ export default function Hidetosee() {
         </p>
       </div>
       <div className={styles.hideToSeeEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-  {`
-┌──(tev㉿kali)-[~/pico]
-└─$ eog atbash.jpg    
-  `}
-</SyntaxHighlighter>
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico]
+└─$ eog atbash.jpg`}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.hideToSeeSolved}>
         <p>
@@ -76,9 +121,11 @@ export default function Hidetosee() {
         </p>
       </div>
       <div className={styles.hideToSeeEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-{`
-┌──(tev㉿kali)-[~/pico]
+        <button onClick={copyCode2} className={styles.copyButton}>
+          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico]
 └─$ steghide extract -sf atbash.jpg  
 Enter passphrase:
 wrote extracted data to "encrypted.txt".
@@ -89,9 +136,8 @@ atbash.jpg  encrypted.txt
 
 ┌──(tev㉿kali)-[~/pico]
 └─$ cat encrypted.txt
-krxlXGU{zgyzhs_xizxp_xz005577y}
-`}
-</SyntaxHighlighter>
+krxlXGU{zgyzhs_xizxp_xz005577y}`}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.hideToSeeSolved}>
         <p>
@@ -110,12 +156,12 @@ krxlXGU{zgyzhs_xizxp_xz005577y}
         </p>
       </div>
       <div
-        className={`${styles.hideToSeeEvidence} ${
+        className={`${styles.hideToSeeEvidencePic} ${
           isZoomed1 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/HideToSee1.png" width={700} height={320} alt="logo" className={styles.hideToSeeImage} />
+        <Image src="/pico2023/HideToSee1.png" width={900} height={400} alt="logo" className={styles.hideToSeeImage} />
       </div>
       <div className={styles.hideToSeeFlag}>
         <span>Flag: </span>
@@ -123,6 +169,20 @@ krxlXGU{zgyzhs_xizxp_xz005577y}
           picoCTF{"{atbash_crack_ca00558b}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>MSB</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>rotation</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }
+

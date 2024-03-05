@@ -1,12 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function NoWayOut() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/Reverse");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/SafeOpener2");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [isZoomed1, setIsZoomed1] = useState(false);
   const [isZoomed2, setIsZoomed2] = useState(false);
   const [isZoomed3, setIsZoomed3] = useState(false);
@@ -20,6 +33,43 @@ export default function NoWayOut() {
   };
   const toggleZoom3 = () => {
     setIsZoomed3(!isZoomed3);
+  };
+
+  const [copied1, setCopied1] = useState(false);
+  const [copied2, setCopied2] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+Old code:
+
+if (Input.GetButton("Jump") && this.canMove && this.characterController.IsGrounded && !this.isClimbing)
+{
+    this.moveDirection.y = this.jumpSpeed;
+}
+else
+{
+    this.moveDirection.y = y;
+}
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
+  const copyCode2 = () => {
+    navigator.clipboard.writeText(`
+New code:
+
+if (Input.GetButton("Jump") // && this.canMove && this.characterController.IsGrounded && !this.isClimbing)
+{
+    this.moveDirection.y = this.jumpSpeed;
+}
+else
+{
+    this.moveDirection.y = y;
+}
+    `);
+    setCopied2(true);
+    setTimeout(() => setCopied2(false), 1500);
   };
   return (
     <div className={styles.noWayOutContainer}>
@@ -64,7 +114,7 @@ export default function NoWayOut() {
         </p>
       </div>
       <div
-        className={`${styles.noWayOutEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.noWayOutEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
         <Image src="/pico2023/Nowayout1.png" width={900} height={450} alt="logo" className={styles.vm0Image} />
@@ -83,7 +133,7 @@ export default function NoWayOut() {
         </p>
       </div>
       <div
-        className={`${styles.noWayOutEvidence} ${isZoomed2 ? styles.zoomed : ""}`}
+        className={`${styles.noWayOutEvidencePic} ${isZoomed2 ? styles.zoomed : ""}`}
         onClick={toggleZoom2}
       >
         <Image src="/pico2023/Nowayout2.png" width={900} height={500} alt="logo" className={styles.vm0Image} />
@@ -94,9 +144,11 @@ export default function NoWayOut() {
         </p>
       </div>
       <div className={styles.noWayOutEvidence}>
-        <SyntaxHighlighter language="csharp" style={gruvboxDark}>
-          {`
-Old code:
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`Old code:
 
 if (Input.GetButton("Jump") && this.canMove && this.characterController.IsGrounded && !this.isClimbing)
 {
@@ -105,8 +157,7 @@ if (Input.GetButton("Jump") && this.canMove && this.characterController.IsGround
 else
 {
     this.moveDirection.y = y;
-}
-  `}
+}`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.noWayOutSolved}>
@@ -116,9 +167,11 @@ else
         </p>
       </div>
       <div className={styles.noWayOutEvidence}>
-        <SyntaxHighlighter language="csharp" style={gruvboxDark}>
-          {`
-New code:
+        <button onClick={copyCode2} className={styles.copyButton}>
+          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`New code:
 
 if (Input.GetButton("Jump") // && this.canMove && this.characterController.IsGrounded && !this.isClimbing)
 {
@@ -127,15 +180,14 @@ if (Input.GetButton("Jump") // && this.canMove && this.characterController.IsGro
 else
 {
     this.moveDirection.y = y;
-}
-  `}
+}`}
         </SyntaxHighlighter>
       </div>
       <div
-        className={`${styles.noWayOutEvidence} ${isZoomed3 ? styles.zoomed : ""}`}
+        className={`${styles.noWayOutEvidencePic} ${isZoomed3 ? styles.zoomed : ""}`}
         onClick={toggleZoom3}
       >
-        <Image src="/pico2023/Nowayout3.png" width={600} height={500} alt="logo" className={styles.vm0Image} />
+        <Image src="/pico2023/Nowayout3.png" width={900} height={700} alt="logo" className={styles.vm0Image} />
       </div>
 
       <div className={styles.noWayOutFlag}>
@@ -144,6 +196,19 @@ else
           picoCTF{"{WELCOME_TO_UNITY!!}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Reverse</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>Safe Opener 2</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

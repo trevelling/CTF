@@ -1,12 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function MSB() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/FindAndOpen");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/HideToSee");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [isZoomed1, setIsZoomed1] = useState(false);
   const [isZoomed2, setIsZoomed2] = useState(false);
 
@@ -17,6 +30,30 @@ export default function MSB() {
   const toggleZoom2 = () => {
     setIsZoomed2(!isZoomed2);
   };
+
+  const [copied1, setCopied1] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+Part of out.txt:
+
+720a70756e697368 6d656e7420756e6c  r.punish ment unl
+6573732068652063 6f6d6d6974732073  ess he c ommits s
+6f6d65206e657720 6f6666656e63652e  ome new  offence.
+220a7069636f4354 467b31355f793075  ".picoCT F{15_y0u
+725f71756535375f 7175317830373163  r_que57_ qu1x071c
+5f30725f68337230 31635f6565336362  _0r_h3r0 1c_ee3cb
+3464387d0a0a2254 686f752068617374  4d8}.."T hou hast
+2073616964207765 6c6c20616e642068   said we ll and h
+6974207468652070 6f696e742c222061  it the p oint," a
+6e73776572656420 446f6e2051756978  nswered  Don Quix
+    
+/pico (^W)
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
   return (
     <div className={styles.msbContainer}>
       <div className={styles.msbTitle} style={{ color: "white"}}>
@@ -82,10 +119,10 @@ export default function MSB() {
         </p>
       </div>
       <div
-        className={`${styles.msbEvidence} ${isZoomed1 ? styles.zoomed : ""}`}
+        className={`${styles.msbEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/MSB1.png" width={800} height={400} alt="logo" className={styles.vm0Image} />
+        <Image src="/pico2023/MSB1.png" width={900} height={550} alt="logo" className={styles.vm0Image} />
       </div>
       <div className={styles.msbSolved}>
         <p>
@@ -93,15 +130,17 @@ export default function MSB() {
         </p>
       </div>
       <div
-        className={`${styles.msbEvidence} ${isZoomed2 ? styles.zoomed : ""}`}
+        className={`${styles.msbEvidencePic} ${isZoomed2 ? styles.zoomed : ""}`}
         onClick={toggleZoom2}
       >
-        <Image src="/pico2023/MSB2.png" width={600} height={400} alt="logo" className={styles.vm0Image} />
+        <Image src="/pico2023/MSB2.png" width={900} height={600} alt="logo" className={styles.vm0Image} />
       </div>
       <div className={styles.msbEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-          {`
-Part of out.txt:
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`Part of out.txt:
 
 720a70756e697368 6d656e7420756e6c  r.punish ment unl
 6573732068652063 6f6d6d6974732073  ess he c ommits s
@@ -114,8 +153,7 @@ Part of out.txt:
 6974207468652070 6f696e742c222061  it the p oint," a
 6e73776572656420 446f6e2051756978  nswered  Don Quix
 
-/pico (^W)
-  `}
+/pico (^W)`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.msbFlag}>
@@ -124,6 +162,19 @@ Part of out.txt:
           picoCTF{"{15_y0ur_que57_qu1x071c_0r_h3r01c_ee3cb4d8}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>FindAndOpen</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>HideToSee</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

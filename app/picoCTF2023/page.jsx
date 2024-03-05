@@ -12,7 +12,7 @@ export default function PicoCTF() {
   };
 
   const handleNext = () => {
-    router.push("/HACK@AC/ASCII");
+    router.push("/picoCTF2023/moneyware");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
@@ -195,7 +195,7 @@ export default function PicoCTF() {
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
-          <div className={styles.buttonText}>ASCII Me Anything</div>
+          <div className={styles.buttonText}>moneyware</div>
           <span className={styles.arrow}></span>
         </button>
       </div>

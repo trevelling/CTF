@@ -12,7 +12,7 @@ export default function BitsCTF() {
   };
 
   const handleNext = () => {
-    router.push("/HACK@AC/ASCII");
+    router.push("/bitsCTF/DFIR1");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
@@ -106,7 +106,7 @@ export default function BitsCTF() {
         </button>
         <button className={styles.button2} onClick={handleNext}>
           <div className={styles.buttonNext}>Next</div>
-          <div className={styles.buttonText}>ASCII Me Anything</div>
+          <div className={styles.buttonText}>Intro to DFIR</div>
           <span className={styles.arrow}></span>
         </button>
       </div>

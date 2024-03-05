@@ -304,7 +304,7 @@ OK: Grass_Final.png (4032x3024, 32-bit RGB+alpha, non-interlaced, 69.1%).
         className={`${styles.grassEvidencePic} ${isZoomed1 ? styles.zoomed : ""}`}
         onClick={toggleZoom1}
       >
-        <Image src="/HACK@AC/Grass_Final1.png" width={700} height={400} alt="logo" className={styles.grassImage}/>
+        <Image src="/HACK@AC/Grass_Final1.png" width={900} height={600} alt="logo" className={styles.grassImage}/>
       </div>
       <div className={styles.grassSolved}>
         <p>

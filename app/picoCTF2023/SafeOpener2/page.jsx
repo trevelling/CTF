@@ -1,11 +1,82 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function SafeOpener2() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/Nowayout");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/timer");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const [copied1, setCopied1] = useState(false);
+  const [copied2, setCopied2] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico]
+└─$ file SafeOpener.class
+SafeOpener.class: complied Java class data, version 52.0 (Java 1.8)
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
+  const copyCode2 = () => {
+    navigator.clipboard.writeText(`
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Base64;
+import java.util.Base64.Encoder;
+            
+public class SafeOpener {
+    public static void main(String[] args) throws IOException {
+        BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+        Encoder encoder = Base64.getEncoder();
+        String encodedkey = "";
+        String key = "";
+            
+        for(int i = 0; i < 3; ++i) {
+            System.out.print("Enter password for the safe: ");
+            key = keyboard.readLine();
+            encodedkey = encoder.encodeToString(key.getBytes());
+            System.out.println(encodedkey);
+            boolean isOpen = openSafe(encodedkey);
+            if (isOpen) {
+                break;
+            }
+            
+            System.out.println("You have  " + (2 - i) + " attempt(s) left");
+        }
+            
+    }
+            
+    public static boolean openSafe(String password) {
+        String encodedkey = "picoCTF{SAf3_0p3n3rr_y0u_solv3d_it_0e57c117}";
+        if (password.equals(encodedkey)) {
+            System.out.println("Sesame open");
+            return true;
+        } else {
+            System.out.println("Password is incorrect\n");
+            return false;
+        }
+    }
+}
+    `);
+    setCopied2(true);
+    setTimeout(() => setCopied2(false), 1500);
+  };
   return (
     <div className={styles.safeContainer}>
       <div className={styles.safeTitle} style={{ color: "white"}}>
@@ -49,12 +120,13 @@ export default function SafeOpener2() {
         </p>
       </div>
       <div className={styles.safeEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-          {`
-┌──(tev㉿kali)-[~/pico]
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico]
 └─$ file SafeOpener.class
-SafeOpener.class: complied Java class data, version 52.0 (Java 1.8)
-  `}
+SafeOpener.class: complied Java class data, version 52.0 (Java 1.8)`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.safeSolved}>
@@ -75,9 +147,11 @@ SafeOpener.class: complied Java class data, version 52.0 (Java 1.8)
         </p>
       </div>
       <div className={styles.safeEvidence}>
-        <SyntaxHighlighter language="python" style={gruvboxDark}>
-          {`
-import java.io.BufferedReader;
+        <button onClick={copyCode2} className={styles.copyButton}>
+          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="python" style={dracula}>
+          {`import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Base64;
@@ -115,8 +189,7 @@ public class SafeOpener {
             return false;
         }
     }
-} 
-          `}
+}`}
         </SyntaxHighlighter>
       </div>
       <div className={styles.safeFlag}>
@@ -125,6 +198,19 @@ public class SafeOpener {
           picoCTF{"{SAf3_0p3n3rr_y0u_solv3d_it_0e57c117}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>No way out</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>timer</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

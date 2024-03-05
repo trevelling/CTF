@@ -3,8 +3,20 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Moneyware() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/PcapPoisoning");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const [isZoomed1, setIsZoomed1] = useState(false);
 
   const toggleZoom1 = () => {
@@ -49,17 +61,30 @@ export default function Moneyware() {
         </p>
       </div>
       <div
-        className={`${styles.moneywareEvidence} ${
+        className={`${styles.moneywareEvidencePic} ${
           isZoomed1 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/moneyware.png" width={500} height={80} alt="logo" className={styles.moenywareImage} />
+        <Image src="/pico2023/moneyware.png" width={900} height={130} alt="logo" className={styles.moenywareImage} />
       </div>
       <div className={styles.moneywareFlag}>
         <span>Flag: </span>
         <span style={{ color: "rgb(137, 207, 240)" }}>picoCTF{"{Petya}"}</span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>picoCTF 2023</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>PcapPoisoning</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

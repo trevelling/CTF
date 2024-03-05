@@ -46,7 +46,7 @@ export default function YBNCTF() {
         className={`${styles.ybnCertification} ${isZoomed ? styles.zoomed : ""}`}
         onClick={toggleZoom}
       >
-        <Image src="/YBNCTF/ybnctf.jpg" width={735} height={420} alt="logo" className={styles.ybnImage}/>
+        <Image src="/YBNCTF/ybnctf.jpg" width={735} height={450} alt="logo" className={styles.ybnImage}/>
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.button1} onClick={handlePrevious}>

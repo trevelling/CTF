@@ -62,7 +62,7 @@ export default function Sidebar() {
 
 const sideBarItems = [
   {
-    name: "🚩   Tev's CTF Writeups",
+    name: "🏳️   Tev's CTF Writeups",
     href: "/",
     isLink: true,
   },

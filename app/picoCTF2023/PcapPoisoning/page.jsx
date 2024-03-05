@@ -3,8 +3,19 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function PcapPoisoning() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/moneyware");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/hideme");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const [isZoomed1, setIsZoomed1] = useState(false);
   const [isZoomed2, setIsZoomed2] = useState(false);
 
@@ -60,12 +71,12 @@ export default function PcapPoisoning() {
         </p>
       </div>
       <div
-        className={`${styles.pcapPoisoningEvidence} ${
+        className={`${styles.pcapPoisoningEvidencePic} ${
           isZoomed1 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom1}
       >
-        <Image src="/pico2023/PcapPoisoning1.png" width={800} height={325} alt="logo" className={styles.pcapPoisoningImage}/>
+        <Image src="/pico2023/PcapPoisoning1.png" width={900} height={350} alt="logo" className={styles.pcapPoisoningImage}/>
       </div>
       <div className={styles.pcapPoisoningSolved}>
         <p>
@@ -86,12 +97,12 @@ export default function PcapPoisoning() {
         </p>
       </div>
       <div
-        className={`${styles.pcapPoisoningEvidence} ${
+        className={`${styles.pcapPoisoningEvidencePic} ${
           isZoomed2 ? styles.zoomed : ""
         }`}
         onClick={toggleZoom2}
       >
-        <Image src="/pico2023/PcapPoisoning2.png" width={800} height={400} alt="logo" className={styles.pcapPoisoningImage} />
+        <Image src="/pico2023/PcapPoisoning2.png" width={900} height={450} alt="logo" className={styles.pcapPoisoningImage} />
       </div>
       <div className={styles.pcapPoisoningFlag}>
         <span>Flag: </span>
@@ -100,6 +111,19 @@ export default function PcapPoisoning() {
           picoCTF{"{P64P_4N4L7S1S_SU55355FUL_f621fa37}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>money-ware</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>hideme</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }

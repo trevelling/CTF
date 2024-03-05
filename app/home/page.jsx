@@ -2,39 +2,40 @@
 
 import React from "react";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 const About = () => {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("https://trevelling.github.io/tev/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/tools");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <div className={styles.aboutContainer}>
-      <div className={styles.CTFheader}>
-        <span aria-hidden="true">CTF </span>
-        <span>CTF </span>
-        <span aria-hidden="true">CTF</span>
+    <div className={styles.aboutContainer}> 
+      <div className={styles.introtitle} style={{ color: "white" }}>
+          Tev's CTF Writeups 🏴
       </div>
-      
-      <div className={styles.about}>
+      <div className={styles.introtext} style={{paddingLeft: "16px"}}>
+      Here you can find writeups from various CTFs that I've participated in.
       </div>
-      <p>
-          <strong className={styles.intro} style={{ color: "white" }}>~# cat Introduction</strong>
-      </p>
-      <p style={{paddingLeft: "16px", fontWeight: "600" }}>
-      Hi I'm Tev! Here you can find writeups from various CTFs that I've participated in 👨‍💻.
-      </p>
-      <p>
-          <strong className={styles.intro} style={{ color: "white" }}>~# man CTFs</strong>
-      </p>
-      <p style={{paddingLeft: "16px", fontWeight: "600" }}>
+      <div className={styles.intro} style={{ color: "white" }} >
+          ~# man CTFs
+      </div>
+      <div className={styles.introtext} style={{paddingLeft: "16px"}}>
       In case you don't know what CTFs are, here's a nice definition: 
-      </p>
+      </div>
       <div className={styles.aboutCTF} >
-        <p>
           A capture the flag (CTF) contest is a special kind of cybersecurity
           competition designed to challenge its participants to solve computer
           security problems and/or capture and defend computer systems.
-        </p>
       </div>
-      <div className={styles.date2023}>
+      <div className={styles.intro}>
         ~# ls -la 2023
       </div>
       <table className={styles.table2023}>
@@ -86,7 +87,7 @@ const About = () => {
           </tr>
         </tbody>
       </table>
-      <div className={styles.date2024}>
+      <div className={styles.intro}>
         ~# ls -la 2024
       </div>
       <table className={styles.table2024}>
@@ -164,18 +165,32 @@ const About = () => {
           </tr>
         </tbody>
       </table>
-      <p>
-          <strong className={styles.intro} style={{ color: "white" }}>~# cat LICENSE</strong>
-      </p>
+      <div className={styles.intro} style={{ color: "white" }}>
+        ~# cat LICENSE
+      </div>
       <div className={styles.license}>
         <p>All original code is licensed under the MIT license.</p>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>Personal Website</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>Tools</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
       <footer className={styles.footer}>    
           &copy; 2024 Tev
       </footer>
     </div>
   );
-};
+}
+
 
 export default About;
 

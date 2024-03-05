@@ -1,11 +1,73 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { IoCopyOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function Hideme() {
+  const router = useRouter();
+  const handlePrevious = () => {
+    router.push("/picoCTF2023/PcapPoisoning");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    router.push("/picoCTF2023/whoisit");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const [copied1, setCopied1] = useState(false);
+  const [copied2, setCopied2] = useState(false);
+  const [copied3, setCopied3] = useState(false);
+
+  const copyCode1 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico]
+└─$ binwalk -e flag.png        
+    
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 512 x 504, 8-bit/color RGBA, non-interlaced
+41            0x29            Zlib compressed data, compressed
+39739         0x9B3B          Zip archive data, at least v1.0 to extract, name: secret/
+39804         0x9B7C          Zip archive data, at least v2.0 to extract, compressed size: 2858, uncompressed size: 3015, name: secret/flag.png
+42897         0xA791          End of Zip archive, footer length: 22
+    `);
+    setCopied1(true);
+    setTimeout(() => setCopied1(false), 1500);
+  };
+
+  const copyCode2 = () => {
+    navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico]
+└─$ cd _flag.png.extracted       
+                                                                                       
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted]
+└─$ ls
+29  29.zlib  9B3B.zip  secret
+                                                                                       
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted]
+└─$ cd secret             
+                                                                                       
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted/secret]
+└─$ ls
+flag.png
+    `);
+    setCopied2(true);
+    setTimeout(() => setCopied2(false), 1500);
+  };
+
+  const copyCode3 = () => {
+navigator.clipboard.writeText(`
+┌──(tev㉿kali)-[~/pico/_flag.png.extracted/secret]
+└─$ eog flag.png
+    `);
+    setCopied3(true);
+    setTimeout(() => setCopied3(false), 1500);
+  };
   return (
     <div className={styles.hideMeContainer}>
       <div className={styles.hideMeTitle} style={{ color: "white"}}>
@@ -49,9 +111,11 @@ export default function Hideme() {
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-  {`
-┌──(tev㉿kali)-[~/pico]
+        <button onClick={copyCode1} className={styles.copyButton}>
+          {copied1 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico]
 └─$ binwalk -e flag.png        
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
@@ -60,9 +124,8 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 41            0x29            Zlib compressed data, compressed
 39739         0x9B3B          Zip archive data, at least v1.0 to extract, name: secret/
 39804         0x9B7C          Zip archive data, at least v2.0 to extract, compressed size: 2858, uncompressed size: 3015, name: secret/flag.png
-42897         0xA791          End of Zip archive, footer length: 22
-  `}
-</SyntaxHighlighter>
+42897         0xA791          End of Zip archive, footer length: 22`}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.hideMeSolved}>
         <p>
@@ -73,9 +136,11 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-  {`
-┌──(tev㉿kali)-[~/pico]
+        <button onClick={copyCode2} className={styles.copyButton}>
+          {copied2 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico]
 └─$ cd _flag.png.extracted       
                                                                                    
 ┌──(tev㉿kali)-[~/pico/_flag.png.extracted]
@@ -87,9 +152,8 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
                                                                                    
 ┌──(tev㉿kali)-[~/pico/_flag.png.extracted/secret]
 └─$ ls
-flag.png
-  `}
-</SyntaxHighlighter>
+flag.png`}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.hideMeSolved}>
         <p>
@@ -106,12 +170,13 @@ flag.png
         </p>
       </div>
       <div className={styles.hideMeEvidence}>
-        <SyntaxHighlighter language="bash" style={gruvboxDark}>
-  {`                                                                       
-┌──(tev㉿kali)-[~/pico/_flag.png.extracted/secret]
-└─$ eog flag.png
-  `}
-</SyntaxHighlighter>
+        <button onClick={copyCode3} className={styles.copyButton}>
+          {copied3 ? <IoCopyOutline /> : <IoCopyOutline />}
+        </button>
+        <SyntaxHighlighter language="bash" style={dracula}>
+          {`┌──(tev㉿kali)-[~/pico/_flag.png.extracted/secret]
+└─$ eog flag.png`}
+        </SyntaxHighlighter>
       </div>
       <div className={styles.hideMeFlag}>
         <span>Flag: </span>
@@ -119,8 +184,20 @@ flag.png
           picoCTF{"{Hiddinng_An_imag3_within_@n_ima9e_96539bea}"}
         </span>
       </div>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button1} onClick={handlePrevious}>
+          <div className={styles.buttonPrevious}>Previous</div>
+          <div className={styles.buttonText}>PcapPoisoning</div>
+          <span className={styles.arrow}></span>
+        </button>
+        <button className={styles.button2} onClick={handleNext}>
+          <div className={styles.buttonNext}>Next</div>
+          <div className={styles.buttonText}>who is it</div>
+          <span className={styles.arrow}></span>
+        </button>
+      </div>
+      <div className={styles.line}></div>
     </div>
   );
 }
-
 
