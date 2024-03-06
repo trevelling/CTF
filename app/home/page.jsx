@@ -50,58 +50,6 @@ const About = () => {
           security problems and/or capture and defend computer systems.
       </div>
       <div className={styles.intro}>
-        ~# ls -la 2023
-      </div>
-      <table className={styles.table2023}>
-        <thead>
-          <tr>
-            <th>CTF Name</th>
-            <th>Type</th>
-            <th>Ranking</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a
-                href="/picoCTF2023"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                picoCTF 
-              </a>
-            </td>
-            <td>Jeporady (Individual)</td>
-            <td>&lt; -</td>
-          </tr>
-          <tr>
-            <td>       
-                BrainHack CDDC
-            </td>
-            <td>Jeporady</td>
-            <td>19th (poly-category)</td>
-          </tr>
-          <tr>
-            <td>  
-                TISC           
-            </td>
-            <td>Jeporady (Individual)</td>
-            <td>Level 2</td>
-          </tr>
-          <tr>
-            <td>
-              <a
-                href="/ybnCTF"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                YBN
-              </a>
-            </td>
-            <td>Jeporady</td>
-            <td>8th</td>
-          </tr>
-        </tbody>
-      </table>
-      <div className={styles.intro}>
         ~# ls -la 2024
       </div>
       <table className={styles.table2024}>
@@ -135,7 +83,7 @@ const About = () => {
               </a>
             </td>
             <td>Jeporady</td>
-            <td>Participant</td>
+            <td>26th</td>
           </tr>
           <tr>
             <td>
@@ -176,6 +124,58 @@ const About = () => {
             </td>
             <td>Jeporady</td>
             <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+      <div className={styles.intro}>
+        ~# ls -la 2023
+      </div>
+      <table className={styles.table2023}>
+        <thead>
+          <tr>
+            <th>CTF Name</th>
+            <th>Type</th>
+            <th>Ranking</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a
+                href="/picoCTF2023"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                picoCTF 
+              </a>
+            </td>
+            <td>Jeporady (Individual)</td>
+            <td>&lt; 14%</td>
+          </tr>
+          <tr>
+            <td>       
+                BrainHack CDDC
+            </td>
+            <td>Jeporady</td>
+            <td>19th (poly-category)</td>
+          </tr>
+          <tr>
+            <td>  
+                TISC           
+            </td>
+            <td>Jeporady (Individual)</td>
+            <td>Level 2</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="/ybnCTF"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                YBN
+              </a>
+            </td>
+            <td>Jeporady</td>
+            <td>8th 🏆</td>
           </tr>
         </tbody>
       </table>

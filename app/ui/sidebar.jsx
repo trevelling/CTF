@@ -1,12 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Preloader from "@/app/ui/preloader";
 import Link from "next/link";
 import styles from "./sidebar.module.css";
 import { RxExternalLink } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function Sidebar() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1);
+
+    return () => clearTimeout(timeout);
+  }, []);
   const [activeLink, setActiveLink] = useState("/");
 
   const handleLinkClick = (href, isLink) => {
@@ -17,6 +27,7 @@ export default function Sidebar() {
 
   return (
     <div className={styles.sideBarContainer}>
+      {loading && <Preloader />}
       <aside className={styles.sideBar}>
         <div className={styles.sideBarList}>
           {sideBarItems.map(({ name, href, isLink, icon, className }) => (
@@ -93,6 +104,24 @@ const sideBarItems = [
   {
     name: "BrainHack CDDC ",
     href: "/BrainHack2024",
+    isLink: true,
+    icon: <IoIosArrowForward className={styles.icon2} />,
+  },
+  {
+    name: "HACKBASH x A.YCEP",
+    href: "/HACKBASH",
+    isLink: true,
+    icon: <IoIosArrowForward className={styles.icon2} />,
+  },
+  {
+    name: "picoCTF",
+    href: "/picoCTF2024",
+    isLink: true,
+    icon: <IoIosArrowForward className={styles.icon2} />,
+  },
+  {
+    name: "Pearl CTF",
+    href: "/pearlCTF",
     isLink: true,
     icon: <IoIosArrowForward className={styles.icon2} />,
   },

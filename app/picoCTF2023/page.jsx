@@ -41,7 +41,7 @@ export default function PicoCTF() {
         <br />
       </div>
       <div className={styles.pico2023}>
-        <p>Playing for fun to learn and improve my skills 😃!</p>
+        <p>All the challenges I solved during the 2023 competition😃!</p>
         <p></p>
       </div>
       <table className={styles.pico2023Categories}>
@@ -197,6 +197,17 @@ export default function PicoCTF() {
               </a>
             </td>
             <td>Reverse Engineering</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="../picoCTF2023/InvisibleWORDs"
+                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
+              >
+                Invisible WORDs
+              </a>
+            </td>
+            <td>Forensics</td>
           </tr>
         </tbody>
       </table>
