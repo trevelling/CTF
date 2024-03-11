@@ -99,13 +99,6 @@ const About = () => {
           </tr>
           <tr>
             <td>
-                Pearl CTF
-            </td>
-            <td>Jeporady</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>
                 HACKBASH x A.YCEP
             </td>
             <td>Jeporady</td>

@@ -75,7 +75,7 @@ export default function Sidebar() {
 
 const sideBarItems = [
   {
-    name: "🏳️\u00A0\u00A0\u00A0Tev's CTF Writeups",
+    name: "🏳️ \u00A0\u00A0Tev's CTF Writeups",
     href: "/",
     isLink: true,
   },
@@ -116,12 +116,6 @@ const sideBarItems = [
   {
     name: "picoCTF",
     href: "/picoCTF2024",
-    isLink: true,
-    icon: <IoIosArrowForward className={styles.icon2} />,
-  },
-  {
-    name: "Pearl CTF",
-    href: "/pearlCTF",
     isLink: true,
     icon: <IoIosArrowForward className={styles.icon2} />,
   },
