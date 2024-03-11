@@ -109,7 +109,7 @@ const sideBarItems = [
   },
   {
     name: "HACKBASH x A.YCEP",
-    href: "/HACKBASH",
+    href: "/HACKBASHxAYCEP",
     isLink: true,
     icon: <IoIosArrowForward className={styles.icon2} />,
   },

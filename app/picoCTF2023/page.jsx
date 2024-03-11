@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
-export default function PicoCTF() {
+export default function PicoCTF2023() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

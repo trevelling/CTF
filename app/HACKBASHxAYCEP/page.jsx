@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
-export default function LNC() {
+export default function HACKBASH() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,27 +28,24 @@ export default function LNC() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className={styles.lncContainer}>
+    <div className={styles.hackbashContainer}>
       {loading && <Preloader />}
-      <div className={styles.lncTitle}>
+      <div className={styles.hackbashTitle}>
         <a
           href="https://8059blank.github.io/hackac/HACK@AC-Information"
           target="blank"
           style={{ color: "white", textDecoration: "none" }}
         >
-          Lag and Crash 💥
+          HACKBASH x A.YCEP 🕵🏼‍♂️
         </a>
         <br />
       </div>
-      <div className={styles.lnc}>
+      <div className={styles.hackbash}>
         <p>
-          Lag and Crash is an inter-polytechnic 2 day CTF targeted at
-          Polytechnic, Institute of Technical Education and Junior College
-          students. The event is organised between the Polytechnic Cybersecurity
-          Interest Groups.
+          HACKBASH x A.YCEP is a 2 day workshop that included a final physical CTF (selected participants). These are my writeups for the challenges I completed.
         </p>
       </div>
-      <table className={styles.lncCategories}>
+      <table className={styles.hackbashCategories}>
         <thead>
           <tr>
             <th>Challenge Name</th>
@@ -62,54 +59,10 @@ export default function LNC() {
                 href="../bitsCTF/DFIR1"
                 style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
               >
-                pyre_1
+                ----
               </a>
             </td>
-            <td>Reverse Engineering</td>
-          </tr>
-          <tr>
-            <td>
-              <a
-                href="../bitsCTF/DFIR1"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                Unknown Lingo
-              </a>
-            </td>
-            <td>Misc.</td>
-          </tr>
-          <tr>
-            <td>
-              <a
-                href="../bitsCTF/DFIR1"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                Viva la Revolution!
-              </a>
-            </td>
-            <td>Cryptography</td>
-          </tr>
-          <tr>
-            <td>
-              <a
-                href="../bitsCTF/DFIR1"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                Free Food
-              </a>
-            </td>
-            <td>OSINT</td>
-          </tr>
-          <tr>
-            <td>
-              <a
-                href="../bitsCTF/DFIR1"
-                style={{ color: "rgb(76, 211, 76)", textDecoration: "none" }}
-              >
-                Boblox
-              </a>
-            </td>
-            <td>OSINT</td>
+            <td>----</td>
           </tr>
         </tbody>
       </table>

@@ -1,0 +1,182 @@
+.hackbashContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  transition: margin-left 0.3s ease;
+  font-family: gitbook-content-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .hackbashContainer {
+    margin-left: 0;
+    width: 100%;
+  }
+  .buttonContainer {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button1,
+  .button2 {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+.hackbash {
+  color: white;
+  background-color: rgb(20, 23, 28);
+  padding-left: 15px;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  font-size: 16px;
+  opacity: 0.9;
+  text-align: left;
+  border-left: 4px solid rgb(40, 47, 48);
+  margin: 20px;
+  width: 50%;
+}
+
+.hackbashTitle {
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 23, 28);
+  letter-spacing: 1.1px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+  opacity: 0.9;
+  text-align: left;
+  margin: 20px;
+  width: 50%;
+}
+
+.hackbashCategories {
+  width: 50%;
+  margin: 18px;
+  color: #ffffff;
+  border-spacing: 0;
+  border-collapse: separate;
+  font-size: 1rem;
+}
+
+.hackbashCategories th,
+.hackbashCategories td {
+  border: 0.5px solid rgb(40, 47, 48);
+  padding: 8px;
+  text-align: left;
+}
+
+.hackbashCategories th:first-child,
+.hackbashCategories td:first-child {
+  border-left: none;
+  width: 30%;
+}
+
+.hackbashCategories th:last-child,
+.hackbashCategories td:last-child {
+  border-right: none;
+  width: 30%;
+}
+
+.hackbashCategories th {
+  border-top: none;
+  color: rgb(204, 207, 212);
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.button1 {
+  width: 356px;
+  padding-right: 20px;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgb(40, 47, 48);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, color 0.3s, transform 0.3s ease-out;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0) inset;
+
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.button2 {
+  width: 356px;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgb(40, 47, 48);
+  border-radius: 4px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, color 0.3s, transform 0.3s ease-out;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0) inset;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buttonPrevious,
+.buttonNext {
+  font-size: 13px;
+  padding-bottom: 4px;
+}
+
+.buttonText {
+  font-weight: 550;
+  font-size: 16px;
+}
+.button1:hover .buttonText,
+.button1:hover .arrow {
+  color: rgb(76, 211, 76);
+}
+
+.button2:hover .buttonText,
+.button2:hover .arrow {
+  color: rgb(76, 211, 76);
+}
+
+.line {
+  border-bottom: 1px solid rgb(40, 47, 48);
+  margin: 20px;
+  width: 49%;
+  margin-left: 40px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  padding-top: 5px;
+}
+
+.button1 .arrow {
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 20px;
+}
+
+.button2 .arrow {
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 20px;
+}
